@@ -1,0 +1,238 @@
+{
+  "info": {
+    "project": "envmon Mark II - Environment Monitor",
+    "file": "seasons.json",
+    "description": "Seasons file",
+    "author": "Márcio Pessoa <marcio.pessoa@sciemon.com>",
+    "contributors": "none",
+    "source": "https://pt.wikipedia.org/wiki/Esta%C3%A7%C3%A3o_do_ano"
+  },
+  "timezone": "UTC",
+  "calendar": {
+    "2014-12-21 23:03": {
+      "event": "Solstice",
+      "northen": "Winter",
+      "southern": "Summer"
+    },
+    "2015-03-20 22:45": {
+      "event": "Equinox",
+      "northen": "Spring",
+      "southern": "Fall"
+    },
+    "2015-06-21 16:38": {
+      "event": "Solstice",
+      "northen": "Summer",
+      "southern": "Winter"
+    },
+    "2015-09-23 08:21": {
+      "event": "Equinox",
+      "northen": "Fall",
+      "southern": "Spring"
+    },
+    "2015-12-22 04:48": {
+      "event": "Solstice",
+      "northen": "Winter",
+      "southern": "Summer"
+    },
+    "2016-03-20 04:30": {
+      "event": "Equinox",
+      "northen": "Spring",
+      "southern": "Fall"
+    },
+    "2016-06-20 22:34": {
+      "event": "Solstice",
+      "northen": "Summer",
+      "southern": "Winter"
+    },
+    "2016-09-22 14:21": {
+      "event": "Equinox",
+      "northen": "Fall",
+      "southern": "Spring"
+    },
+    "2016-12-21 10:44": {
+      "event": "Solstice",
+      "northen": "Winter",
+      "southern": "Summer"
+    },
+    "2017-03-20 10:29": {
+      "event": "Equinox",
+      "northen": "Spring",
+      "southern": "Fall"
+    },
+    "2017-06-21 04:24": {
+      "event": "Solstice",
+      "northen": "Summer",
+      "southern": "Winter"
+    },
+    "2017-09-22 20:02": {
+      "event": "Equinox",
+      "northen": "Fall",
+      "southern": "Spring"
+    },
+    "2017-12-21 16:28": {
+      "event": "Solstice",
+      "northen": "Winter",
+      "southern": "Summer"
+    },
+    "2018-03-20 16:15": {
+      "event": "Equinox",
+      "northen": "Spring",
+      "southern": "Fall"
+    },
+    "2018-06-21 10:07": {
+      "event": "Solstice",
+      "northen": "Summer",
+      "southern": "Winter"
+    },
+    "2018-09-23 01:54": {
+      "event": "Equinox",
+      "northen": "Fall",
+      "southern": "Spring"
+    },
+    "2018-12-21 22:23": {
+      "event": "Solstice",
+      "northen": "Winter",
+      "southern": "Summer"
+    },
+    "2019-03-20 21:58": {
+      "event": "Equinox",
+      "northen": "Spring",
+      "southern": "Fall"
+    },
+    "2019-06-21 15:54": {
+      "event": "Solstice",
+      "northen": "Summer",
+      "southern": "Winter"
+    },
+    "2019-09-23 07:50": {
+      "event": "Equinox",
+      "northen": "Fall",
+      "southern": "Spring"
+    },
+    "2019-12-22 04:19": {
+      "event": "Solstice",
+      "northen": "Winter",
+      "southern": "Summer"
+    },
+    "2020-03-20 03:50": {
+      "event": "Equinox",
+      "northen": "Spring",
+      "southern": "Fall"
+    },
+    "2020-06-20 21:44": {
+      "event": "Solstice",
+      "northen": "Summer",
+      "southern": "Winter"
+    },
+    "2020-09-22 13:31": {
+      "event": "Equinox",
+      "northen": "Fall",
+      "southern": "Spring"
+    },
+    "2020-12-21 10:02": {
+      "event": "Solstice",
+      "northen": "Winter",
+      "southern": "Summer"
+    },
+    "2021-03-20 09:37": {
+      "event": "Equinox",
+      "northen": "Spring",
+      "southern": "Fall"
+    },
+    "2021-06-21 03:32": {
+      "event": "Solstice",
+      "northen": "Summer",
+      "southern": "Winter"
+    },
+    "2021-09-22 19:21": {
+      "event": "Equinox",
+      "northen": "Fall",
+      "southern": "Spring"
+    },
+    "2021-12-21 15:59": {
+      "event": "Solstice",
+      "northen": "Winter",
+      "southern": "Summer"
+    },
+    "2022-03-20 15:53": {
+      "event": "Equinox",
+      "northen": "Spring",
+      "southern": "Fall"
+    },
+    "2022-06-21 09:14": {
+      "event": "Solstice",
+      "northen": "Summer",
+      "southern": "Winter"
+    },
+    "2022-09-23 00:40": {
+      "event": "Equinox",
+      "northen": "Fall",
+      "southern": "Spring"
+    },
+    "2022-12-21 21:48": {
+      "event": "Solstice",
+      "northen": "Winter",
+      "southern": "Summer"
+    },
+    "2023-03-20 21:24": {
+      "event": "Equinox",
+      "northen": "Spring",
+      "southern": "Fall"
+    },
+    "2023-06-21 14:58": {
+      "event": "Solstice",
+      "northen": "Summer",
+      "southern": "Winter"
+    },
+    "2023-09-23 06:50": {
+      "event": "Equinox",
+      "northen": "Fall",
+      "southern": "Spring"
+    },
+    "2023-12-22 03:27": {
+      "event": "Solstice",
+      "northen": "Winter",
+      "southern": "Summer"
+    },
+    "2024-03-20 03:06": {
+      "event": "Equinox",
+      "northen": "Spring",
+      "southern": "Fall"
+    },
+    "2024-06-20 20:51": {
+      "event": "Solstice",
+      "northen": "Summer",
+      "southern": "Winter"
+    },
+    "2024-09-22 12:44": {
+      "event": "Equinox",
+      "northen": "Fall",
+      "southern": "Spring"
+    },
+    "2024-12-21 09:21": {
+      "event": "Solstice",
+      "northen": "Winter",
+      "southern": "Summer"
+    },
+    "2025-03-20 09:01": {
+      "event": "Equinox",
+      "northen": "Spring",
+      "southern": "Fall"
+    },
+    "2025-06-21 02:42": {
+      "event": "Solstice",
+      "northen": "Summer",
+      "southern": "Winter"
+    },
+    "2025-09-22 18:19": {
+      "event": "Equinox",
+      "northen": "Fall",
+      "southern": "Spring"
+    },
+    "2025-12-21 15:03": {
+      "event": "Solstice",
+      "northen": "Winter",
+      "southern": "Summer"
+    }
+  }
+}

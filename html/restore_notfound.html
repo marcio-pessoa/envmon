@@ -1,0 +1,12 @@
+<script>
+function goBack() {
+  window.history.back()
+}
+</script>
+<h3><?=msg("restore")?></h3>
+<p id="restore"><?=msg("configuration")?></p>
+<p>
+  <?=msg("file_not_found")?>.
+</p>
+<br/>
+<button onclick="goBack()" />&nbsp;<?=msg("back")?>&nbsp;</button>

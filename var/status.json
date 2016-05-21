@@ -1,0 +1,73 @@
+{
+  "outdoor1": {
+    "temperature": {
+      "value": 28,
+      "moment": "2016-03-20 04:30",
+      "status": 0
+    },
+    "humidity":  {
+      "value": 42,
+      "moment": "2016-03-20 04:30",
+      "status": 0
+    },
+    "moisture":  {
+      "value": 66,
+      "moment": "2016-03-20 04:30",
+      "status": 0
+    },
+    "water":  {
+      "value": 8,
+      "moment": "2016-03-20 04:30",
+      "status": 2
+    }
+  },
+  "controller": {
+    "temperature":  {
+      "value": 77,
+      "moment": "2016-03-20 04:30",
+      "status": 1
+    },
+    "fan":  {
+      "value": 85,
+      "moment": "2016-03-20 04:30",
+      "status": 0
+    },
+    "memory":  {
+      "value": 45,
+      "moment": "2016-03-20 04:30",
+      "status": 0
+    }
+  },
+  "system": {
+    "memory":  {
+      "value": 45,
+      "moment": "2016-03-20 04:30",
+      "status": 0
+    },
+    "cpu":  {
+      "value": 33,
+      "moment": "2016-03-20 04:30",
+      "status": 0
+    },
+    "swap":  {
+      "value": 0,
+      "moment": "2016-03-20 04:30",
+      "status": 0
+    },
+    "internal_storage":  {
+      "value": 45,
+      "moment": "2016-03-20 04:30",
+      "status": 0
+    },
+    "external_storage":  {
+      "value": 12,
+      "moment": "2016-03-20 04:30",
+      "status": 0
+    }
+  },
+  "season": {
+    "current": "spring",
+    "begin": "2016-03-20 04:30",
+    "end": "2016-03-20 04:30"
+  }
+}

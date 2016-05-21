@@ -1,0 +1,198 @@
+<form action="?content=setup&sub=system" method="post">
+<h3><?=msg("system")?></h3>
+<p id="host"><?=msg("host")?></p>
+<table class="form">
+  <tr>
+    <td class="form_description"><?=msg("name")?></td>
+    <td class="form_input">
+      <input type="text" name="system_hostname"
+             value="<?=$cfg['system']['hostname']?>">
+    </td>
+  </tr>
+</table>
+<p id="installation"><?=msg("installation")?></p>
+<table class="comfort_form">
+  <tr>
+    <td class="form_description"><?=msg("location")?></td>
+    <td class="form_input">
+      <input type="radio" name="system_location" value="indoor" 
+      <?php if ($cfg['system']['location'] == "indoor") echo "checked"?>>
+      <?=msg("indoor")?>
+    </td>
+    <td class="form_input">
+      <input type="radio" name="system_location" value="outdoor"
+      <?php if ($cfg['system']['location'] == "outdoor") echo "checked"?>>
+      <?=msg("outdoor")?>
+    </td>
+  </tr>
+</table>
+<p id="region"><?=msg("region")?></p>
+<table class="form">
+  <tr>
+    <td class="form_description"><?=msg("hemisphere")?></td>
+    <td class="form_input">
+      <input type="radio" name="system_hemisphere" value="Northen" <?php if ($cfg['system']['hemisphere'] == "Northen") echo "checked"?> />
+      <?=msg("northen")?>
+      &nbsp;&nbsp;&nbsp;
+      <input type="radio" name="system_hemisphere" value="Southern" <?php if ($cfg['system']['hemisphere'] == "Southern") echo "checked"?> />
+      <?=msg("southern")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">Time zone</td>
+    <td class="form_input">
+      <select name="system_timezone">
+        <option value="<?=$cfg['system']['timezone']?>">
+          <?=$cfg['system']['timezone']?>
+        </option>
+      </select>
+    </td>
+  </tr>
+</table>
+<!--
+<p id="region"><?=msg("units")?></p>
+<table class="form">
+  <tr>
+    <td class="form_description"><?=msg("sizes")?></td>
+    <td class="form_input">
+      <input type="radio" name="system_hemisphere" value="Northen" 
+      <?php if ($cfg['system']['hemisphere'] == "Northen") echo "checked"?>>
+      <?=msg("centimeters")?>
+      &nbsp;&nbsp;&nbsp;
+      <input type="radio" name="system_hemisphere" value="Southern"
+      <?php if ($cfg['system']['hemisphere'] == "Southern") echo "checked"?>>
+      <?=msg("inches")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description"><?=msg("weight")?></td>
+    <td class="form_input">
+      <select name="units_weight">
+        <option value="<?=$cfg['system']['timezone']?>">
+          <?=$cfg['system']['timezone']?>
+        </option>
+        <option>Kilograms</option>
+        <option>Punds</option>
+        <option>Stone</option>
+      </select>
+    </td>
+  <tr>
+    <td class="form_description"><?=msg("distance")?></td>
+    <td class="form_input">
+      <input type="radio" name="system_hemisphere" value="Northen" 
+      <?php if ($cfg['system']['hemisphere'] == "Northen") echo "checked"?>>
+      <?=msg("kilometers")?>
+      &nbsp;&nbsp;&nbsp;
+      <input type="radio" name="system_hemisphere" value="Southern"
+      <?php if ($cfg['system']['hemisphere'] == "Southern") echo "checked"?>>
+      <?=msg("miles")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description"><?=msg("energy")?></td>
+    <td class="form_input">
+      <input type="radio" name="system_hemisphere" value="Northen" 
+      <?php if ($cfg['system']['hemisphere'] == "Northen") echo "checked"?>>
+      <?=msg("calories")?>
+      &nbsp;&nbsp;&nbsp;
+      <input type="radio" name="system_hemisphere" value="Southern"
+      <?php if ($cfg['system']['hemisphere'] == "Southern") echo "checked"?>>
+      <?=msg("kilojoules")?>
+    </td>
+  </tr>
+  </tr>
+</table>
+-->
+<p id="language"><?=msg("language")?></p>
+<table class="slim_form">
+  <tr>
+    <td class="form_description">
+      <?=msg("language")?>
+    </td>
+    <td class="form_input">
+      <select name="system_language" onchange="this.form.submit()">
+        <option value="<?=$cfg['system']['language']?>">
+          <?=$cfg['system']['language']?>
+        </option>
+        <?=$language_options?>
+      </select>
+    </td>
+  </tr>
+</table>
+<p id="theme"><?=msg("theme")?></p>
+<table class="slim_form">
+  <tr>
+    <td class="form_description"><?=msg("theme")?></td>
+    <td class="form_input">
+      <select name="system_theme" onchange="this.form.submit()">
+        <option value="<?=$cfg['system']['theme']?>">
+          <?=$cfg['system']['theme']?>
+        </option>
+        <?=$theme_options?>
+      </select>
+    </td>
+  </tr>
+</table>
+<p id="authentication"><?=msg("authentication")?></p>
+<table class="form">
+  <tr>
+    <td class="form_description">
+      <?=msg("user_name")?>
+    </td>
+    <td class="form_input">
+      <input type="text" name="authentication_username"
+             value="<?=$cfg['authentication']['username']?>">
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("password")?>
+    </td>
+    <td class="form_input">
+      <input type="password" name="authentication_password1">
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("password_again")?>
+    </td>
+    <td class="form_input">
+      <input type="password" name="authentication_password2">
+    </td>
+  </tr>
+</table>
+<br/>
+<input type="hidden" name="action" value="proced">
+<button type="submit" value="submit"><?=msg("apply")?></button>
+</form>
+<script src="jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+var code = {};
+$("select[name='system_timezone'] > option").each(function () {
+    if(code[this.text]) {
+        $(this).remove();
+    } else {
+        code[this.text] = this.value;
+    }
+});
+</script>
+<script type="text/javascript">
+var code = {};
+$("select[name='system_language'] > option").each(function () {
+    if(code[this.text]) {
+        $(this).remove();
+    } else {
+        code[this.text] = this.value;
+    }
+});
+</script>
+<script type="text/javascript">
+var code = {};
+$("select[name='system_theme'] > option").each(function () {
+    if(code[this.text]) {
+        $(this).remove();
+    } else {
+        code[this.text] = this.value;
+    }
+});
+</script>

@@ -1,0 +1,96 @@
+/* style.css, envmon Mark II - Environment Monitor, Web white style file
+ * 
+ * Author: Márcio Pessoa <marcio@pessoa.eti.br>
+ * Contributors: none
+ */
+ 
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+a:link, a:visited {
+  color: #FFFFFF;
+}
+
+a:hover, a:active {
+  color: #808080;
+}
+
+#header {
+  background-color: #111111;
+  color: #000000;
+}
+
+#Item {
+  background-color: #000000;
+  color: #AAAAAA;
+}
+
+#Item_description {
+  background-color: #000000;
+  color: #888888;
+}
+
+[title]:after{
+	color:#FFFFFF;
+	background:#333333;
+}
+
+#OK,
+#Warning,
+#Critical,
+#Unknown,
+#Pending {
+  color: #000000;
+}
+
+#OK {
+  background-color: #68CF68;
+}
+
+#Warning {
+  background-color: #E0E000;
+}
+
+#Critical {
+  background-color: #FF3333;
+}
+
+#Unknown {
+  background-color: #FF9C59;
+}
+
+#Pending {
+  background-color: #BBBBBB;
+}
+
+h1 {
+  color: #AAAAAA;
+}
+
+h2 {
+  color: #CCCCCC;
+}
+
+p.Resource_title {
+  color: #CCCCCC;
+}
+
+a.Resource_title {
+  color: #CCCCCC;
+}
+
+a.Resource_title:hover {
+  color: #FFFFFF;
+}
+
+#footer {
+  background-color: #AAAAAA;
+  color: #000000;
+}
+
+#debug {
+  background-color: #888888;
+  color: #FFFFFF;
+}

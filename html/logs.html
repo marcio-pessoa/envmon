@@ -1,0 +1,19 @@
+<h3><?=msg("logs")?></h3>
+<div id="Resource">
+  <p id="environment"><?=msg("environment")?></p>
+  <textarea rows="40" cols="150">
+<?php insert_file($log["environment"]) ?>
+  </textarea>
+</div>
+<div id="Resource">
+  <p id="controller"><?=msg("controller")?></p>
+  <textarea rows="40" cols="150">
+<?php insert_file($log["controller"]) ?>
+  </textarea>
+</div>
+<div id="Resource">
+  <p id="system"><?=msg("system")?></p>
+  <textarea rows="40" cols="150">
+<?php insert_file($log["system"]) ?>
+  </textarea>
+</div>

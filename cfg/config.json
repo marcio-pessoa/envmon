@@ -1,0 +1,148 @@
+{
+    "info": {
+        "project": "envmon Mark II - Environment Monitor",
+        "file": "config.json",
+        "description": "Config file",
+        "author": "Marcio Pessoa <marcio.pessoa@sciemon.com>",
+        "contributors": "none"
+    },
+    "notification": {
+        "device": {
+            "speaker": 0,
+            "led": 1
+        },
+        "email": {
+            "user": "envmon@sciemon.com",
+            "password": "envmon",
+            "server": "smtp.gmail.com",
+            "port": "587",
+            "tls": 1,
+            "temperature": 0,
+            "humidity": 1,
+            "water": 1,
+            "moisture": 1,
+            "season": 1,
+            "to": "marcio.pessoa@gmail.com",
+            "timeout": 10
+        },
+        "twitter": {
+            "user": "envmon_system",
+            "password": "opq1opa1",
+            "temperature": 0,
+            "humidity": 0,
+            "water": 0,
+            "moisture": 0,
+            "season": 1
+        },
+        "nrdp": {
+            "url": "http:\/\/sciemon.com\/nrdp\/",
+            "token": "Jenkiactat(twobfossAcyingIlsocPatHyratCoorphefeshepdecNieshvekvu",
+            "freshness": "300"
+        }
+    },
+    "threshold": {
+        "season": {
+            "spring": {
+                "warning": 52,
+                "critical": 42
+            },
+            "summer": {
+                "warning": 62,
+                "critical": 48
+            },
+            "fall": {
+                "warning": 52,
+                "critical": 42
+            },
+            "winter": {
+                "warning": 56,
+                "critical": 47
+            }
+        },
+        "temp": {
+            "env": {
+                "min": {
+                    "warning": 11,
+                    "critical": 7
+                },
+                "max": {
+                    "warning": 34,
+                    "critical": 37
+                }
+            },
+            "sys": {
+                "min": {
+                    "warning": 18,
+                    "critical": 12
+                },
+                "max": {
+                    "warning": 64,
+                    "critical": 72
+                }
+            }
+        },
+        "humidity": {
+            "warning": 40,
+            "critical": 30
+        },
+        "water": {
+            "warning": 30,
+            "critical": 10
+        },
+        "moisture": {
+            "spring": {
+                "warning": 52,
+                "critical": 42
+            },
+            "summer": {
+                "warning": 62,
+                "critical": 48
+            },
+            "fall": {
+                "warning": 52,
+                "critical": 42
+            },
+            "winter": {
+                "warning": 56,
+                "critical": 47
+            }
+        }
+    },
+    "timer": {
+        "environment": {
+            "temperature": 60,
+            "humidity": 60,
+            "moisture": 2,
+            "water": 5,
+            "external_storage": "300"
+        },
+        "system": {
+            "temperature": "2",
+            "fan": "3",
+            "cpu": "300",
+            "memory": "300",
+            "swap": "300",
+            "internal_storage": "300",
+            "internalstorage": "300",
+            "externalstorage": "300"
+        },
+        "squirt": {
+            "duration": "7",
+            "minimum": "600",
+            "maximum": "7200"
+        }
+    },
+    "system": {
+        "hostname": "envmon",
+        "hemisphere": "Southern",
+        "timezone": "Sao_Paulo",
+        "language": "English",
+        "theme": "Noir",
+        "remoteadmin": 1,
+        "location": "outdoor"
+    },
+    "authentication": {
+        "username": "admin",
+        "password": "$1$zhB4ECel$K.w1lzo2DD3l\/GO5d89I7."
+    }
+}

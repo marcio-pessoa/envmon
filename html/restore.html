@@ -1,0 +1,33 @@
+<script>
+function goBack() {
+  window.history.back()
+}
+</script>
+<form action="?content=setup&sub=restore" method="post">
+<h3><?=msg("restore")?></h3>
+<p id="restore"><?=msg("configuration")?></p>
+<p>
+  <?=msg("if_u_agree")?>...
+</p>
+<p>
+  <ul>
+    <li><?=msg("will_be_overwritten")?>!</li>
+  </ul>
+</p>
+<p>
+  <?=msg("attention")?>: <?=msg("cannot_be_undone")?>
+</p>
+<table class="comfort_form">
+  <tr>
+    <td class="form_description"><?=msg("you_sure")?>?</td>
+    <td class="form_input">
+      <button type="submit" value="submit"><?=msg("yes")?></button>
+    </td>
+    <td class="form_input">
+      <button onclick="goBack()" />&nbsp;<?=msg("no")?>&nbsp;</button>
+    </td>
+  </tr>
+</table>
+<br/>
+<input type="hidden" name="action" value="restore">
+</form>

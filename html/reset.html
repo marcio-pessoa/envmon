@@ -1,0 +1,36 @@
+<script>
+function goBack() {
+  window.history.back()
+}
+</script>
+<form action="?content=setup&sub=reset" method="post">
+<h3><?=msg("reset")?></h3>
+<p id="reset"><?=msg("factory_defaults")?></p>
+<p>
+  <?=msg("if_u_agree")?>...
+</p>
+<p>
+  <ul>
+    <li><?=msg("conf_ll_b_lost")?></li>
+    <li><?=msg("ip_addr_reset")?></li>
+    <li><?=msg("user_name_reset")?></li>
+    <li><?=msg("password_reset")?></li>
+  </ul>
+</p>
+<p>
+  <?=msg("attention")?>: <?=msg("cannot_be_undone")?>
+</p>
+<table class="comfort_form">
+  <tr>
+    <td class="form_description"><?=msg("you_sure")?>?</td>
+    <td class="form_input">
+      <button type="submit" value="submit"><?=msg("yes")?></button>
+    </td>
+    <td class="form_input">
+      <button onclick="goBack()" />&nbsp;<?=msg("no")?>&nbsp;</button>
+    </td>
+  </tr>
+</table>
+<br/>
+<input type="hidden" name="action" value="proced">
+</form>

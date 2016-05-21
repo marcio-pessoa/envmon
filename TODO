@@ -1,0 +1,34 @@
+CHANGELOG, envmon Mark II - Environment Monitor, To do list file
+
+Mechanics
+  * Controller
+    * Case
+      * Shapes
+        * Back
+  * Soil Moisture
+    * Case
+  * Outdoor module
+    * Case
+      * Furos
+        * Mangueiras
+        * Sensor de nível d'água
+  * Reservatório de água
+    * Build technical specification
+    * Buy
+    * Delivery
+    * Install
+
+Electronics
+  * Fan
+    * Driver
+      * Transistor BC547
+      * Resistor 270R
+    * Cabling
+  * Pump
+
+Software
+  * CPU (Linux)
+    * Back end
+      * Fazer upload dos logs para a nuvem.
+      * Adicionar uptime na monitoração.
+  * MCU (Arduino)

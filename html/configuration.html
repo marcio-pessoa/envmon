@@ -1,0 +1,46 @@
+<h3><?=msg("configuration")?></h3>
+<p id="backup"><?=msg("backup")?></p>
+<table class="slim_form">
+  <tr>
+    <td class="form_description"><?=msg("running_setup")?></td>
+    <td class="form_input">
+      <input type="button" value="Download" 
+             onClick="window.location.href='/config.json'" />
+    </td>
+  </tr>
+</table>
+<p id="restore"><?=msg("restore_from_file")?></p>
+<form enctype="multipart/form-data"
+      action="?content=setup&sub=restore" method="post">
+<table class="comfort_form">
+  <tr>
+    <td class="form_description"> </td>
+    <td class="form_input">
+      <input type="file" name="restore_file">
+      <button type="submit" value="submit"><?=msg("restore")?></button>
+    </td>
+  </tr>
+</table>
+<input type="hidden" name="action" value="proced">
+</form>
+<p id="reboot"><?=msg("reboot_device")?></p>
+<table class="slim_form">
+  <tr>
+    <td class="form_description"><?=msg("system")?></td>
+    <td class="form_input">
+      <input type="button" value="<?=msg("reboot")?>" 
+             onClick="window.location.href='?content=setup&sub=reboot'" />
+    </td>
+  </tr>
+</table>
+<p id="reset"><?=msg("reset_configuration")?></p>
+<table class="slim_form">
+  <tr>
+    <td class="form_description"><?=msg("factory_defaults")?></td>
+    <td class="form_input">
+      <input type="button" value="<?=msg("reset")?>" 
+             onClick="window.location.href='?content=setup&sub=reset'" />
+    </td>
+  </tr>
+</table>
+<br/>

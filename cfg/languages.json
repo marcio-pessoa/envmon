@@ -1,0 +1,25 @@
+{
+  "_comment": "This file uses ISO 639-1 Language Codes",
+  "language": {
+    "English": {
+      "file": "en.json",
+      "code": "en",
+      "enable": 1
+    },
+    "Português": {
+      "file": "pt.json",
+      "code": "pt",
+      "enable": 1
+    },
+    "Español": {
+      "file": "es.json",
+      "code": "es",
+      "enable": 1
+    },
+    "Français": {
+      "file": "fr.json",
+      "code": "fr",
+      "enable": 1
+    }
+  }
+}

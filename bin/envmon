@@ -1,0 +1,7 @@
+#!/bin/sh
+readonly WORK_DIR='/opt/envmon'
+readonly WORK_FILE='envmon.pyc'
+
+python "$WORK_DIR/$WORK_FILE $*" --config /opt/envmon/cfg/config.json \
+                                 --device localhost:6571 > \
+                                 /opt/envmon/log/event.log &

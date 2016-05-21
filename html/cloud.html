@@ -1,0 +1,30 @@
+<form action="?content=setup&sub=cloud" method="post">
+<h3><?=msg("cloud")?></h3>
+<p id="cloud"><?=msg("access_anywhere")?></p>
+<?=msg("remote_offers")?>:
+<ul>
+  <li><?=msg("remote_clause1")?></li>
+  <li><?=msg("remote_clause2")?></li>
+  <li><?=msg("remote_clause3")?></li>
+  <li><?=msg("remote_clause4")?></li>
+  <li><?=msg("remote_clause5")?></li>
+  <li><?=msg("remote_clause6")?></li>
+</ul>
+<p>
+  <?=msg("remote_agreement")?>
+</p>
+<table class="slim_form">
+  <tr>
+    <td class="form_description">
+      <?=msg("remote_administration")?>:
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="system_remoteadmin"
+             value="1" <?=$system_remoteadmin?>>
+    </td>
+  </tr>
+</table>
+<br/>
+<input type="hidden" name="action" value="proced">
+<button type="submit" value="submit"><?=msg("apply")?></button>
+</form>

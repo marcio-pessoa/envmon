@@ -1,0 +1,178 @@
+/* style.css, envmon Mark II - Environment Monitor, Web interface style file
+ * 
+ * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Contributors: Orlando Patriarcha <orlando.patriarcha@gmail.com>
+ */
+ 
+body {
+  font-family: sans;
+}
+
+a:link, a:visited {
+  padding: 10px 5px;
+  text-align: Left; 
+  text-decoration: none;
+  display: inline-block;
+}
+
+table.form {
+  border-collapse: collapse;
+  width: 500px;
+}
+
+table.comfort_form {
+  border-collapse: collapse;
+  width: 400px;
+}
+
+table.slim_form {
+  border-collapse: collapse;
+  width: 300px;
+}
+
+td.form_description {
+  text-align: right;
+  padding: 5px;
+}
+
+td.form_input {
+  text-align: left;
+  padding: 5px;
+}
+
+#header {
+  text-align: center;
+  padding: 5px;
+}
+
+#Resource {
+  padding-top: 5px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  clear: both;
+}
+
+#Item {
+  text-align: left;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  font-family: sans;
+  font-size: 130%;
+  min-width: 140px;
+  float: left;
+  margin-bottom: 20px;
+}
+
+#Item_description {
+  text-align: left;
+  padding-top: 0px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  font-family: sans;
+  font-size: 80%;
+}
+
+[title]{
+	position: relative;
+}
+
+[title]:after{
+	content: attr(title);
+	padding: 5px;
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+	bottom: 100%;
+	white-space: nowrap;
+	-webkit-transition: 0.25s linear opacity;
+}
+
+[title]:hover:after{
+	left: 5px;
+	opacity: 1;
+}
+
+#clock,
+#date,
+#status0,
+#status1,
+#status2,
+#status3,
+#status4 {
+  text-align: center;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  font-family: sans;
+  font-size: 120%;
+}
+
+h1 {
+  font-family: sans;
+  font-size: 300%;
+  text-align: center;
+}
+
+h2 {
+  font-family: sans;
+  font-size: 110%;
+  text-align: center;
+}
+
+h3 {
+  font-family: sans;
+  font-size: 120%;
+  text-align: left;
+  font-weight: normal;
+}
+
+a.Resource_title {
+  font-family: sans;
+  font-size: 120%;
+  text-align: left;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  height: 50px;
+}
+
+#footer {
+  clear: both;
+  text-align: center;
+  font-size: 80%;
+  padding: 5px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-top: 20px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+#debug {
+  clear: both;
+  font-family: monospace;
+  font-size: 110%;
+  text-align: left;
+  padding: 5px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-top: 20px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}

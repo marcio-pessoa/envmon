@@ -1,0 +1,175 @@
+/* style.css, envmon Mark II - Environment Monitor, Web black style file
+ * 
+ * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Contributors: none
+ */
+ 
+body {
+  background-color: #E7CBE7;
+  color: #460046;
+}
+
+a:link, a:visited {
+  color: #CF65CF;
+}
+
+a:hover, a:active {
+  color: #922892;
+}
+
+#header {
+  background-color: #800080;
+  color: #000000;
+}
+
+#Item {
+  background-color: #D6A8D6;
+  color: #AAAAAA;
+}
+
+#Item_description {
+  background-color: #D6A8D6;
+  color: #800080;
+}
+
+[title]:after{
+	color:#FFFFFF;
+	background:#333333;
+}
+
+#clock,
+#date,
+#status0,
+#status1,
+#status2,
+#status3,
+#status4 {
+  color: #FFEDFF;
+}
+
+#clock,
+#date,
+#status0 {
+  background-color: #68CF68;
+}
+
+#status1 {
+  background-color: #E0E000;
+}
+
+#status2 {
+  background-color: #FF3333;
+}
+
+#status3 {
+  background-color: #FF9C59;
+}
+
+#status4 {
+  background-color: #BBBBBB;
+}
+
+h1 {
+  color: #E0ADE0;
+}
+
+h2 {
+  color: #C66FC6;
+}
+
+h3 {
+  color: #C66FC6;
+}
+
+p.Resource_title {
+  color: #C021C0;
+}
+
+a.Resource_title {
+  color: #C021C0;
+}
+
+a.Resource_title:hover {
+  color: #FFFFFF;
+}
+
+#footer {
+  background-color: #BEA1BE;
+  color: #000000;
+}
+
+#debug {
+  background-color: #888888;
+  color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#cssmenu {
+  background: #500050;
+}
+
+#cssmenu a {
+  background: #500050;
+  color: #ffffff;
+}
+
+#cssmenu > ul > li > a {
+  color: #ffffff;
+}
+
+#cssmenu > ul > li:hover:after {
+  border-bottom: #BC78BC;
+}
+
+#cssmenu > ul > li.active > a,
+#cssmenu > ul > li:hover > a {
+  color: #ffffff;
+  box-shadow: #000000;
+  -moz-box-shadow: #000000;
+  -webkit-box-shadow: #000000;
+  background: #BC78BC;
+}
+
+#cssmenu .has-sub ul li a {
+  background: #792D79;
+  border-bottom: #31b7f1;
+  color: #ffffff;
+}
+
+#cssmenu .has-sub ul li:hover a {
+  background: #BC78BC;
+}
+
+#cssmenu ul ul li:hover > a {
+  color: #ffffff;
+}
+
+#cssmenu .has-sub .has-sub ul li a {
+  background: #0c7fb0;
+  border-bottom: #31b7f1;
+}
+
+#cssmenu .has-sub .has-sub ul li a:hover {
+  background: #0a6d98;
+}

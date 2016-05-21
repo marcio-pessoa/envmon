@@ -1,0 +1,104 @@
+/* style.css, envmon Mark II - Environment Monitor, Web black style file
+ * 
+ * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Contributors: Nícolas Masaishi Oi Pessoa <masaishi.pessoa@gmail.com>
+ */
+ 
+body {
+  background-color: #78BBC4;
+  color: #254145;
+}
+
+a:link, a:visited {
+  color: #FFFFFF;
+}
+
+a:hover, a:active {
+  color: #808080;
+}
+
+#header {
+  background-color: #346B73;
+  color: #000000;
+}
+
+#Item {
+  background-color: #9AD6DE;
+  color: #AAAAAA;
+}
+
+#Item_description {
+  background-color: #9AD6DE;
+  color: #888888;
+}
+
+[title]:after{
+	color:#FFFFFF;
+	background:#333333;
+}
+
+#clock,
+#date,
+#status0,
+#status1,
+#status2,
+#status3,
+#status4 {
+  color: #FFEDFF;
+}
+
+#clock,
+#date,
+#status0 {
+  background-color: #68CF68;
+}
+
+#status1 {
+  background-color: #E0E000;
+}
+
+#status2 {
+  background-color: #FF3333;
+}
+
+#status3 {
+  background-color: #FF9C59;
+}
+
+#status4 {
+  background-color: #BBBBBB;
+}
+
+h1 {
+  color: #A1D7DE;
+}
+
+h2 {
+  color: #9BCCD3;
+}
+
+h3 {
+  color: #316B73;
+}
+
+p.Resource_title {
+  color: #CCCCCC;
+}
+
+a.Resource_title {
+  color: #CCCCCC;
+}
+
+a.Resource_title:hover {
+  color: #FFFFFF;
+}
+
+#footer {
+  background-color: #AFC5C7;
+  color: #000000;
+}
+
+#debug {
+  background-color: #888888;
+  color: #FFFFFF;
+}

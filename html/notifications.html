@@ -1,0 +1,263 @@
+<form action="?content=setup&sub=notifications" method="post">
+<h3><?=msg("notifications")?></h3>
+<p id="device"><?=msg("device")?></p>
+<table class="slim_form">
+  <tr>
+    <td class="form_description">
+      <?=msg("speaker")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_device_speaker"
+             value="1" <?=$notification_device_speaker?>>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("led")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_device_led"
+             value="1" <?=$notification_device_led?>>
+    </td>
+  </tr>
+</table>
+<p id="email"><?=msg("email")?></p>
+<table class="form">
+  <tr>
+    <td class="form_description">
+      <?=msg("user_name")?>
+    </td>
+    <td class="form_input">
+      <input type="text" name="notification_email_user"
+             value="<?=$cfg['notification']['email']['user']?>">
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("password")?>
+    </td>
+    <td class="form_input">
+      <input type="password" name="notification_email_password"
+             value="<?=$cfg['notification']['email']['password']?>">
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("server")?>
+    </td>
+    <td class="form_input">
+      <input type="text" name="notification_email_server"
+             value="<?=$cfg['notification']['email']['server']?>">
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("smtp_port")?>
+    </td>
+    <td class="form_input">
+      <input name="notification_email_port"
+             type="number" min="1" max="65535" 
+             value="<?=$cfg['notification']['email']['port']?>">
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("timeout")?>
+    </td>
+    <td class="form_input">
+      <input name="notification_email_timeout"
+             type="number" min="1" max="60"
+             value="<?=$cfg['notification']['email']['timeout']?>">
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("tls")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_email_tls" value="1"
+             <?php if ($cfg['notification']['email']['tls'] == 1) {
+                       echo "checked";
+                   }
+             ?>>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("to")?>
+    </td>
+    <td class="form_input">
+      <input type="text" name="notification_email_to"
+             value="<?=$cfg['notification']['email']['to']?>">
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("what_to_notify")?>?
+    </td>
+    <td class="form_input">
+    </td>
+  <tr>
+    <td class="form_description">
+      <?=msg("temperature")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_email_temperature"
+             value="1" <?=$notification_email_temperature?>>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("humidity")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_email_humidity"
+             value="1" <?=$notification_email_humidity?>>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("water_level")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_email_water"
+             value="1" <?=$notification_email_water?>>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("moisture")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_email_moisture"
+             value="1" <?=$notification_email_moisture?>>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("season_changes")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_email_season"
+             value="1" <?=$notification_email_season?>>
+    </td>
+  </tr>
+</table>
+<p id="twitter"><?=msg("twitter")?></p>
+<table class="form">
+  <tr>
+    <td class="form_description">
+      <?=msg("user_name")?>
+    </td>
+    <td class="form_input">
+      <input type="text" name="notification_twitter_user"
+             value="<?=$cfg['notification']['twitter']['user']?>">
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("password")?>
+    </td>
+    <td class="form_input">
+      <input type="password" name="notification_twitter_password"
+             value="<?=$cfg['notification']['twitter']['password']?>">
+    </td>
+  <tr>
+    <td class="form_description">
+      <?=msg("what_to_notify")?>?
+    </td>
+    <td class="form_input">
+    </td>
+  <tr>
+    <td class="form_description">
+      <?=msg("temperature")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_twitter_temperature"
+             value="1" <?=$notification_twitter_temperature?>>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("humidity")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_twitter_humidity"
+             value="1" <?=$notification_twitter_humidity?>>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("water_level")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_twitter_water"
+             value="1" <?=$notification_twitter_water?>>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("moisture")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_twitter_moisture"
+             value="1" <?=$notification_twitter_moisture?>>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("season_changes")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_twitter_season"
+             value="1" <?=$notification_twitter_season?>>
+    </td>
+  </tr>
+</table>
+<p id="nrdp"><?=msg("nagios_nrdp")?></p>
+<table class="form">
+  <tr>
+    <td class="form_description">
+      <?=msg("url")?>
+    </td>
+    <td class="form_input">
+      <input type="text" name="notification_nrdp_url" size="35"
+             value="<?=$cfg['notification']['nrdp']['url']?>">
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("token")?>
+    </td>
+    <td class="form_input">
+      <input type="text" name="notification_nrdp_token" size="35"
+             value="<?=$cfg['notification']['nrdp']['token']?>">
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("freshness")?>
+    </td>
+    <td class="form_input">
+      <input name="notification_nrdp_freshness"
+             type="number" min="1" max="3000"
+             value="<?=$cfg['notification']['nrdp']['freshness']?>">
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("send_check_immediately")?>
+    </td>
+    <td class="form_input">
+      <input type="checkbox" name="notification_nrdp_obsess"
+             value="1" <?=$notification_nrdp_obsess?>>
+    </td>
+  </tr>
+</table>
+<br/>
+<input type="hidden" name="action" value="proced">
+<button type="submit" value="submit"><?=msg("apply")?></button>
+<button type="reset" value="reset"><?=msg("reset")?></button>
+</form>

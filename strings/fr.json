@@ -1,0 +1,17 @@
+{
+  "information": {
+    "language": "Français",
+    "version": {
+      "number": "2016-05-03 22-45-53",
+      "translator": "Full Name",
+      "contact": "user@example.com"
+    }
+  },
+  "elements": {
+    "warning": "Attention",
+    "critical": "Critique",
+    "unknown": "Inconnu",
+    "old_data": "Anciennes données",
+    "language": "Langue"
+  }
+}

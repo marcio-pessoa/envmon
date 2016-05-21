@@ -1,0 +1,188 @@
+<form action="?content=setup&sub=timers" method="post">
+<h3><?=msg("timers")?></h3>
+<p id="mgmt_interface"><?=msg("mgmt_interface")?></p>
+<table class="form">
+  <tr>
+    <td></td>
+    <td>
+      <?=msg("update")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("view")?>
+    </td>
+    <td class="form_input">
+      <input name="timer_display_timeout"
+             type="number" min="1" max="600"
+             value="<?=$cfg['timer']['display']['timeout']?>" />
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+</table>
+<p id="envirmonment"><?=msg("environment")?></p>
+<table class="form">
+  <tr>
+    <td></td>
+    <td>
+      <?=msg("update")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("temperature")?>
+    </td>
+    <td class="form_input">
+      <input name="timer_environment_temperature"
+             type="number" min="10" max="240"
+             value="<?=$cfg['timer']['environment']['temperature']?>" />
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description"><?=msg("air_humidity")?></td>
+    <td class="form_input">
+      <input name="timer_environment_humidity"
+             type="number" min="10" max="240"
+             value="<?=$cfg['timer']['environment']['humidity']?>" />
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description"><?=msg("moisture")?></td>
+    <td class="form_input">
+      <input name="timer_environment_moisture" 
+             type="number" min="1" max="120"
+             value="<?=$cfg['timer']['environment']['moisture']?>">
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description"><?=msg("water")?></td>
+    <td class="form_input">
+      <input name="timer_environment_water" 
+             type="number" min="1" max="240" 
+             value="<?=$cfg['timer']['environment']['water']?>">
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+</table>
+<p id="system"><?=msg("system")?></p>
+<table class="form">
+  <tr>
+    <td></td>
+    <td>
+      <?=msg("update")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("temperature")?>
+    </td>
+    <td class="form_input">
+      <input name="timer_system_temperature"
+             type="number" min="1" max="300"
+             value="<?=$cfg['timer']['system']['temperature']?>" />
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description"><?=msg("fan")?></td>
+    <td class="form_input">
+      <input name="timer_system_fan"
+             type="number" min="1" max="300"
+             value="<?=$cfg['timer']['system']['fan']?>" />
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description"><?=msg("cpu")?></td>
+    <td class="form_input">
+      <input name="timer_system_cpu" 
+             type="number" min="10" max="600"
+             value="<?=$cfg['timer']['system']['cpu']?>">
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description"><?=msg("memory")?></td>
+    <td class="form_input">
+      <input name="timer_system_memory" 
+             type="number" min="10" max="300" 
+             value="<?=$cfg['timer']['system']['memory']?>">
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description"><?=msg("swap")?></td>
+    <td class="form_input">
+      <input name="timer_system_swap" 
+             type="number" min="10" max="300" 
+             value="<?=$cfg['timer']['system']['swap']?>">
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description"><?=msg("internal_storage")?></td>
+    <td class="form_input">
+      <input name="timer_system_internalstorage" 
+             type="number" min="10" max="300" 
+             value="<?=$cfg['timer']['system']['internalstorage']?>">
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description"><?=msg("external_storage")?></td>
+    <td class="form_input">
+      <input name="timer_system_externalstorage" 
+             type="number" min="10" max="300" 
+             value="<?=$cfg['timer']['system']['externalstorage']?>">
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+</table>
+<p id="moisture"><?=msg("squirt")?></p>
+<table class="form">
+  <tr>
+    <td></td>
+    <td>
+      <?=msg("period")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description"><?=msg("duration")?></td>
+    <td class="form_input">
+      <input name="timer_squirt_duration"
+             type="number" min="5" max="20"
+             value="<?=$cfg['timer']['squirt']['duration']?>" />
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("minimum")?>
+    </td>
+    <td class="form_input">
+      <input name="timer_squirt_minimum" 
+             type="number" min="10" max="7200"
+             value="<?=$cfg['timer']['squirt']['minimum']?>">
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("maximum")?>
+    </td>
+    <td class="form_input">
+      <input name="timer_squirt_maximum" 
+             type="number" min="10" max="14400" 
+             value="<?=$cfg['timer']['squirt']['maximum']?>">
+             <?=msg("seconds")?>
+    </td>
+  </tr>
+</table>
+<br/>
+<input type="hidden" name="action" value="proced">
+<button type="submit" value="submit"><?=msg("apply")?></button>
+<button type="reset" value="reset"><?=msg("reset")?></button>
+</form>

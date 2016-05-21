@@ -1,0 +1,32 @@
+{
+  "theme": {
+    "Gus": {
+      "file": "gus.css",
+      "enable": 1
+    },
+    "Light": {
+      "file": "white.css",
+      "enable": 1
+    },
+    "Nano": {
+      "file": "nano.css",
+      "enable": 1
+    },
+    "Napolitano": {
+      "file": "napolitano.css",
+      "enable": 1
+    },
+    "Noir": {
+      "file": "black.css",
+      "enable": 1
+    },
+    "Pistacho": {
+      "file": "green.css",
+      "enable": 1
+    },
+    "Tata": {
+      "file": "tata.css",
+      "enable": 1
+    }
+  }
+}

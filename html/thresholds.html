@@ -1,0 +1,231 @@
+<form action="?content=setup&sub=thresholds" method="post">
+<h3><?=msg("thresholds")?></h3>
+<p id="temperature"><?=msg("temperature")?></p>
+<table class="form">
+  <tr>
+    <th></th>
+    <th colspan="2">
+      <?=msg("minimum")?>
+    </th>
+    <th>&nbsp;</th>
+    <th colspan="2">
+      <?=msg("maximum")?>
+    </th>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <?=msg("critical")?>
+    </td>
+    <td>
+      <?=msg("warning")?>
+    </td>
+    <td>&nbsp;</td>
+    <td>
+      <?=msg("warning")?>
+    </td>
+    <td>
+      <?=msg("critical")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("environment")?>
+    </td>
+    <td class="form_input">
+      <input name="threshold_temp_env_min_critical"
+             type="number" min="0" max="50" 
+             value="<?=$cfg['threshold']['temp']['env']['min']['critical']?>">
+             &#8451
+    </td>
+    <td class="form_input">
+      <input name="threshold_temp_env_min_warning"
+             type="number" min="0" max="50" 
+             value="<?=$cfg['threshold']['temp']['env']['min']['warning']?>" />
+             &#8451
+    </td>
+    <td>&nbsp;</td>
+    <td class="form_input">
+      <input name="threshold_temp_env_max_warning"
+             type="number" min="0" max="50" 
+             value="<?=$cfg['threshold']['temp']['env']['max']['warning']?>" />
+             &#8451
+    </td>
+    <td class="form_input">
+      <input name="threshold_temp_env_max_critical"
+             type="number" min="0" max="50" 
+             value="<?=$cfg['threshold']['temp']['env']['max']['critical']?>">
+             &#8451
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("system")?>
+    </td>
+    <td class="form_input">
+      <input name="threshold_temp_sys_min_critical"
+             type="number" min="0" max="85" 
+             value="<?=$cfg['threshold']['temp']['sys']['min']['critical']?>">
+             &#8451
+    </td>
+    <td class="form_input">
+      <input name="threshold_temp_sys_min_warning" 
+             type="number" min="0" max="85" 
+             value="<?=$cfg['threshold']['temp']['sys']['min']['warning']?>">
+             &#8451
+    </td>
+    <td>&nbsp;</td>
+    <td class="form_input">
+      <input name="threshold_temp_sys_max_warning" 
+             type="number" min="0" max="85" 
+             value="<?=$cfg['threshold']['temp']['sys']['max']['warning']?>">
+             &#8451
+    </td>
+    <td class="form_input">
+      <input name="threshold_temp_sys_max_critical"
+             type="number" min="0" max="85" 
+             value="<?=$cfg['threshold']['temp']['sys']['max']['critical']?>">
+             &#8451
+    </td>
+  </tr>
+</table>
+<p id="humidity"><?=msg("humidity")?></p>
+<table class="comfort_form">
+  <tr>
+    <td></td>
+    <td>
+      <?=msg("warning")?>
+    </td>
+    <td>
+      <?=msg("critical")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("air_humidity")?>
+    </td>
+    <td class="form_input">
+      <input name="threshold_humidity_warning"
+             type="number" min="0" max="100" 
+             value="<?=$cfg['threshold']['humidity']['warning']?>" /> %
+    </td>
+    <td class="form_input">
+      <input name="threshold_humidity_critical"
+             type="number" min="0" max="100" 
+             value="<?=$cfg['threshold']['humidity']['critical']?>"> %
+    </td>
+  </tr>
+</table>
+<p id="water"><?=msg("water")?></p>
+<table class="comfort_form">
+  <tr>
+    <td></td>
+    <td>
+      <?=msg("warning")?>
+    </td>
+    <td>
+      <?=msg("critical")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description"><?=msg("water_level")?></td>
+    <td class="form_input">
+      <input name="threshold_water_warning"
+             type="number" min="0" max="100" 
+             value="<?=$cfg['threshold']['water']['warning']?>" />
+             %
+    </td>
+    <td class="form_input">
+      <input name="threshold_water_critical"
+             type="number" min="0" max="100" 
+             value="<?=$cfg['threshold']['water']['critical']?>">
+             %
+    </td>
+  </tr>
+</table>
+<p id="moisture"><?=msg("moisture")?></p>
+<table class="comfort_form">
+  <tr>
+    <td></td>
+    <td>
+      <?=msg("warning")?>
+    </td>
+    <td>
+      <?=msg("critical")?>
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("spring")?>
+    </td>
+    <td class="form_input">
+      <input name="threshold_moisture_spring_warning"
+             type="number" min="0" max="100" 
+             value="<?=$cfg['threshold']['moisture']['spring']['warning']?>" />
+             %
+    </td>
+    <td class="form_input">
+      <input name="threshold_moisture_spring_critical"
+             type="number" min="0" max="100" 
+             value="<?=$cfg['threshold']['moisture']['spring']['critical']?>">
+             %
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("summer")?>
+    </td>
+    <td class="form_input">
+      <input name="threshold_moisture_summer_warning" 
+             type="number" min="0" max="100" 
+             value="<?=$cfg['threshold']['moisture']['summer']['warning']?>">
+             %
+    </td>
+    <td class="form_input">
+      <input name="threshold_moisture_summer_critical"
+             type="number" min="0" max="100" 
+             value="<?=$cfg['threshold']['moisture']['summer']['critical']?>">
+             %
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("fall")?>
+    </td>
+    <td class="form_input">
+      <input name="threshold_moisture_fall_warning" 
+             type="number" min="0" max="100" 
+             value="<?=$cfg['threshold']['moisture']['fall']['warning']?>">
+             %
+    </td>
+    <td class="form_input">
+      <input name="threshold_moisture_fall_critical"
+             type="number" min="0" max="100" 
+             value="<?=$cfg['threshold']['moisture']['fall']['critical']?>">
+             %
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("winter")?>
+    </td>
+    <td class="form_input">
+      <input name="threshold_moisture_winter_warning" 
+             type="number" min="0" max="100" 
+             value="<?=$cfg['threshold']['moisture']['winter']['warning']?>">
+             %
+    </td>
+    <td class="form_input">
+      <input name="threshold_moisture_winter_critical" 
+             type="number" min="0" max="100" 
+             value="<?=$cfg['threshold']['moisture']['winter']['critical']?>">
+             %
+    </td>
+  </tr>
+  </tr>
+</table>
+<br/>
+<input type="hidden" name="action" value="proced">
+<button type="submit" value="submit"><?=msg("apply")?></button>
+<button type="reset" value="reset"><?=msg("reset")?></button>
+</form>
