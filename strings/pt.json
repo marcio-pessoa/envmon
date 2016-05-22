@@ -147,6 +147,10 @@
     "date": "Data",
     "system_date": "Data do sistema",
     "read_all_sensors": "Ler todos os sensores",
-    "now": "Agora"
+    "now": "Agora",
+    "logs_sensor": "Sensores",
+    "logs_system": "Sistem",
+    "logs_envmon_help": "",
+    "logs_system_help": ""
   }
 }

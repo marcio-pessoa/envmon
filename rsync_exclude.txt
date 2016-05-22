@@ -1,0 +1,14 @@
+*.py
+cfg/config.json
+DONE
+TODO
+rsync_exclude.txt
+setup.sh
+envmon.geany
+enm2/
+Pictures/
+Documents/
+Schematics/
+task.log
+log/*
+var/*

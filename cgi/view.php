@@ -6,9 +6,9 @@
  * Contributors: none
  */
 
-if (file_exists($current["status"])) {
-    $file = fopen($current["status"], "r");
-    $json = fread($file, filesize($current["status"]));
+if (file_exists($files["status"])) {
+    $file = fopen($files["status"], "r");
+    $json = fread($file, filesize($files["status"]));
     fclose($file);
     $status = json_decode($json, true);
 }

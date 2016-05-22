@@ -13,6 +13,9 @@
 #   setup.sh update 192.168.1.11
 # 
 # Change log
+# 2016-05-22
+#         Using rsync.
+#
 # 2016-05-11
 #         Added update option.
 #
@@ -44,57 +47,23 @@ check_return() {
 install_dependencies() {
   message "Installing software dependencies"
   ssh "root@""$HOST" "opkg update && opkg install \
-                    php5 php5-cgi php5-cli php5-mod-json \
-                    zoneinfo-simple bc \
-                    python python-json pyserial"
+                      php5 php5-cgi php5-cli php5-mod-json \
+                      rsync \
+                      zoneinfo-simple bc \
+                      python python-json pyserial"
   check_return $?
 }
 
-create_directories() {
-  message "Creating directories"
-  ssh "root@""$HOST" "mkdir -p /opt/envmon/bin"
-  ssh "root@""$HOST" "mkdir -p /opt/envmon/cfg"
-  ssh "root@""$HOST" "mkdir -p /opt/envmon/cgi"
-  ssh "root@""$HOST" "mkdir -p /opt/envmon/html"
-  ssh "root@""$HOST" "mkdir -p /opt/envmon/nrdp"
-  ssh "root@""$HOST" "mkdir -p /opt/envmon/strings"
-  ssh "root@""$HOST" "mkdir -p /opt/envmon/log"
-  ssh "root@""$HOST" "mkdir -p /opt/envmon/var"
-  ssh "root@""$HOST" "mkdir -p /opt/envmon/www"
+update() {
+  message "Copying files"
+  rsync -v --exclude-from rsync_exclude.txt --delete --archive ./* \
+        "root@""$HOST":/opt/envmon
   check_return $?
 }
 
-install_files() {
-  message "Installing files"
-  scp -q -r cgi CHANGELOG html nrdp README strings www \
-  "root@""$HOST":/opt/envmon
-  check_return $?
-}
-
-install_full_config() {
-  message "Installing full configuration files"
-  scp -q -r cfg "root@""$HOST":/opt/envmon
-  check_return $?
-}
-
-install_some_config() {
-  message "Installing some configuration files"
-  scp -q -r cfg/config.php \
-            cfg/crontab \
-            cfg/default.json \
-            cfg/languages.json \
-            cfg/seasons.json \
-            "root@""$HOST":/opt/envmon/cfg
-  check_return $?
-}
-
-install_binaries() {
-  message "Installing binaries files"
-  scp -q -r bin/check_myip.sh \
-            bin/check_system.sh \
-            bin/envmon.pyc \
-            bin/relieve.sh \
-            "root@""$HOST":/opt/envmon/cfg
+install() {
+  message "Copying configuration file"
+  scp -q -r cfg/config.json "root@""$HOST":/opt/envmon/cfg
   check_return $?
 }
 
@@ -128,17 +97,13 @@ configure_webserver() {
 case "$ACTION" in
   'install')
     install_dependencies
-    create_directories
-    install_files
-    install_full_config
-    install_binaries
+    update
+    install
     configure_cron
     configure_webserver
     ;;
   'update')
-    install_files
-    install_some_config
-    install_binaries
+    update
     ;;
   *)
     echo "Usage:

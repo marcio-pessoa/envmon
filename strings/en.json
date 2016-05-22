@@ -159,6 +159,11 @@
     "date": "Date",
     "system_date": "System date",
     "read_all_sensors": "Read all sensors",
-    "now": "Now"
+    "now": "Now",
+    "envmon": "envmon",
+    "logs_sensor": "Sensors",
+    "logs_system": "System",
+    "logs_envmon_help": "",
+    "logs_system_help": ""
   }
 }

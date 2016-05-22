@@ -20,9 +20,8 @@ $config["languages"] = $directory["work"] . "cfg/languages.json";
 $config["themes"] = $directory["work"] . "cfg/themes.json";
 
 // Log files
-$log["environment"] = $directory["work"] . "log/environment.log";
-$log["controller"] = $directory["work"] . "log/controller.log";
-$log["system"] = $directory["work"] . "log/system.log";
+$files["log"] = $directory["work"] . "log/event.log";
+$files["status"] = $directory["work"] . "var/status.json";
 
 // Defaults
 $default["title"] = true;
@@ -31,11 +30,10 @@ $default["debug"] = false;
 $default["content"] = "view";
 $default["speaker"] = false;
 $default["language"] = "English";
+$default["timezone"] = "Sao_Paulo";
 
 // Currents
-$current["status"] = $directory["work"] . 'var/status.json';
 $current["content"] = $default["content"];
-$current["timezone"] = 'Sao_Paulo';
 $current["language"] = $default["language"];
 
 // Menu
@@ -49,6 +47,8 @@ $menu_items = array("view",
                           "cloud",
                           "configuration"),
                     "logs",
+                    array("logs_sensor",
+                          "logs_system"),
                     "help",
                     "about");
 ?>

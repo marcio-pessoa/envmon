@@ -48,6 +48,8 @@ $language_defined = language_load($current["language"]);
 $current["theme_file"] = theme_set($cfg['system']['theme']);
 
 // Set time zone
+$current["timezone"] = isset($cfg['system']['timezone']) ? 
+                       $cfg['system']['timezone'] : $default["timezone"];
 date_default_timezone_set($current["timezone"]);
 
 // Load content
