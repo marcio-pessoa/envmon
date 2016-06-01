@@ -149,8 +149,10 @@
     "read_all_sensors": "Ler todos os sensores",
     "now": "Agora",
     "logs_sensor": "Sensores",
-    "logs_system": "Sistem",
-    "logs_envmon_help": "",
-    "logs_system_help": ""
+    "logs_system": "Sistema",
+    "logs_sensor_help": "",
+    "logs_system_help": "",
+    "system_uptime": "Tempo de atividade",
+    "uptime": "Atividade"
   }
 }

@@ -32,13 +32,14 @@ a:hover, a:active {
   color: #800080;
 }
 
-[title]:after{
+[title]:after {
 	color:#FFFFFF;
 	background:#333333;
 }
 
 #clock,
 #date,
+#uptime,
 #status0,
 #status1,
 #status2,
@@ -49,6 +50,7 @@ a:hover, a:active {
 
 #clock,
 #date,
+#uptime,
 #status0 {
   background-color: #68CF68;
 }
@@ -102,28 +104,6 @@ a.Resource_title:hover {
   background-color: #888888;
   color: #FFFFFF;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #cssmenu {
   background: #500050;

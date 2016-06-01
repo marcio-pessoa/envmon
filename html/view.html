@@ -71,6 +71,12 @@
     </div>
     <div id="clock"></div>
   </div>
+  <div id="Item" title="<?=msg("system_uptime")?>">
+    <div id="Item_description">
+      <?=msg("uptime")?>
+    </div>
+    <div id="uptime"></div>
+  </div>
   <div id="Item" 
        title="<?=msg($status["controller"]["temperature"]["status"])?> -
               <?=$status["controller"]["temperature"]["moment"]?>">
@@ -144,5 +150,5 @@
 </div>
 <script language="JavaScript" type="text/javascript">
 setTimeout("location.reload(true);",
-           <?=$cfg['timer']['display']['timeout']*1000?>);
+           <?=$cfg['timer']['display']['timeout'] * 1000?>);
 </script>

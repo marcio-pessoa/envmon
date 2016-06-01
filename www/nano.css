@@ -32,13 +32,14 @@ a:hover, a:active {
   color: #888888;
 }
 
-[title]:after{
+[title]:after {
 	color:#FFFFFF;
 	background:#333333;
 }
 
 #clock,
 #date,
+#uptime,
 #status0,
 #status1,
 #status2,
@@ -49,6 +50,7 @@ a:hover, a:active {
 
 #clock,
 #date,
+#uptime,
 #status0 {
   background-color: #68CF68;
 }
@@ -101,4 +103,53 @@ a.Resource_title:hover {
 #debug {
   background-color: #888888;
   color: #FFFFFF;
+}
+
+#cssmenu {
+  background: #2F4C50;
+}
+
+#cssmenu a {
+  background: #2F4C50;
+  color: #ffffff;
+}
+
+#cssmenu > ul > li > a {
+  color: #ffffff;
+}
+
+#cssmenu > ul > li:hover:after {
+  border-bottom: #669399;
+}
+
+#cssmenu > ul > li.active > a,
+#cssmenu > ul > li:hover > a {
+  color: #ffffff;
+  box-shadow: #000000;
+  -moz-box-shadow: #000000;
+  -webkit-box-shadow: #000000;
+  background: #669399;
+}
+
+#cssmenu .has-sub ul li a {
+  background: #2F4C50;
+  border-bottom: #31b7f1;
+  color: #ffffff;
+}
+
+#cssmenu .has-sub ul li:hover a {
+  background: #669399;
+}
+
+#cssmenu ul ul li:hover > a {
+  color: #ffffff;
+}
+
+#cssmenu .has-sub .has-sub ul li a {
+  background: #0c7fb0;
+  border-bottom: #31b7f1;
+}
+
+#cssmenu .has-sub .has-sub ul li a:hover {
+  background: #0a6d98;
 }

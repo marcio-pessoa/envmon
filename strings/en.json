@@ -163,7 +163,9 @@
     "envmon": "envmon",
     "logs_sensor": "Sensors",
     "logs_system": "System",
-    "logs_envmon_help": "",
-    "logs_system_help": ""
+    "logs_sensor_help": "",
+    "logs_system_help": "",
+    "system_uptime": "System uptime",
+    "uptime": "Uptime"
   }
 }

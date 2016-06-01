@@ -99,7 +99,21 @@ README, envmon Mark II - Environment Monitor, Readme file
 ╚═════╩═══════════════════════════════════════════════════════════════════════╝
 
 3.3.2. Green connector
-***** Preencha os 3 pinos abaixo!!! *****
+
+ *       ╭───┬─┬───╮
+ *     L1│ o │ │ o │R1
+ *     L2│ o │ │ o │R2
+ *     L3│ o │ │ o │R3
+ *       ╰───┴─┴───╯
+ *            
+L1 +5Vcc
+L2 GND
+L3 Soil moisture sensor
+
+R1 Relay NO
+R2 Relay common
+R3 Relay NC
+
 ╔═════╦═══════════════════════════════════════════════════════════════════════╗
 ║ pin ║                              description                              ║
 ╠═════╬═══════════════════════════════════════════════════════════════════════╣
@@ -175,43 +189,6 @@ Add this line to /etc/fstab via web interface
 Add crontab jobs
 
 -------------------------------------------------------------------------------
-
-
-
-
-Model
-
-function get_users() {
-    return array(
-        'Foo',
-        'Bar',
-        'Baz',
-    );
-}
-
-
-View
-
-function users_template($users) {
-    $html = '<ul>';
-
-    foreach ($users as $user) {
-        $html .= "<li>$user</li>";
-    }
-
-    $html .= '</ul>';
-
-    return $html;
-}
-
-
-Controller
-
-function list_users() {
-    $users = get_users();
-
-    echo users_template($users);
-}
 
 
 

@@ -5,8 +5,8 @@
  */
  
 body {
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #F8E3AE;
+  color: #AE8E3E;
 }
 
 a:link, a:visited {
@@ -18,18 +18,18 @@ a:hover, a:active {
 }
 
 #header {
-  background-color: #111111;
+  background-color: #BB9A48;
   color: #000000;
 }
 
 #Item {
-  background-color: #000000;
-  color: #AAAAAA;
+  background-color: #E3D3A9;
+  color: #FFFFFF;
 }
 
 #Item_description {
-  background-color: #000000;
-  color: #888888;
+  background-color: #E3D3A9;
+  color: #795F20;
 }
 
 [title]:after{
@@ -37,44 +37,43 @@ a:hover, a:active {
 	background:#333333;
 }
 
-#OK,
-#Warning,
-#Critical,
-#Unknown,
-#Pending {
-  color: #000000;
-}
-
-#OK {
+#clock,
+#date,
+#uptime,
+#status0 {
   background-color: #68CF68;
 }
 
-#Warning {
+#status1 {
   background-color: #E0E000;
 }
 
-#Critical {
+#status2 {
   background-color: #FF3333;
 }
 
-#Unknown {
+#status3 {
   background-color: #FF9C59;
 }
 
-#Pending {
+#status4 {
   background-color: #BBBBBB;
 }
 
 h1 {
-  color: #AAAAAA;
+  color: #FCEDC5;
 }
 
 h2 {
-  color: #CCCCCC;
+  color: #F0DEB1;
+}
+
+h3 {
+  color: #A38437;
 }
 
 p.Resource_title {
-  color: #CCCCCC;
+  color: #5282CC;
 }
 
 a.Resource_title {
@@ -86,11 +85,60 @@ a.Resource_title:hover {
 }
 
 #footer {
-  background-color: #AAAAAA;
-  color: #000000;
+  background-color: #E3D3A9;
+  color: #444444;
 }
 
 #debug {
-  background-color: #888888;
+  background-color: #000000;
   color: #FFFFFF;
+}
+
+#cssmenu {
+  background: #E3D3A9;
+}
+
+#cssmenu a {
+  background: #E3D3A9;
+  color: #795F20;
+}
+
+#cssmenu > ul > li > a {
+  color: #795F20;
+}
+
+#cssmenu > ul > li:hover:after {
+  border-bottom: #6E8EB9;
+}
+
+#cssmenu > ul > li.active > a,
+#cssmenu > ul > li:hover > a {
+  color: #ffffff;
+  box-shadow: #000000;
+  -moz-box-shadow: #000000;
+  -webkit-box-shadow: #000000;
+  background: #D4C18F;
+}
+
+#cssmenu .has-sub ul li a {
+  background: #E3D3A9;
+  border-bottom: #31b7f1;
+  color: #795F20;
+}
+
+#cssmenu .has-sub ul li:hover a {
+  background: #E3D3A9;
+}
+
+#cssmenu ul ul li:hover > a {
+  color: #795F20;
+}
+
+#cssmenu .has-sub .has-sub ul li a {
+  background: #A3D3A9;
+  border-bottom: #31b7f1;
+}
+
+#cssmenu .has-sub .has-sub ul li a:hover {
+  background: #D4C18F;
 }
