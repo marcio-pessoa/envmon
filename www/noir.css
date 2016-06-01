@@ -1,0 +1,106 @@
+/* style.css, envmon Mark II - Environment Monitor, Web black style file
+ * 
+ * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Contributors: none
+ */
+ 
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+a:link, a:visited {
+  color: #FFFFFF;
+}
+
+a:hover, a:active {
+  color: #808080;
+}
+
+#header {
+  background-color: #111111;
+  color: #000000;
+}
+
+#Item {
+  background-color: #333333;
+  color: #AAAAAA;
+}
+
+#Item_description {
+  background-color: #333333;
+  color: #DDDDDD;
+}
+
+[title]:after {
+	color:#FFFFFF;
+	background:#444444;
+}
+
+#clock,
+#date,
+#uptime,
+#status0,
+#status1,
+#status2,
+#status3,
+#status4 {
+  color: #000000;
+}
+
+#clock,
+#date,
+#uptime,
+#status0 {
+  background-color: #68CF68;
+}
+
+#status1 {
+  background-color: #E0E000;
+}
+
+#status2 {
+  background-color: #FF3333;
+}
+
+#status3 {
+  background-color: #FF9C59;
+}
+
+#status4 {
+  background-color: #BBBBBB;
+}
+
+h1 {
+  color: #AAAAAA;
+}
+
+h2 {
+  color: #BBBBBB;
+}
+
+h3 {
+  color: #CCCCCC;
+}
+
+p.Resource_title {
+  color: #CCCCCC;
+}
+
+a.Resource_title {
+  color: #CCCCCC;
+}
+
+a.Resource_title:hover {
+  color: #FFFFFF;
+}
+
+#footer {
+  background-color: #AAAAAA;
+  color: #000000;
+}
+
+#debug {
+  background-color: #888888;
+  color: #FFFFFF;
+}
