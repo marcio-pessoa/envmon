@@ -6,5 +6,6 @@
  * Contributors: none
  */
 
+$content = nl2br(shell_exec("logread"));
 require($directory["html"] . "logs_system.html");
 ?>

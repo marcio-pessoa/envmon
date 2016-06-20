@@ -6,7 +6,7 @@
  * Contributors: none
  */
 
-/* 
+/* stopwatch
  * 
  * Description
  *   .

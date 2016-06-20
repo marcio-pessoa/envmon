@@ -6,14 +6,18 @@
  * Contributors: none
  */
 
-if (file_exists($files["status"])) {
-    $file = fopen($files["status"], "r");
-    $json = fread($file, filesize($files["status"]));
-    fclose($file);
-    $status = json_decode($json, true);
-}
-else {
-    print("ERROR: Status file not found.");
-}
+$status = json_decode(file_get_contents($url["ws_all"]), true);
+exec($files["envmon_manager"] . " status",
+     $status["running"],
+     $status["running_id"]);
+$status["running"] = $status["running_id"] == 0 ? "running" : "stopped";
+$cpu = json_decode(file_get_contents($url["ws_cpu"]), true);
+$memory = json_decode(file_get_contents($url["ws_memory"]), true);
+$timezone = str_replace("_", " ", $cfg['system']['timezone']);
+$timestamp = date('U');
+$uptime = exec("cat /proc/uptime | cut -d ' ' -f 1");
+//TODO(Márcio): Converter para UTC
+$seconds_to_next_season = strtotime(date($status["season"]["end"])) - 
+                          $timestamp;
 require($directory["html"] . "view.html");
 ?>

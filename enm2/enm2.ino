@@ -28,10 +28,10 @@
 Project envmon("envmon",  // Platform
                "II",  // Mark
                "Environment Monitor",  // Name
-               "0.06b",  // Version
-               "2016-05-10",  // Version date
+               "0.07b",  // Version
+               "2016-06-19",  // Version date
                "5",  // Serial number
-               "Copyright (c) 2013-2015 Marcio Pessoa",  // Owner
+               "Copyright (c) 2013-2016 Marcio Pessoa",  // Owner
                "undefined. There is NO WARRANTY.",  // License
                "http://pessoa.eti.br/",  // Website
                "Marcio Pessoa <marcio.pessoa@sciemon.com>");  // Contact

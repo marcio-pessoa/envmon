@@ -6,38 +6,46 @@
         "author": "Marcio Pessoa <marcio.pessoa@sciemon.com>",
         "contributors": "none"
     },
+    "file": {
+      "check": "/opt/envmon/bin/check_system.sh",
+      "seasons": "/opt/envmon/cfg/seasons.json",
+      "notifications": "/opt/envmon/cfg/notifications.json"
+    },
     "notification": {
         "device": {
             "speaker": 0,
             "led": 1
         },
         "email": {
-            "user": "envmon@sciemon.com",
-            "password": "envmon",
+            "user": "",
+            "password": "",
             "server": "smtp.gmail.com",
-            "port": "587",
+            "port": 587,
             "tls": 1,
-            "temperature": 0,
+            "temp": 0,
             "humidity": 1,
             "water": 1,
             "moisture": 1,
             "season": 1,
-            "to": "marcio.pessoa@gmail.com",
+            "to": "",
             "timeout": 10
         },
         "twitter": {
-            "user": "envmon_system",
-            "password": "opq1opa1",
-            "temperature": 0,
+            "temp": 0,
             "humidity": 0,
             "water": 0,
             "moisture": 0,
-            "season": 1
+            "season": 1,
+            "token": "",
+            "token_secret": "",
+            "consumer_secret": "",
+            "consumer_key": ""
         },
         "nrdp": {
-            "url": "http:\/\/sciemon.com\/nrdp\/",
-            "token": "Jenkiactat(twobfossAcyingIlsocPatHyratCoorphefeshepdecNieshvekvu",
-            "freshness": "300"
+            "url": "",
+            "token": "",
+            "freshness": 300,
+            "obsess": 1
         }
     },
     "threshold": {
@@ -110,31 +118,29 @@
     },
     "timer": {
         "environment": {
-            "temperature": 60,
             "humidity": 60,
             "moisture": 2,
-            "water": 5,
-            "external_storage": "300"
+            "water": 15,
+            "temperature": 40
         },
         "system": {
-            "temperature": "2",
-            "fan": "3",
-            "cpu": "300",
-            "memory": "300",
-            "swap": "300",
-            "internal_storage": "300",
-            "internalstorage": "300",
-            "externalstorage": "300"
+            "fan": 3,
+            "cpu": 60,
+            "memory": 60,
+            "swap": 60,
+            "temperature": 2,
+            "intstorage": 60,
+            "extstorage": 60
         },
         "squirt": {
-            "duration": "7",
-            "minimum": "600",
-            "maximum": "7200"
+            "duration": 7,
+            "minimum": 600,
+            "maximum": 7200
         }
     },
     "system": {
         "hostname": "envmon",
-        "hemisphere": "Southern",
+        "hemisphere": "southern",
         "timezone": "Sao_Paulo",
         "language": "English",
         "theme": "Noir",
@@ -143,6 +149,6 @@
     },
     "authentication": {
         "username": "admin",
-        "password": "$1$zhB4ECel$K.w1lzo2DD3l\/GO5d89I7."
+        "password": "$1$jO17xyds$XWBs4xnBFgLB89hUOypCe."
     }
 }

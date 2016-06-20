@@ -1,13 +1,2 @@
-# Get system performance information
-*/5 * * * *	/opt/envmon/bin/check_system.sh >> /opt/envmon/log/system.log
-
-# Get season changes
-0 */1 * * *	/opt/envmon/bin/check_season.sh >> /opt/envmon/log/system.log
-
-# Send data to remote Nagios system via NRDP
-*/5 * * * *	/usr/bin/php-cli /opt/envmon/cgi/nrdp_sender.php
-
-# Relieve old logs
-1 0 * * * /opt/envmon/bin/relieve.sh /mnt /opt/envmon/log/system.log /mnt/envmon/log >> /opt/envmon/log/relieve.log 2>&1
-2 0 * * * /opt/envmon/bin/relieve.sh /mnt /opt/envmon/log/environment.log /mnt/envmon/log >> /opt/envmon/log/relieve.log 2>&1
-3 0 * * * /opt/envmon/bin/relieve.sh /mnt /opt/envmon/log/controller.log /mnt/envmon/log >> /opt/envmon/log/relieve.log 2>&1
+# envmon watchdog
+*/1 * * * * /opt/envmon/bin/envmon start

@@ -28,7 +28,7 @@
       <?=msg("user_name")?>
     </td>
     <td class="form_input">
-      <input type="text" name="notification_email_user"
+      <input type="text" name="notification_email_user" size="35"
              value="<?=$cfg['notification']['email']['user']?>">
     </td>
   </tr>
@@ -37,7 +37,7 @@
       <?=msg("password")?>
     </td>
     <td class="form_input">
-      <input type="password" name="notification_email_password"
+      <input type="password" name="notification_email_password" size="35"
              value="<?=$cfg['notification']['email']['password']?>">
     </td>
   </tr>
@@ -46,7 +46,7 @@
       <?=msg("server")?>
     </td>
     <td class="form_input">
-      <input type="text" name="notification_email_server"
+      <input type="text" name="notification_email_server" size="35"
              value="<?=$cfg['notification']['email']['server']?>">
     </td>
   </tr>
@@ -88,7 +88,7 @@
       <?=msg("to")?>
     </td>
     <td class="form_input">
-      <input type="text" name="notification_email_to"
+      <input type="text" name="notification_email_to" size="35"
              value="<?=$cfg['notification']['email']['to']?>">
     </td>
   </tr>
@@ -148,27 +148,47 @@
 <table class="form">
   <tr>
     <td class="form_description">
-      <?=msg("user_name")?>
+      <?=msg("consumer_key")?>
     </td>
     <td class="form_input">
-      <input type="text" name="notification_twitter_user"
-             value="<?=$cfg['notification']['twitter']['user']?>">
+      <input type="text" name="notification_twitter_consumer_key" size="50"
+             value="<?=$cfg['notification']['twitter']['consumer_key']?>">
     </td>
   </tr>
   <tr>
     <td class="form_description">
-      <?=msg("password")?>
+      <?=msg("consumer_secret")?>
     </td>
     <td class="form_input">
-      <input type="password" name="notification_twitter_password"
-             value="<?=$cfg['notification']['twitter']['password']?>">
+      <input type="text" name="notification_twitter_consumer_secret" size="50"
+             value="<?=$cfg['notification']['twitter']['consumer_secret']?>">
     </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("access_token")?>
+    </td>
+    <td class="form_input">
+      <input type="text" name="notification_twitter_token" size="50"
+             value="<?=$cfg['notification']['twitter']['token']?>">
+    </td>
+  </tr>
+  <tr>
+    <td class="form_description">
+      <?=msg("access_token_secret")?>
+    </td>
+    <td class="form_input">
+      <input type="text" name="notification_twitter_token_secret" size="50"
+             value="<?=$cfg['notification']['twitter']['token_secret']?>">
+    </td>
+  </tr>
   <tr>
     <td class="form_description">
       <?=msg("what_to_notify")?>?
     </td>
     <td class="form_input">
     </td>
+  </tr>
   <tr>
     <td class="form_description">
       <?=msg("temperature")?>
@@ -222,7 +242,7 @@
       <?=msg("url")?>
     </td>
     <td class="form_input">
-      <input type="text" name="notification_nrdp_url" size="35"
+      <input type="text" name="notification_nrdp_url" size="50"
              value="<?=$cfg['notification']['nrdp']['url']?>">
     </td>
   </tr>
@@ -231,7 +251,7 @@
       <?=msg("token")?>
     </td>
     <td class="form_input">
-      <input type="text" name="notification_nrdp_token" size="35"
+      <input type="text" name="notification_nrdp_token" size="50"
              value="<?=$cfg['notification']['nrdp']['token']?>">
     </td>
   </tr>

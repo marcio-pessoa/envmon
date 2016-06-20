@@ -37,7 +37,7 @@ if ($action == "proced") {
         crypt(m_post("authentication_password1", "string"));
     }
     // Save JSON file
-    json_write($config["running"], $cfg);
+    json_write($files["running"], $cfg);
     // Reload page on language change
     if ($reload) {
         print("<META HTTP-EQUIV=\"refresh\" CONTENT=\"0\">");

@@ -37,9 +37,6 @@ a:hover, a:active {
 	background:#333333;
 }
 
-#clock,
-#date,
-#uptime,
 #status0 {
   background-color: #68CF68;
 }

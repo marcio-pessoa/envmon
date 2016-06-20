@@ -1,5 +1,6 @@
 <form action="?content=setup&sub=timers" method="post">
 <h3><?=msg("timers")?></h3>
+<!--
 <p id="mgmt_interface"><?=msg("mgmt_interface")?></p>
 <table class="form">
   <tr>
@@ -20,6 +21,7 @@
     </td>
   </tr>
 </table>
+-->
 <p id="envirmonment"><?=msg("environment")?></p>
 <table class="form">
   <tr>
@@ -123,20 +125,20 @@
     </td>
   </tr>
   <tr>
-    <td class="form_description"><?=msg("internal_storage")?></td>
+    <td class="form_description"><?=msg("intstorage")?></td>
     <td class="form_input">
-      <input name="timer_system_internalstorage" 
+      <input name="timer_system_intstorage" 
              type="number" min="10" max="300" 
-             value="<?=$cfg['timer']['system']['internalstorage']?>">
+             value="<?=$cfg['timer']['system']['intstorage']?>">
              <?=msg("seconds")?>
     </td>
   </tr>
   <tr>
-    <td class="form_description"><?=msg("external_storage")?></td>
+    <td class="form_description"><?=msg("extstorage")?></td>
     <td class="form_input">
-      <input name="timer_system_externalstorage" 
+      <input name="timer_system_extstorage" 
              type="number" min="10" max="300" 
-             value="<?=$cfg['timer']['system']['externalstorage']?>">
+             value="<?=$cfg['timer']['system']['extstorage']?>">
              <?=msg("seconds")?>
     </td>
   </tr>

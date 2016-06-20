@@ -1,73 +1,66 @@
 {
   "outdoor1": {
     "temperature": {
-      "value": 23,
-      "moment": "2016-03-20 04:30",
-      "status": 0
+      "value": 0,
+      "moment": "0000-00-00 00:00",
+      "status": 3
     },
-    "humidity":  {
-      "value": 41,
-      "moment": "2016-03-20 04:30",
-      "status": 0
+    "humidity": {
+      "value": 0,
+      "moment": "0000-00-00 00:00",
+      "status": 3
     },
-    "moisture":  {
-      "value": 62,
-      "moment": "2016-03-20 04:30",
-      "status": 0
+    "moisture": {
+      "value": 0,
+      "moment": "0000-00-00 00:00",
+      "status": 3
     },
-    "water":  {
-      "value": 32,
-      "moment": "2016-03-20 04:30",
-      "status": 1
-    }
-  },
-  "controller": {
-    "temperature":  {
-      "value": 43,
-      "moment": "2016-03-20 04:30",
-      "status": 0
-    },
-    "fan":  {
-      "value": 74,
-      "moment": "2016-03-20 04:30",
-      "status": 0
-    },
-    "memory":  {
-      "value": 45,
-      "moment": "2016-03-20 04:30",
-      "status": 0
+    "water": {
+      "value": 0,
+      "moment": "0000-00-00 00:00",
+      "status": 3
     }
   },
   "system": {
-    "memory":  {
-      "value": 61,
-      "moment": "2016-03-20 04:30",
-      "status": 0
-    },
-    "cpu":  {
-      "value": 11,
-      "moment": "2016-03-20 04:30",
-      "status": 0
-    },
-    "swap":  {
+    "temperature": {
       "value": 0,
-      "moment": "2016-03-20 04:30",
-      "status": 0
+      "moment": "0000-00-00 00:00",
+      "status": 3
     },
-    "internal_storage":  {
-      "value": 45,
-      "moment": "2016-03-20 04:30",
-      "status": 0
+    "fan": {
+      "value": 0,
+      "moment": "0000-00-00 00:00",
+      "status": 3
     },
-    "external_storage":  {
-      "value": 11,
-      "moment": "2016-03-20 04:30",
-      "status": 0
+    "cpu": {
+      "value": 0,
+      "moment": "0000-00-00 00:00",
+      "status": 3
+    },
+    "memory": {
+      "value": 0,
+      "moment": "0000-00-00 00:00",
+      "status": 3
+    },
+    "swap": {
+      "value": 0,
+      "moment": "0000-00-00 00:00",
+      "status": 3
+    },
+    "intstorage": {
+      "value": 0,
+      "moment": "0000-00-00 00:00",
+      "status": 3
+    },
+    "extstorage": {
+      "value": 0,
+      "moment": "0000-00-00 00:00",
+      "status": 3
     }
   },
   "season": {
-    "current": "fall",
-    "begin": "2016-03-20 04:30",
-    "end": "2016-03-20 04:30"
+    "current": "unknown",
+    "begin": "0000-00-00 00:00",
+    "end": "0000-00-00 00:00"
   }
 }

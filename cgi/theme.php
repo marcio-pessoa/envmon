@@ -6,7 +6,7 @@
  * Contributors: none
  */
 
-/* 
+/* theme_set
  * 
  * Description
  *   .
@@ -28,7 +28,7 @@ function theme_set($theme) {
     return $file;
 }
 
-/* 
+/* theme_list
  * 
  * Description
  *   .
@@ -42,10 +42,10 @@ function theme_set($theme) {
  *   void
  */
 function theme_list($theme = "") {
-    global $config;
-    if (file_exists($config["themes"])) {
-        $file = fopen($config["themes"], "r");
-        $json = fread($file, filesize($config["themes"]));
+    global $files;
+    if (file_exists($files["themes"])) {
+        $file = fopen($files["themes"], "r");
+        $json = fread($file, filesize($files["themes"]));
         fclose($file);
         $themes = json_decode($json, true);
     }

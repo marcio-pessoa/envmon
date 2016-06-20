@@ -11,7 +11,7 @@
 # Example: 
 #   check_myip.sh
 # 
-# Change log
+# Change log:
 # 2015-06-30
 #         Experimental version.
 # 

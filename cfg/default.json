@@ -6,6 +6,11 @@
         "author": "Marcio Pessoa <marcio.pessoa@sciemon.com>",
         "contributors": "none"
     },
+    "file": {
+      "check": "/opt/envmon/bin/check_system.sh",
+      "seasons": "/opt/envmon/cfg/seasons.json",
+      "notifications": "/opt/envmon/cfg/notifications.json"
+    },
     "notification": {
         "device": {
             "speaker": 0,
@@ -14,10 +19,10 @@
         "email": {
             "user": "",
             "password": "",
-            "server": "",
-            "port": "587",
+            "server": "smtp.gmail.com",
+            "port": 587,
             "tls": 1,
-            "temperature": 0,
+            "temp": 0,
             "humidity": 1,
             "water": 1,
             "moisture": 1,
@@ -26,18 +31,20 @@
             "timeout": 10
         },
         "twitter": {
-            "user": "",
-            "password": "",
-            "temperature": 0,
+            "temp": 0,
             "humidity": 0,
             "water": 0,
             "moisture": 0,
-            "season": 1
+            "season": 1,
+            "token": "",
+            "token_secret": "",
+            "consumer_secret": "",
+            "consumer_key": ""
         },
         "nrdp": {
             "url": "",
             "token": "",
-            "freshness": "300",
+            "freshness": 300,
             "obsess": 1
         }
     },
@@ -111,31 +118,29 @@
     },
     "timer": {
         "environment": {
-            "temperature": 60,
             "humidity": 60,
             "moisture": 2,
-            "water": 5,
-            "external_storage": "300"
+            "water": 15,
+            "temperature": 40
         },
         "system": {
-            "temperature": "2",
-            "fan": "3",
-            "cpu": "60",
-            "memory": "60",
-            "swap": "60",
-            "internal_storage": "300",
-            "internalstorage": "60",
-            "externalstorage": "60"
+            "fan": 3,
+            "cpu": 60,
+            "memory": 60,
+            "swap": 60,
+            "temperature": 2,
+            "intstorage": 60,
+            "extstorage": 60
         },
         "squirt": {
-            "duration": "7",
-            "minimum": "600",
-            "maximum": "7200"
+            "duration": 7,
+            "minimum": 600,
+            "maximum": 7200
         }
     },
     "system": {
         "hostname": "envmon",
-        "hemisphere": "Southern",
+        "hemisphere": "southern",
         "timezone": "Sao_Paulo",
         "language": "English",
         "theme": "Noir",
@@ -144,6 +149,6 @@
     },
     "authentication": {
         "username": "admin",
-        "password": "admin"
+        "password": "$1$jO17xyds$XWBs4xnBFgLB89hUOypCe."
     }
 }

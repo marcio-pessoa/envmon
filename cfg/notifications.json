@@ -1,0 +1,21 @@
+{
+  "info": {
+    "project": "envmon Mark II - Environment Monitor",
+    "file": "notifications.json",
+    "description": "Notifications file",
+    "author": "Márcio Pessoa <marcio.pessoa@sciemon.com>",
+    "contributors": "none"
+  },
+  "timezone": "UTC",
+  "calendar": {
+    "2014-06-19 22:00:00": {
+      "message": "Yes! I'm an #IoT device. #AutoMessage"
+    },
+    "2016-06-20 19:34:00": {
+      "message": "Bem vindo ao #inverno."
+    },
+    "2016-06-20 19:34:01": {
+      "message": "Welcome to #Winter."
+    }
+  }
+}

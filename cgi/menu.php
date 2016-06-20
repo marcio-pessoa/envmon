@@ -8,7 +8,7 @@
 
 show_menu($menu_items, $current["content"]);
 
-/* 
+/* show_menu
  * 
  * Description
  *   .

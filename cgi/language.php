@@ -47,7 +47,7 @@ function msg($element) {
     }
 }
 
-/* 
+/* language_load
  * 
  * Description
  *   .
@@ -61,7 +61,7 @@ function msg($element) {
  *   void
  */
 function language_load($language) {
-    global $config;
+    global $files;
     global $directory;
     // Check if language is configured and get get language file name
     $file = language_list($language);
@@ -84,7 +84,7 @@ function language_load($language) {
     }
 }
 
-/* 
+/* language_code
  * 
  * Description
  *   Return current language code.
@@ -98,10 +98,10 @@ function language_load($language) {
  *   void
  */
 function language_code($language) {
-    global $config;
-    if (file_exists($config["languages"])) {
-        $file = fopen($config["languages"], "r");
-        $json = fread($file, filesize($config["languages"]));
+    global $files;
+    if (file_exists($files["languages"])) {
+        $file = fopen($files["languages"], "r");
+        $json = fread($file, filesize($files["languages"]));
         fclose($file);
         $lang = json_decode($json, true);
     }
@@ -113,7 +113,7 @@ function language_code($language) {
     return $code;
 }
 
-/* 
+/* language_list
  * 
  * Description
  *   .
@@ -127,10 +127,10 @@ function language_code($language) {
  *   void
  */
 function language_list($language = "") {
-    global $config;
-    if (file_exists($config["languages"])) {
-        $file = fopen($config["languages"], "r");
-        $json = fread($file, filesize($config["languages"]));
+    global $files;
+    if (file_exists($files["languages"])) {
+        $file = fopen($files["languages"], "r");
+        $json = fread($file, filesize($files["languages"]));
         fclose($file);
         $lang = json_decode($json, true);
     }

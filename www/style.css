@@ -18,7 +18,7 @@ a:link, a:visited {
 
 table.form {
   border-collapse: collapse;
-  width: 500px;
+  width: 100%;
 }
 
 table.comfort_form {
@@ -97,9 +97,6 @@ td.form_input {
 	opacity: 1;
 }
 
-#clock,
-#date,
-#uptime,
 #status0,
 #status1,
 #status2,

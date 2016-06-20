@@ -8,10 +8,10 @@
 
 $action = isset($_POST[action]) ? $_POST[action] : null;
 if ($action == "proced") {
-    $file = fopen($config["default"], "r");
-    $json = fread($file, filesize($config["default"]));
+    $file = fopen($files["default"], "r");
+    $json = fread($file, filesize($files["default"]));
     fclose($file);
-    if(!file_put_contents($config["running"], $json)) {
+    if(!file_put_contents($files["running"], $json)) {
         msg("error_saving") . " " . $file;
     }
     require($directory["html"] . "reset_ok.html");

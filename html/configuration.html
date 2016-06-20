@@ -5,7 +5,7 @@
     <td class="form_description"><?=msg("running_setup")?></td>
     <td class="form_input">
       <input type="button" value="Download" 
-             onClick="window.location.href='/config.json'" />
+             onclick="window.location.href='/config.json'" />
     </td>
   </tr>
 </table>
@@ -23,13 +23,23 @@
 </table>
 <input type="hidden" name="action" value="proced">
 </form>
+<p id="reload"><?=msg("reload_config")?></p>
+<table class="slim_form">
+  <tr>
+    <td class="form_description"><?=msg("envmon")?></td>
+    <td class="form_input">
+      <input type="button" value="<?=msg("reload")?>" 
+             onclick="window.location.href='?content=setup&sub=reload'" />
+    </td>
+  </tr>
+</table>
 <p id="reboot"><?=msg("reboot_device")?></p>
 <table class="slim_form">
   <tr>
     <td class="form_description"><?=msg("system")?></td>
     <td class="form_input">
       <input type="button" value="<?=msg("reboot")?>" 
-             onClick="window.location.href='?content=setup&sub=reboot'" />
+             onclick="window.location.href='?content=setup&sub=reboot'" />
     </td>
   </tr>
 </table>
@@ -39,7 +49,7 @@
     <td class="form_description"><?=msg("factory_defaults")?></td>
     <td class="form_input">
       <input type="button" value="<?=msg("reset")?>" 
-             onClick="window.location.href='?content=setup&sub=reset'" />
+             onclick="window.location.href='?content=setup&sub=reset'" />
     </td>
   </tr>
 </table>

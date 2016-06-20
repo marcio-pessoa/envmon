@@ -7,7 +7,6 @@
  */
 
 // Load content
-//TODO(Marcio): Filter $content varible!!!
 $current["sub"] = isset($_GET["sub"]) ? $_GET["sub"] : null;
 if ($current["sub"] != null) {
     require($directory["cgi"] . $current["sub"] . ".php");
@@ -27,8 +26,8 @@ else
     }
     print("</ul>\n");
 }
- 
-/* 
+
+/* m_post
  * 
  * Description
  *   .
@@ -62,7 +61,7 @@ function m_post($variable, $type="integer", $range=array(0, 100)) {
     return $value;
 }
 
-/* 
+/* json_write
  * 
  * Description
  *   .

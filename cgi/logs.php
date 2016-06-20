@@ -7,7 +7,6 @@
  */
 
 // Load content
-//TODO(Marcio): Filter $content varible!!!
 $current["sub"] = isset($_GET["sub"]) ? $_GET["sub"] : null;
 if ($current["sub"] != null) {
     require($directory["cgi"] . $current["sub"] . ".php");
@@ -18,7 +17,7 @@ else
     foreach($menu_items as &$item) {
         if (is_array($item) and $last_item == "logs") {
             foreach($item as &$sub_item) {
-                print("  <li><a href=\"?content=setup&sub=" . 
+                print("  <li><a href=\"?content=logs&sub=" . 
                       $sub_item .
                       "\">" . msg("$sub_item") . "</a></li>\n");
             }
@@ -28,7 +27,7 @@ else
     print("</ul>\n");
 }
 
-/* 
+/* m_post
  * 
  * Description
  *   .
@@ -62,7 +61,7 @@ function m_post($variable, $type="integer", $range=array(0, 100)) {
     return $value;
 }
 
-/* 
+/* json_write
  * 
  * Description
  *   .

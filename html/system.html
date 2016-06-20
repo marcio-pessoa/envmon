@@ -31,15 +31,15 @@
   <tr>
     <td class="form_description"><?=msg("hemisphere")?></td>
     <td class="form_input">
-      <input type="radio" name="system_hemisphere" value="Northen" <?php if ($cfg['system']['hemisphere'] == "Northen") echo "checked"?> />
+      <input type="radio" name="system_hemisphere" value="northen" <?php if ($cfg['system']['hemisphere'] == "northen") echo "checked"?> />
       <?=msg("northen")?>
       &nbsp;&nbsp;&nbsp;
-      <input type="radio" name="system_hemisphere" value="Southern" <?php if ($cfg['system']['hemisphere'] == "Southern") echo "checked"?> />
+      <input type="radio" name="system_hemisphere" value="southern" <?php if ($cfg['system']['hemisphere'] == "southern") echo "checked"?> />
       <?=msg("southern")?>
     </td>
   </tr>
   <tr>
-    <td class="form_description">Time zone</td>
+    <td class="form_description"><?=msg("timezone")?></td>
     <td class="form_input">
       <select name="system_timezone">
         <option value="<?=$cfg['system']['timezone']?>">

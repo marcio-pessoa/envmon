@@ -26,10 +26,10 @@ if ($action == "proced") {
         m_post("timer_system_memory", "integer", array(1, 600));
     $cfg['timer']['system']['swap'] =
         m_post("timer_system_swap", "integer", array(1, 600));
-    $cfg['timer']['system']['internalstorage'] =
-        m_post("timer_system_internalstorage", "integer", array(1, 600));
-    $cfg['timer']['system']['externalstorage'] =
-        m_post("timer_system_externalstorage", "integer", array(1, 600));
+    $cfg['timer']['system']['intstorage'] =
+        m_post("timer_system_intstorage", "integer", array(1, 600));
+    $cfg['timer']['system']['extstorage'] =
+        m_post("timer_system_extstorage", "integer", array(1, 600));
     $cfg['timer']['squirt']['duration'] =
         m_post("timer_squirt_duration", "integer", array(1, 20));
     $cfg['timer']['squirt']['minimum'] =
@@ -38,7 +38,8 @@ if ($action == "proced") {
         m_post("timer_squirt_maximum", "integer", array(1, 14400));
     $cfg['timer']['display']['timeout'] =
         m_post("timer_display_timeout", "integer", array(1, 600));
-    json_write($config["running"], $cfg);
+    json_write($files["running"], $cfg);
+    echo("<script>alert('Opa!');</script>");
 }
 require($directory["html"] . "timers.html");
 ?>

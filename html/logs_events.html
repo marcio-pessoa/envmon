@@ -1,0 +1,19 @@
+<script>
+function reload() {
+    window.location.reload();
+}
+
+function clearlog() {
+    window.location.assign("?content=logs&sub=logs_events&action=clear");
+}
+</script>
+<h3><?=msg("logs_events")?></h3>
+<div id="Resource">
+  <p>
+    <button onclick="reload()" />&nbsp;<?=msg("reload")?>&nbsp;</button>
+    <button onclick="clearlog()" />&nbsp;<?=msg("clear_log")?>&nbsp;</button>
+  </p>
+  <div id="log">
+<?=$content?>
+  </div>
+</div>

@@ -29,7 +29,7 @@ switch ($action) {
         $file = fopen($tmp, "r");
         $json = fread($file, filesize($tmp));
         fclose($file);
-        if(!file_put_contents($config["running"], $json)) {
+        if(!file_put_contents($files["running"], $json)) {
             echo "Error saving " . $file;
         }
         require($directory["html"] . "restore_ok.html");

@@ -27,14 +27,25 @@ if ($debug) {
 }
 
 // Read JSON config file
-if (file_exists($config["running"])) {
-    $file = fopen($config["running"], "r");
-    $json = fread($file, filesize($config["running"]));
+if (file_exists($files["running"])) {
+    $file = fopen($files["running"], "r");
+    $json = fread($file, filesize($files["running"]));
     fclose($file);
     $cfg = json_decode($json, true);
 }
 else {
     print("ERROR: Configuration file not found.");
+}
+
+// Set content
+$current["content"] = isset($_GET["content"]) ?
+                      $_GET["content"] :
+                      $default["content"];
+
+// ReST - Web Services
+if ($current["content"] == "status") {
+  require($directory["cgi"] . $current["content"] . ".php");
+  exit;
 }
 
 // Set configured language
@@ -53,12 +64,6 @@ $current["timezone"] = isset($cfg['system']['timezone']) ?
 date_default_timezone_set($current["timezone"]);
 
 // Load content
-//TODO(Marcio): Filter $content varible!!!
-$current["content"] = isset($_GET["content"]) ? $_GET["content"] : $default["content"];
-
-// Item library
-// require($directory["cgi"] . "item.php");
-
 require($directory["html"] . "header.html");
 
 if ($title) {

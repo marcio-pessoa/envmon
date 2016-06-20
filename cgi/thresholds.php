@@ -48,7 +48,7 @@ if ($action == "proced") {
         m_post("threshold_moisture_winter_warning");
     $cfg["threshold"]["moisture"]["winter"]["critical"] =
         m_post("threshold_moisture_winter_critical");
-    json_write($config["running"], $cfg);
+    json_write($files["running"], $cfg);
 }
 require($directory["html"] . "thresholds.html");
 ?>

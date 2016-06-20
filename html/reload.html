@@ -1,0 +1,31 @@
+<script>
+function goBack() {
+  window.history.back()
+}
+</script>
+<form action="?content=setup&sub=reload" method="post">
+<h3><?=msg("reload")?></h3>
+<p id="reload"><?=msg("reload_config")?></p>
+<p>
+  <?=msg("if_u_agree")?>...
+</p>
+<p>
+  <ul>
+    <li><?=msg("reload_term1")?></li>
+    <li><?=msg("reload_term2")?></li>
+  </ul>
+</p>
+<table class="comfort_form">
+  <tr>
+    <td class="form_description"><?=msg("you_sure")?>?</td>
+    <td class="form_input">
+      <button type="submit" value="submit"><?=msg("yes")?></button>
+    </td>
+    <td class="form_input">
+      <button onclick="goBack()" />&nbsp;<?=msg("no")?>&nbsp;</button>
+    </td>
+  </tr>
+</table>
+<br/>
+<input type="hidden" name="action" value="reload">
+</form>
