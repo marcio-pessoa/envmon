@@ -8,7 +8,6 @@
 
 header("Content-Type: text/plain");
 
-
 if (file_exists($files["status"])) {
     for ($i=0; $i<=100; $i++) {
         $size = filesize($files["status"]);

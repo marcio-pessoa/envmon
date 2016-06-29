@@ -142,6 +142,7 @@ class Console:
             select(self.sockets, [], [], 0)
         # Accept new connections
         if self.server in sockets_to_read_from:
+            logln("Conecting client.")
             self.accept()
             sockets_to_read_from.remove(self.server)
         # Read from sockets
@@ -201,7 +202,7 @@ class Console:
         self.clients_sendbuffer[client] = ''
 
     def close(self, sock):
-        echo("Disconecting client.")
+        logln("Disconecting client.")
         sock.close()
         self.clients.remove(sock)
         self.sockets.remove(sock)
@@ -401,7 +402,6 @@ def getHumidityData():
 
 
 def checkSeason():
-    log("Updating seasons...")
     # Read seasons file
     try:
         file = open(cfg['file']['seasons'], 'r')
@@ -444,7 +444,6 @@ def checkSeason():
     r['season']['end'] = proxima
     r['season']['current'] = estacao
     statusWrite(r)
-    echoln("Done.")
     return i - t
 
 
@@ -586,6 +585,12 @@ def main():
                 console.write("Reading all sensors.\r\n")
             elif command == 'squirt':
                 pumpSquirt()
+            elif command == 'reload':
+                msg = "Reloading " + PROGRAM_NAME + "..."
+                log(msg, debug)
+                console.write(msg)
+                echoln("Done", debug)
+                console.write("Done")
         if cpu_timer.check():
             getCpuData()
         if memory_timer.check():

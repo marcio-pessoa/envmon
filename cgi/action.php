@@ -6,6 +6,10 @@
  * Contributors: none
  */
 
+// error_reporting(E_ALL);
+
+ob_implicit_flush();
+
 $action = isset($_POST[action]) ? $_POST[action] : null;
 if ($action == "proced") {
     $cfg["threshold"]["temp"]["env"]["min"]["warning"] =
@@ -14,45 +18,113 @@ if ($action == "proced") {
 
 $sub = isset($_GET[sub]) ? $_GET[sub] : null;
 if ($sub == 'read') {
-  error_reporting(E_ALL);
+    echo "Creating socket... ";
 
-  echo "Creating socket... ";
+    $service_port = 2323;
+    $address = gethostbyname('localhost');
 
-  $service_port = 2323;
-  $address = gethostbyname('127.0.0.1');
+    $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
+    if ($socket === false) {
+        echo "socket_create() failed: reason: " . 
+        socket_strerror(socket_last_error());
+    } 
+    else {
+        echo "OK";
+    }
+    echo ".<br/>";
 
-  $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
-  if ($socket === false) {
-      echo "socket_create() failed: reason: " . socket_strerror(socket_last_error()) . "\n";
-  } else {
-      echo "OK.<br/>";
-  }
+    echo "Attempting to connect to '$address' on port '$service_port'... ";
+    $result = socket_connect($socket, $address, $service_port);
+    if ($result === false) {
+        echo "socket_connect() failed.<br/>Reason: ($result) " . 
+        socket_strerror(socket_last_error($socket));
+    }
+    else {
+        echo "OK";
+    }
+    echo ".<br/>";
 
-  echo "Attempting to connect to '$address' on port '$service_port'... ";
-  $result = socket_connect($socket, $address, $service_port);
-  if ($result === false) {
-      echo "socket_connect() failed.<br/>Reason: ($result) " . socket_strerror(socket_last_error($socket)) . "\n";
-  } else {
-      echo "OK.<br/>";
-  }
+    $tx = "read\r\n";
+    $rx = '';
 
-  $in = "read\n";
-  $in .= "\n";
-  $in .= "bye\n";
-  $out = '';
+    echo "Sending request:";
+    echo "<pre>";
+    echo $tx;
+    echo "</pre>";
+    $result = socket_write($socket, $tx, strlen($tx));
+    if ($result === false) {
+        echo "socket_write() failed.<br/>Reason: ($result) " . 
+        socket_strerror(socket_last_error($socket)) . "<br/>";
+    }
+    else {
+        echo "OK - bytes sent: " . $result;
+    }
+    echo ".<br/>";
 
-  echo "Sending request...";
-  socket_write($socket, $in, strlen($in));
-  echo "OK.<br/>";
+    echo "Reading response...<br/>";
+    while (true) {
+        socket_recv($socket, $buffer, 1, 0);
+        $rx .= $buffer;
+        if ($buffer == "\n") {
+            break;
+        }
+    }
+    echo "<pre>";
+    echo $rx;
+    echo "</pre>";
 
-  echo "Reading response:<br/>";
-  while ($out = socket_read($socket, 2048)) {
-      echo $out;
-  }
 
-  echo "Closing socket... ";
-  socket_close($socket);
-  echo "OK.<br/>";
+
+
+
+
+
+
+    $tx = "squirt\r\n";
+    $rx = '';
+
+    echo "Sending request:";
+    echo "<pre>";
+    echo $tx;
+    echo "</pre>";
+    $result = socket_write($socket, $tx, strlen($tx));
+    if ($result === false) {
+        echo "socket_write() failed.<br/>Reason: ($result) " . 
+        socket_strerror(socket_last_error($socket)) . "<br/>";
+    }
+    else {
+        echo "OK - bytes sent: " . $result;
+    }
+    echo ".<br/>";
+
+    echo "Reading response...<br/>";
+    while (true) {
+        socket_recv($socket, $buffer, 1, 0);
+        $rx .= $buffer;
+        if ($buffer == "\n") {
+            break;
+        }
+    }
+    echo "<pre>";
+    echo $rx;
+    echo "</pre>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+    echo "Closing socket... ";
+    socket_close($socket);
+    echo "OK";
+    echo ".<br/>";
 }
 
 require($directory["html"] . "action.html");

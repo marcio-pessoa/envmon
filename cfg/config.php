@@ -47,6 +47,9 @@ $current["language"] = $default["language"];
 // Menu
 $menu_items = array("view",
                     "action",
+                    "logs",
+                    array("logs_events",
+                          "logs_system"),
                     "setup",
                     array("system",
                           "thresholds",
@@ -54,9 +57,6 @@ $menu_items = array("view",
                           "notifications",
                           "cloud",
                           "configuration"),
-                    "logs",
-                    array("logs_events",
-                          "logs_system"),
                     "help",
                     "about");
 ?>

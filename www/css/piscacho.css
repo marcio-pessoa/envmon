@@ -1,40 +1,48 @@
 /* style.css, envmon Mark II - Environment Monitor, Web white style file
  * 
- * Author: Márcio Pessoa <marcio@pessoa.eti.br>
+ * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
  * Contributors: none
  */
  
 body {
-  background-color: #F8E3AE;
-  color: #AE8E3E;
+  background-color: #D1FFD1;
+  color: #002F00;
 }
 
 a:link, a:visited {
-  color: #FFFFFF;
+  color: #CF65CF;
 }
 
 a:hover, a:active {
-  color: #808080;
+  color: #922892;
 }
 
 #header {
-  background-color: #BB9A48;
+  background-color: #82C382;
   color: #000000;
 }
 
 #Item {
-  background-color: #E3D3A9;
-  color: #FFFFFF;
+  background-color: #D6A8D6;
+  color: #AAAAAA;
 }
 
 #Item_description {
-  background-color: #E3D3A9;
-  color: #795F20;
+  background-color: #D6A8D6;
+  color: #800080;
 }
 
-[title]:after{
+[title]:after {
 	color:#FFFFFF;
 	background:#333333;
+}
+
+#status0,
+#status1,
+#status2,
+#status3,
+#status4 {
+  color: #FFEDFF;
 }
 
 #status0 {
@@ -58,23 +66,27 @@ a:hover, a:active {
 }
 
 h1 {
-  color: #FCEDC5;
+  color: #C5FFC5;
 }
 
 h2 {
-  color: #F0DEB1;
+  color: #BBDBBB;
 }
 
 h3 {
-  color: #A38437;
+  color: #C66FC6;
+}
+
+p {
+  color: #002F00;
 }
 
 p.Resource_title {
-  color: #5282CC;
+  color: #C021C0;
 }
 
 a.Resource_title {
-  color: #CCCCCC;
+  color: #C021C0;
 }
 
 a.Resource_title:hover {
@@ -82,30 +94,30 @@ a.Resource_title:hover {
 }
 
 #footer {
-  background-color: #E3D3A9;
-  color: #444444;
+  background-color: #BEA1BE;
+  color: #000000;
 }
 
 #debug {
-  background-color: #000000;
+  background-color: #888888;
   color: #FFFFFF;
 }
 
 #cssmenu {
-  background: #E3D3A9;
+  background: #500050;
 }
 
 #cssmenu a {
-  background: #E3D3A9;
-  color: #795F20;
+  background: #500050;
+  color: #ffffff;
 }
 
 #cssmenu > ul > li > a {
-  color: #795F20;
+  color: #ffffff;
 }
 
 #cssmenu > ul > li:hover:after {
-  border-bottom: #6E8EB9;
+  border-bottom: #BC78BC;
 }
 
 #cssmenu > ul > li.active > a,
@@ -114,28 +126,28 @@ a.Resource_title:hover {
   box-shadow: #000000;
   -moz-box-shadow: #000000;
   -webkit-box-shadow: #000000;
-  background: #D4C18F;
+  background: #BC78BC;
 }
 
 #cssmenu .has-sub ul li a {
-  background: #E3D3A9;
+  background: #792D79;
   border-bottom: #31b7f1;
-  color: #795F20;
+  color: #ffffff;
 }
 
 #cssmenu .has-sub ul li:hover a {
-  background: #E3D3A9;
+  background: #BC78BC;
 }
 
 #cssmenu ul ul li:hover > a {
-  color: #795F20;
+  color: #ffffff;
 }
 
 #cssmenu .has-sub .has-sub ul li a {
-  background: #A3D3A9;
+  background: #0c7fb0;
   border-bottom: #31b7f1;
 }
 
 #cssmenu .has-sub .has-sub ul li a:hover {
-  background: #D4C18F;
+  background: #0a6d98;
 }

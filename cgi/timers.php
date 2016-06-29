@@ -39,7 +39,7 @@ if ($action == "proced") {
     $cfg['timer']['display']['timeout'] =
         m_post("timer_display_timeout", "integer", array(1, 600));
     json_write($files["running"], $cfg);
-    echo("<script>alert('Opa!');</script>");
+    echo("<script>alert('As alterações foram aplicadas.');</script>");
 }
 require($directory["html"] . "timers.html");
 ?>

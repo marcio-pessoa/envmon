@@ -8,14 +8,14 @@
   },
   "timezone": "UTC",
   "calendar": {
-    "2014-06-19 22:00:00": {
-      "message": "Yes! I'm an #IoT device. #AutoMessage"
+    "2014-06-23 11:00:00": {
+      "message": "A extensa área dos continentes do hemisfério #norte absorvem muita energia solar, tornando o #verão deste hemisfério muito intenso."
     },
-    "2016-06-20 19:34:00": {
-      "message": "Bem vindo ao #inverno."
+    "2016-06-26 11:00:00": {
+      "message": "Durante o #inverno, as #noites mais longas faz as #temperaturas ficarem mais baixas até mesmo durante o #dia."
     },
-    "2016-06-20 19:34:01": {
-      "message": "Welcome to #Winter."
+    "2016-06-29 11:00:00": {
+      "message": "O intenso #verão do hemisfério #norte faz o #inverno do hemisfério #sul ser mais suave e mais agradável."
     }
   }
 }

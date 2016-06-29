@@ -1,0 +1,149 @@
+/* style.css, envmon Mark II - Environment Monitor, Web white style file
+ * 
+ * Author: Márcio Pessoa <marcio@pessoa.eti.br>
+ * Contributors: none
+ */
+ 
+body {
+  background-color: #F8E3AE;
+  color: #AE8E3E;
+}
+
+a:link, a:visited {
+  color: #FFFFFF;
+}
+
+a:hover, a:active {
+  color: #808080;
+}
+
+#header {
+  background-color: #BB9A48;
+  color: #000000;
+}
+
+#Item {
+  background-color: #E3D3A9;
+  color: #FFFFFF;
+}
+
+#Item_description {
+  background-color: #E3D3A9;
+  color: #795F20;
+}
+
+[title]:after {
+	color:#FFFFFF;
+	background:#333333;
+}
+
+#status0,
+#status1,
+#status2,
+#status3,
+#status4 {
+  color: #FFFFFF;
+}
+
+#status0 {
+  background-color: #68CF68;
+}
+
+#status1 {
+  background-color: #E0E000;
+}
+
+#status2 {
+  background-color: #FF3333;
+}
+
+#status3 {
+  background-color: #FF9C59;
+}
+
+#status4 {
+  background-color: #BBBBBB;
+}
+
+h1 {
+  color: #FCEDC5;
+}
+
+h2 {
+  color: #F0DEB1;
+}
+
+h3 {
+  color: #A38437;
+}
+
+p.Resource_title {
+  color: #5282CC;
+}
+
+a.Resource_title {
+  color: #CCCCCC;
+}
+
+a.Resource_title:hover {
+  color: #FFFFFF;
+}
+
+#footer {
+  background-color: #E3D3A9;
+  color: #444444;
+}
+
+#debug {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+#cssmenu {
+  background: #E3D3A9;
+}
+
+#cssmenu a {
+  background: #E3D3A9;
+  color: #795F20;
+}
+
+#cssmenu > ul > li > a {
+  color: #795F20;
+}
+
+#cssmenu > ul > li:hover:after {
+  border-bottom: #6E8EB9;
+}
+
+#cssmenu > ul > li.active > a,
+#cssmenu > ul > li:hover > a {
+  color: #ffffff;
+  box-shadow: #000000;
+  -moz-box-shadow: #000000;
+  -webkit-box-shadow: #000000;
+  background: #D4C18F;
+}
+
+#cssmenu .has-sub ul li a {
+  background: #E3D3A9;
+  border-bottom: #31b7f1;
+  color: #795F20;
+}
+
+#cssmenu .has-sub ul li:hover a {
+  background: #E3D3A9;
+}
+
+#cssmenu ul ul li:hover > a {
+  color: #795F20;
+}
+
+#cssmenu .has-sub .has-sub ul li a {
+  background: #A3D3A9;
+  border-bottom: #31b7f1;
+}
+
+#cssmenu .has-sub .has-sub ul li a:hover {
+  background: #D4C18F;
+}

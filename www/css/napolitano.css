@@ -1,40 +1,40 @@
-/* style.css, envmon Mark II - Environment Monitor, Web white style file
+/* style.css, envmon Mark II - Environment Monitor, Web itali style file
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
  * Contributors: none
  */
  
 body {
-  background-color: #D1FFD1;
-  color: #002F00;
+  background-color: #F8F8C0;
+  color: #423209;
 }
 
 a:link, a:visited {
-  color: #CF65CF;
+  color: #FFFFFF;
 }
 
 a:hover, a:active {
-  color: #922892;
+  color: #808080;
 }
 
 #header {
-  background-color: #82C382;
-  color: #000000;
+  background-color: #FDB4B4;
+  color: #AC8A37;
 }
 
 #Item {
-  background-color: #D6A8D6;
+  background-color: #000000;
   color: #AAAAAA;
 }
 
 #Item_description {
-  background-color: #D6A8D6;
-  color: #800080;
+  background-color: #000000;
+  color: #10BB10;
 }
 
-[title]:after{
+[title]:after {
 	color:#FFFFFF;
-	background:#333333;
+	background:#FCC5C5;
 }
 
 #status0,
@@ -42,7 +42,7 @@ a:hover, a:active {
 #status2,
 #status3,
 #status4 {
-  color: #FFEDFF;
+  color: #000000;
 }
 
 #status0 {
@@ -66,27 +66,23 @@ a:hover, a:active {
 }
 
 h1 {
-  color: #C5FFC5;
+  color: #725409;
 }
 
 h2 {
-  color: #BBDBBB;
+  color: #9E7D2B;
 }
 
 h3 {
-  color: #C66FC6;
-}
-
-p {
-  color: #002F00;
+  color: #DE8080;
 }
 
 p.Resource_title {
-  color: #C021C0;
+  color: #21B921;
 }
 
 a.Resource_title {
-  color: #C021C0;
+  color: #CCCCCC;
 }
 
 a.Resource_title:hover {
@@ -94,7 +90,7 @@ a.Resource_title:hover {
 }
 
 #footer {
-  background-color: #BEA1BE;
+  background-color: #AAAAAA;
   color: #000000;
 }
 
@@ -102,25 +98,6 @@ a.Resource_title:hover {
   background-color: #888888;
   color: #FFFFFF;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #cssmenu {
   background: #500050;

@@ -51,7 +51,8 @@ dependencies() {
   ssh "root@""$HOST" "opkg install \
                       rsync zoneinfo-simple \
                       php5 php5-cgi php5-cli php5-mod-json php5-mod-sockets \
-                      python python-json pyserial python-openssl"
+                      python python-json pyserial"
+                      # python-openssl"
   check_return $?
   message "Creating directory structure"
   ssh "root@""$HOST" mkdir -p /opt

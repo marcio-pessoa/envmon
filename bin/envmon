@@ -59,7 +59,7 @@ start() {
                                     --bind 127.0.0.1 \
                                     --verbose \
                                     2>&1 | tee -a "$WORK_DIR/log/$LOG_FILE" \
-                                    > /dev/null &
+                                    #> /dev/null &
   exit $?
 }
 
