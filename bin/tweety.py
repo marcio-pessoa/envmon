@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-python.py
+tweety.py
 
 Author: Marcio Pessoa <marcio@pessoa.eti.br>
 

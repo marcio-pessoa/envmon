@@ -49,6 +49,30 @@
         }
     },
     "threshold": {
+        "cpu": {
+          "warning": 80,
+          "critical": 90
+        },
+        "memory": {
+          "warning": 80,
+          "critical": 90
+        },
+        "swap": {
+          "warning": 80,
+          "critical": 90
+        },
+        "fan": {
+          "warning": 80,
+          "critical": 90
+        },
+        "intstorage": {
+          "warning": 80,
+          "critical": 90
+        },
+        "extstorage": {
+          "warning": 80,
+          "critical": 90
+        },
         "season": {
             "spring": {
                 "warning": 52,
@@ -67,7 +91,7 @@
                 "critical": 47
             }
         },
-        "temp": {
+        "temperature": {
             "env": {
                 "min": {
                     "warning": 11,

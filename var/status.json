@@ -1,5 +1,5 @@
 {
-  "outdoor1": {
+  "environment": {
     "temperature": {
       "value": 0,
       "moment": "0000-00-00 00:00",

@@ -37,7 +37,7 @@ README, envmon Mark II - Environment Monitor, Readme file
 ║ 20 ║   2 ║ analog    ║ input     ║ RJ-45 pin 7 (0/1, Analog)                ║
 ║ 21 ║   3 ║ -         ║ -         ║ -                                        ║
 ║ 22 ║   4 ║ -         ║ -         ║ -                                        ║
-║ 23 ║   5 ║ analog    ║ input     ║ System temperature                       ║
+║ 23 ║   5 ║ analog    ║ input     ║ System temperature sensor                ║
 ╚════╩═════╩═══════════╩═══════════╩══════════════════════════════════════════╝
 
                                       +-----+
@@ -341,3 +341,15 @@ const char *environment_log = "/opt/envmon/log/environment.log";
 const char *controller_log = "/opt/envmon/log/controller.log";
 const int log_file_timer = 60;  // seconds
 
+
+
+
+
+
+
+
+How to reset the Yun Shield
+
+The Yun Shield has a toggle button which can be used for reset. When the system of the Yun Shield is running, the user can press the toggle button to reset the device. Pressing this button will cause the WLAN LED will blink.
+Pressing the toggle button and release after 5 seconds, will reset the WiFi setting and other settings will be kept.
+Pressing the toggle button and release after 30 seconds, will reset ALL the setting to factory default .

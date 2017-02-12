@@ -9,16 +9,17 @@
 char buffer[BUFFER_SIZE];
 int buffer_pointer = 0;
 
-void status(bool i) {
-  Console.println(i == false ? "ok" : "nok");
-}
-
 bool echo(String message) {
   Console.print(String("echo:") + message);
+  Console.print('\0');
 }
 
 bool echoln(String message) {
   echo(message + "\n");
+}
+
+void status(bool i) {
+  echoln(i == false ? "ok" : "nok");
 }
 
 void GcodeReady() {
@@ -59,6 +60,9 @@ void GcodeParse() {
         case 0:
           CommandM100(letter);
           break;
+        case 2:
+          CommandM2();
+          break;
         case 10:
           retval = CommandM10(GcodeNumber('F', 0),
                               GcodeNumber('D', 0));
@@ -92,8 +96,11 @@ void GcodeParse() {
         case 82:
           retval = CommandM82(1);
           break;
-        case 92:
-          CommandM92();
+        case 90:
+          CommandM90();
+          break;
+        case 91:
+          CommandM91();
           break;
         case 99:
           CommandM99();

@@ -1,2 +1,7 @@
-# envmon watchdog
-*/1 * * * * /opt/envmon/bin/envmon start
+# System startup
+@reboot		/opt/envmon/bin/envmon start
+# System watchdogs
+*/1 * * * *	/opt/envmon/bin/bridge start
+*/1 * * * *	/opt/envmon/bin/envmon start
+# Send data to remote Nagios system via NRDP
+*/5 * * * *	/usr/bin/php-cli /opt/envmon/cgi/nrdp_sender.php

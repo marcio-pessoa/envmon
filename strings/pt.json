@@ -12,7 +12,8 @@
     "1": "Atenção",
     "2": "Crítico",
     "3": "Desconhecido",
-    "4": "Dados antigos",
+    "4": "Informação",
+    "5": "Dados antigos",
     "ok": "OK",
     "warning": "Atenção",
     "critical": "Crítico",
@@ -169,6 +170,8 @@
     "consumer_secret": "Consumer Secret (API Secret)",
     "consumer_key": "Consumer Key (API Key)",
     "nextseasonin": "Próxima estação em",
-    "timezone": "Fuso horário"
+    "timezone": "Fuso horário",
+    "cmd_ok": "Comando executado com sucesso.",
+    "cmd_error": "Falha ao executar comando."
   }
 }

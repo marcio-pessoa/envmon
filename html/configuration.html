@@ -33,6 +33,16 @@
     </td>
   </tr>
 </table>
+<p id="restart"><?=msg("restart_service")?></p>
+<table class="slim_form">
+  <tr>
+    <td class="form_description"><?=msg("envmon")?></td>
+    <td class="form_input">
+      <input type="button" value="<?=msg("restart")?>" 
+             onclick="window.location.href='?content=setup&sub=restart'" />
+    </td>
+  </tr>
+</table>
 <p id="reboot"><?=msg("reboot_device")?></p>
 <table class="slim_form">
   <tr>

@@ -9,13 +9,13 @@
 $action = isset($_POST[action]) ? $_POST[action] : null;
 if ($action == "proced") {
     $cfg['timer']['environment']['temperature'] =
-        m_post("timer_environment_temperature");
+        m_post("timer_environment_temperature", "integer", array(1, 600));
     $cfg['timer']['environment']['humidity'] =
-        m_post("timer_environment_humidity");
+        m_post("timer_environment_humidity", "integer", array(1, 600));
     $cfg['timer']['environment']['moisture'] =
-        m_post("timer_environment_moisture");
+        m_post("timer_environment_moisture", "integer", array(1, 600));
     $cfg['timer']['environment']['water'] =
-        m_post("timer_environment_water");
+        m_post("timer_environment_water", "integer", array(1, 600));
     $cfg['timer']['system']['temperature'] =
         m_post("timer_system_temperature", "integer", array(1, 600));
     $cfg['timer']['system']['fan'] =
@@ -38,8 +38,10 @@ if ($action == "proced") {
         m_post("timer_squirt_maximum", "integer", array(1, 14400));
     $cfg['timer']['display']['timeout'] =
         m_post("timer_display_timeout", "integer", array(1, 600));
-    json_write($files["running"], $cfg);
-    echo("<script>alert('As alterações foram aplicadas.');</script>");
+    $return = json_write($files["running"], $cfg);
+    if ($return != false) {
+        echo("<script>alert('As alterações foram aplicadas.');</script>");
+    }
 }
 require($directory["html"] . "timers.html");
 ?>

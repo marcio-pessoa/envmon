@@ -1,0 +1,83 @@
+#!/bin/sh
+#
+# envmon, envmon Mark II - Environment Monitor
+# Arduino Bridge Service manager
+#
+# Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+# Contributors: none
+#
+# Description:
+#
+# Example: 
+#   /opt/envmon/bin/bridge start
+#
+# Tip: 
+#   Add this script to cron job.
+#
+# Change log
+#
+# 2016-01-01
+#         Experimental version.
+#
+
+PROGRAM_NAME="bridge"
+
+proc_id() {
+  state=$(pgrep -f "python -u bridge.py")
+  if [ "$state" = "" ]; then
+    state=0
+  fi
+  echo "$state"
+}
+
+status() {
+  id=$(proc_id)
+  if [ "$id" -gt "0" ]; then
+    echo "Running ($id)"
+    exit 0
+  else
+    echo "Stopped"
+    exit 2
+  fi
+}
+
+start() {
+  id=$(proc_id)
+  if [ "$id" -gt "0" ]; then
+    echo "Nothing to do, because $PROGRAM_NAME is already running."
+    exit 0
+  fi
+  echo "Starting..."
+  /usr/bin/reset-mcu
+  exit $?
+}
+
+stop() {
+  id=$(proc_id)
+  if [ "$id" -gt "0" ]; then
+    echo "Stopping..."
+    /usr/bin/kill-bridge 2>&1 /dev/null
+  else
+    echo "Nothing to do, because $PROGRAM_NAME is not running."
+  fi
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  restart)
+    stop
+    start
+    ;;
+  status)
+    status
+    ;;
+  *)
+    echo "Usage: $PROGRAM_NAME {start|stop|restart|status}" >&2
+    exit 3
+    ;;
+esac

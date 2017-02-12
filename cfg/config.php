@@ -23,13 +23,12 @@ $files["status"] = $directory["work"] . "var/status.json";
 $files["envmon_manager"] = $directory["work"] . "bin/envmon";
 
 // URLs
+$url["service_host"] = gethostbyname('localhost');
+$url["service_port"] = 2323;
 $url["main"] = "http://127.0.0.1/www/";
 $url["ws_all"] = $url["main"] . "?content=status";
-$url["ws_cpu"] = $url["main"] . "?content=status&sub=cpu";
-$url["ws_memory"] = $url["main"] . "?content=status&sub=memory";
-// $url["ws_swap"] = $url["main"] . "?content=status&sub=swap";
-// $url["ws_intstorage"] = $url["main"] . "?content=status&sub=intstorage";
-// $url["ws_extstorage"] = $url["main"] . "?content=status&sub=extstorage";
+$url["ws_cpu"] = $url["main"] . "?content=status&sub=cpu"; // remove
+$url["ws_memory"] = $url["main"] . "?content=status&sub=memory"; // remove
 
 // Defaults
 $default["title"] = true;

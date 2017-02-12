@@ -165,7 +165,6 @@
 <input type="hidden" name="action" value="proced">
 <button type="submit" value="submit"><?=msg("apply")?></button>
 </form>
-<script src="jquery-1.10.2.min.js"></script>
 <script type="text/javascript">
 var code = {};
 $("select[name='system_timezone'] > option").each(function () {
@@ -175,9 +174,7 @@ $("select[name='system_timezone'] > option").each(function () {
         code[this.text] = this.value;
     }
 });
-</script>
-<script type="text/javascript">
-var code = {};
+code = {};
 $("select[name='system_language'] > option").each(function () {
     if(code[this.text]) {
         $(this).remove();
@@ -185,9 +182,7 @@ $("select[name='system_language'] > option").each(function () {
         code[this.text] = this.value;
     }
 });
-</script>
-<script type="text/javascript">
-var code = {};
+code = {};
 $("select[name='system_theme'] > option").each(function () {
     if(code[this.text]) {
         $(this).remove();

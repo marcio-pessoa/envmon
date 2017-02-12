@@ -28,6 +28,7 @@ try:
     import telnetlib
     from time import sleep, time
     from timer import Timer
+    from check import checker
 except ImportError, err:
     print "Critical - %s" % (err)
     exit(1)
@@ -42,6 +43,11 @@ PROGRAM_COPYRIGHT = "Copyright (c) 2015-2016 Marcio Pessoa"
 PROGRAM_LICENSE = "undefined. There is NO WARRANTY."
 PROGRAM_WEBSITE = "http://pessoa.eti.br/"
 PROGRAM_CONTACT = "Marcio Pessoa <marcio.pessoa@sciemon.com>"
+
+OK = 0
+WARNING = 1
+CRITICAL = 2
+UNKNOWN = 3
 
 
 def message_version():
@@ -93,7 +99,7 @@ def echo(string, debug=True):
 def echoln(string, debug=True):
     """"""
     if debug:
-        print string + "\r"
+        print string
 
 
 def log(string, debug=True):
@@ -105,7 +111,7 @@ def log(string, debug=True):
 def logln(string, debug=True):
     """"""
     if debug:
-        print timestamp() + " - " + string + "\r"
+        print timestamp() + " - " + string
 
 
 def try_bind(socket, address, port, timeout=30):
@@ -220,6 +226,7 @@ def update(d, u):
 
 
 def statusWrite(chave):
+    global status
     status_file = "/opt/envmon/var/status.json"
     # Read status file
     try:
@@ -242,7 +249,19 @@ def statusWrite(chave):
     try:
         status = json.loads(content)
     except ValueError, err:
-        echoln("Invalid status file.")
+        try:
+            echoln("Invalid status file.")
+            echo("Trying to create a new status file...")
+            content = '{}'
+            status = json.loads(content)
+            file = open(status_file, 'w')
+            json.dump(status, file, indent=2)
+            file.close()
+            status = json.loads(content)
+        except IOError, err:
+            echoln("Fail.")
+            exit(1)
+        echoln("Done.")
         exit(2)
     # Change payload
     content = update(status, chave)
@@ -263,8 +282,8 @@ def sensorsRead():
     getSwapData()
     getIntStorageData()
     getExtStorageData()
-    getFanData()
-    getSysTempData()
+    # getFanData()
+    # getSysTempData()
     checkSeason()
     logln("Status updated.", debug)
 
@@ -277,10 +296,21 @@ def getCpuData():
     n = subprocess.check_output("/opt/envmon/bin/check_system.sh cpu",
                                 shell=True)
     n = float(re.sub(r'[^\d.]+', '', n))
-    n = round(n, 0)
-    r = {'system': {'cpu': {'value': 0, 'status': 3, 'moment': ''}}}
-    r['system']['cpu']['value'] = n
-    r['system']['cpu']['status'] = 0
+    value = round(n, 0)
+    status = checker(value,
+                     cfg["threshold"]["cpu"]["warning"],
+                     cfg["threshold"]["cpu"]["critical"])
+    r = {
+        'system': {
+            'cpu': {
+                'value': 0,
+                'status': 3,
+                'moment': ''
+            }
+        }
+    }
+    r['system']['cpu']['value'] = value
+    r['system']['cpu']['status'] = status
     r['system']['cpu']['moment'] = timestamp()
     statusWrite(r)
 
@@ -289,31 +319,22 @@ def getMemData():
     n = subprocess.check_output("/opt/envmon/bin/check_system.sh mem",
                                 shell=True)
     n = float(re.sub(r'[^\d.]+', '', n))
-    n = round(n, 0)
-    r = {'system': {'memory': {'value': 0, 'status': 3, 'moment': ''}}}
-    r['system']['memory']['value'] = n
-    r['system']['memory']['status'] = 0
+    value = round(n, 0)
+    status = checker(value,
+                     cfg["threshold"]["memory"]["warning"],
+                     cfg["threshold"]["memory"]["critical"])
+    r = {
+        'system': {
+            'memory': {
+                'value': 0,
+                'status': 3,
+                'moment': ''
+            }
+        }
+    }
+    r['system']['memory']['value'] = value
+    r['system']['memory']['status'] = status
     r['system']['memory']['moment'] = timestamp()
-    statusWrite(r)
-
-
-def getSysTempData():
-    # n = float(re.sub(r'[^\d.]+', '', n))
-    # n = round(n, 1)
-    r = {'system': {'temperature': {'value': 0, 'status': 3, 'moment': ''}}}
-    # r['system']['temperature']['value'] = n
-    # r['system']['temperature']['status'] = 0
-    r['system']['temperature']['moment'] = timestamp()
-    statusWrite(r)
-
-
-def getFanData():
-    # n = float(re.sub(r'[^\d.]+', '', n))
-    # n = round(n, 0)
-    r = {'system': {'fan': {'value': 0, 'status': 3, 'moment': ''}}}
-    # r['system']['fan']['value'] = n
-    # r['system']['fan']['status'] = 0
-    r['system']['fan']['moment'] = timestamp()
     statusWrite(r)
 
 
@@ -321,10 +342,21 @@ def getSwapData():
     n = subprocess.check_output("/opt/envmon/bin/check_system.sh swap",
                                 shell=True)
     n = float(re.sub(r'[^\d.]+', '', n))
-    n = round(n, 0)
-    r = {'system': {'swap': {'value': 0, 'status': 3, 'moment': ''}}}
-    r['system']['swap']['value'] = n
-    r['system']['swap']['status'] = 0
+    value = round(n, 0)
+    status = checker(value,
+                     cfg["threshold"]["swap"]["warning"],
+                     cfg["threshold"]["swap"]["critical"])
+    r = {
+        'system': {
+            'swap': {
+                'value': 0,
+                'status': 3,
+                'moment': ''
+            }
+        }
+    }
+    r['system']['swap']['value'] = value
+    r['system']['swap']['status'] = status
     r['system']['swap']['moment'] = timestamp()
     statusWrite(r)
 
@@ -333,10 +365,21 @@ def getIntStorageData():
     n = subprocess.check_output("/opt/envmon/bin/check_system.sh root",
                                 shell=True)
     n = float(re.sub(r'[^\d.]+', '', n))
-    n = round(n, 0)
-    r = {'system': {'intstorage': {'value': 0, 'status': 3, 'moment': ''}}}
-    r['system']['intstorage']['value'] = n
-    r['system']['intstorage']['status'] = 0
+    value = round(n, 0)
+    status = checker(value,
+                     cfg["threshold"]["intstorage"]["warning"],
+                     cfg["threshold"]["intstorage"]["critical"])
+    r = {
+        'system': {
+            'intstorage': {
+                'value': 0,
+                'status': 3,
+                'moment': ''
+            }
+        }
+    }
+    r['system']['intstorage']['value'] = value
+    r['system']['intstorage']['status'] = status
     r['system']['intstorage']['moment'] = timestamp()
     statusWrite(r)
 
@@ -345,27 +388,89 @@ def getExtStorageData():
     n = subprocess.check_output("/opt/envmon/bin/check_system.sh sd",
                                 shell=True)
     n = float(re.sub(r'[^\d.]+', '', n))
-    n = round(n, 0)
-    r = {'system': {'extstorage': {'value': 0, 'status': 3, 'moment': ''}}}
-    r['system']['extstorage']['value'] = n
-    r['system']['extstorage']['status'] = 0
+    value = round(n, 0)
+    status = checker(value,
+                     cfg["threshold"]["extstorage"]["warning"],
+                     cfg["threshold"]["extstorage"]["critical"])
+    r = {
+        'system': {
+            'extstorage': {
+                'value': 0,
+                'status': 3,
+                'moment': ''
+            }
+        }
+    }
+    r['system']['extstorage']['value'] = value
+    r['system']['extstorage']['status'] = status
     r['system']['extstorage']['moment'] = timestamp()
     statusWrite(r)
 
 
-def getWaterData():
-    n = 0
-    n = round(n, 0)
-    r = {'environment': {'water': {'value': 0, 'status': 3, 'moment': ''}}}
-    r['environment']['water']['value'] = n
-    r['environment']['water']['status'] = 3
+def getSysTempData(n):
+    value = round(n, 1)
+    status = checker(value,
+                     cfg["threshold"]["temperature"]["sys"]["min"]["warning"],
+                     cfg["threshold"]["temperature"]["sys"]["min"]["critical"],
+                     cfg["threshold"]["temperature"]["sys"]["max"]["warning"],
+                     cfg["threshold"]["temperature"]["sys"]["max"]["critical"],
+                     True)
+    r = {
+        'system': {
+            'temperature': {
+                'value': 0,
+                'status': 3,
+                'moment': ''
+            }
+        }
+    }
+    r['system']['temperature']['value'] = value
+    r['system']['temperature']['status'] = status
+    r['system']['temperature']['moment'] = timestamp()
+    statusWrite(r)
+
+
+def getFanData(n):
+    value = round(n, 0)
+    status = checker(value,
+                     cfg["threshold"]["fan"]["warning"],
+                     cfg["threshold"]["fan"]["critical"])
+    r = {'system': {'fan': {'value': 0, 'status': 3, 'moment': ''}}}
+    r['system']['fan']['value'] = value
+    r['system']['fan']['status'] = status
+    r['system']['fan']['moment'] = timestamp()
+    statusWrite(r)
+
+
+def getWaterData(n):
+    value = round(n, 1)
+    status = checker(value,
+                     cfg["threshold"]["water"]["warning"],
+                     cfg["threshold"]["water"]["critical"],
+                     False, False, True)
+    r = {
+        'environment': {
+            'water': {
+                'value': 0,
+                'status': 3,
+                'moment': ''
+            }
+        }
+    }
+    r['environment']['water']['value'] = value
+    r['environment']['water']['status'] = status
     r['environment']['water']['moment'] = timestamp()
     statusWrite(r)
 
 
-def getEnvTempData():
-    n = 0
-    n = round(n, 0)
+def getEnvTempData(n):
+    value = round(n, 1)
+    status = checker(value,
+                     cfg["threshold"]["temperature"]["env"]["min"]["warning"],
+                     cfg["threshold"]["temperature"]["env"]["min"]["critical"],
+                     cfg["threshold"]["temperature"]["env"]["max"]["warning"],
+                     cfg["threshold"]["temperature"]["env"]["max"]["critical"],
+                     True)
     r = {
         "environment": {
             "temperature": {
@@ -375,30 +480,64 @@ def getEnvTempData():
             }
         }
     }
-    r['environment']['temperature']['value'] = n
-    r['environment']['temperature']['status'] = 3
+    r['environment']['temperature']['value'] = value
+    r['environment']['temperature']['status'] = status
     r['environment']['temperature']['moment'] = timestamp()
     statusWrite(r)
 
 
-def getMoistureData():
-    n = 0
-    n = round(n, 0)
-    r = {'environment': {'moisture': {'value': 0, 'status': 3, 'moment': ''}}}
-    r['environment']['moisture']['value'] = n
-    r['environment']['moisture']['status'] = 3
+def getMoistureData(n):
+    value = round(n, 1)
+    # TODO(Marcio): Coletar a estacao do ano de forma dinamica
+    status = checker(value,
+                     cfg["threshold"]["moisture"]["winter"]["warning"],
+                     cfg["threshold"]["moisture"]["winter"]["critical"],
+                     False, False,
+                     True)
+    r = {
+        'environment': {
+            'moisture': {
+                'value': 0,
+                'status': 3,
+                'moment': ''
+            }
+        }
+    }
+    r['environment']['moisture']['value'] = value
+    r['environment']['moisture']['status'] = status
     r['environment']['moisture']['moment'] = timestamp()
     statusWrite(r)
 
 
-def getHumidityData():
-    n = 0
-    n = round(n, 0)
-    r = {'environment': {'humidity': {'value': 0, 'status': 3, 'moment': ''}}}
-    r['environment']['humidity']['value'] = n
-    r['environment']['humidity']['status'] = 3
+def getHumidityData(n):
+    value = round(n, 1)
+    status = checker(value,
+                     cfg["threshold"]["humidity"]["warning"],
+                     cfg["threshold"]["humidity"]["critical"],
+                     False, False, True)
+    r = {
+        'environment': {
+            'humidity': {
+                'value': 0,
+                'status': 3,
+                'moment': ''
+            }
+        }
+    }
+    r['environment']['humidity']['value'] = value
+    r['environment']['humidity']['status'] = status
     r['environment']['humidity']['moment'] = timestamp()
     statusWrite(r)
+
+
+def getData(search, data):
+    matchObj = re.match(r'(.*)' + search + ': (\d*\.\d)', data, re.S)
+    if matchObj:
+        n = float(matchObj.group(2))
+        return n
+    else:
+        # logln("No match: " + str(data))
+        return True
 
 
 def checkSeason():
@@ -479,9 +618,9 @@ def checkNotifications():
 
 
 def notifySeason():
-    pt = "Começou o #inverno! Seja bem vindo a estação mais fria do ano."
-    en = "It is #Winter! Welcome to the coldest season."
-    ts = " 2016-06-20 22:34:00 UTC"
+    pt = "Começou a #primavera! Seja bem vindo a estação mais florida."
+    en = "It is #Spring! Welcome the most colorful season."
+    ts = " 2016-09-22 14:21:00 UTC"
     msg_pt = pt + ts
     msg_en = en + ts
     subprocess.check_output("python /opt/envmon/bin/tweety.pyc" +
@@ -543,17 +682,27 @@ def main():
         echoln("Can't open configuration file.")
         exit(1)
     try:
+        global cfg
         cfg = json.loads(content)
     except ValueError, err:
         echoln("Invalid configuration file.")
         exit(2)
-    # Open TCP socket
     echoln("Done.", debug)
+    # Open TCP socket
     log("Listening on port " + str(service_port) + "...", debug)
     try:
         console = Console(service_bind, service_port)
     except:
         echoln("Failed to start listener.")
+        exit(1)
+    echoln("Done.", debug)
+    # Open Console
+    log("Opening Console on port 6571...", debug)
+    try:
+        tn = telnetlib.Telnet()
+        tn.open('127.0.0.1', 6571, 2)
+    except:
+        echoln("Failed.")
         exit(1)
     echoln("Done.", debug)
     sensorsRead()
@@ -577,6 +726,8 @@ def main():
         command = console.read(1024)[:-2]
         if command != "":
             if command == 'kill':
+                console.write("Shuting down...\r\n")
+                sleep(5)
                 break
             elif command == 'close' or command == 'bye' or command == 'exit':
                 console.close(console.client)
@@ -584,41 +735,84 @@ def main():
                 sensorsRead()
                 console.write("Reading all sensors.\r\n")
             elif command == 'squirt':
+                console.write("Squirting.\r\n")
                 pumpSquirt()
             elif command == 'reload':
                 msg = "Reloading " + PROGRAM_NAME + "..."
                 log(msg, debug)
                 console.write(msg)
-                echoln("Done", debug)
-                console.write("Done")
+                echoln("Done.", debug)
+                console.write("Done.\r\n")
+
         if cpu_timer.check():
             getCpuData()
         if memory_timer.check():
             getMemData()
-        if systemp_timer.check():
-            getSysTempData()
-        if fan_timer.check():
-            getFanData()
         if swap_timer.check():
             getSwapData()
         if intstorage_timer.check():
             getIntStorageData()
         if extstorage_timer.check():
             getExtStorageData()
-        if water_timer.check():
-            getWaterData()
-        if envtemp_timer.check():
-            getEnvTempData()
-        if moisture_timer.check():
-            getMoistureData()
-        if humidity_timer.check():
-            getHumidityData()
         if season_timer.check():
             notifySeason()
             season_timer.set(checkSeason() * 1000)
-        sleep(0.01)
+
+        try:
+            if moisture_timer.check():
+                tn.write("M30\n")
+            if fan_timer.check():
+                tn.write("M40\n")
+            if water_timer.check():
+                tn.write("M50\n")
+            if systemp_timer.check():
+                tn.write("M60 S1\n")
+            if envtemp_timer.check():
+                tn.write("M60 S2\n")
+            if humidity_timer.check():
+                tn.write("M70\n")
+                tn.write("M20 R255 G0 B0\n")
+        except:
+            pass
+
+        try:
+            data = tn.read_until("Program end.", 1)
+        except:
+            pass
+
+        n = getData('Temperature 2', data)
+        if n is not True:
+            getEnvTempData(n)
+
+        n = getData('Humidity', data)
+        if n is not True:
+            getHumidityData(n)
+
+        n = getData('Moisture', data)
+        if n is not True:
+            getMoistureData(n)
+
+        n = getData('Distance', data)
+        if n is not True:
+            getWaterData(n)
+
+        n = getData('Temperature 1', data)
+        if n is not True:
+            getSysTempData(n)
+
+        n = getData('Fan', data)
+        if n is not True:
+            getFanData(n)
+
+        sleep(0.05)
         stdout.flush()
     log("Shuting down listener...")
+    echoln("Done.")
+    log("Closing Console connection...")
+    try:
+        tn.close()
+    except:
+        echoln("Fail.")
     echoln("Done.")
 
 

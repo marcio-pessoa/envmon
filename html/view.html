@@ -1,59 +1,46 @@
-<!--
-<input type="button" value="<?=msg("continue")?>" 
-       onclick="window.location.href='/www/index.php?title=0&label=0&debug=0"/>
-<div id="Resource">
--->
 <div id="Resource">
   <h3><?=msg("environment")?></h3>
-  <div id="Item" 
-       title="<?=msg($status["environment"]["temperature"]["status"])?> -
-              <?=$status["environment"]["temperature"]["moment"]?>">
+  <div id="Item" class="environment_temperature_moment">
     <div id="Item_description">
       <?=msg("temperature")?>
     </div>
-    <div id="status<?=$status["environment"]["temperature"]["status"]?>">
-      <?=$status["environment"]["temperature"]["value"]?>
-      &#8451;
+    <div class="environment_temperature_status" id="status4">
+      <span id="environment_temperature_value"></span>
     </div>
   </div>
-  <div id="Item" 
-       title="<?=msg($status["environment"]["humidity"]["status"])?> -
-              <?=$status["environment"]["humidity"]["moment"]?>">
+  <div id="Item" class="humidity_moment">
     <div id="Item_description">
       <?=msg("air_humidity")?>
     </div>
-    <div id="status<?=$status["environment"]["humidity"]["status"]?>">
-      <?=$status["environment"]["humidity"]["value"]?>%
+    <div class="humidity_status" id="status4">
+      <span id="humidity_value"></span>
     </div>
   </div>
-  <div id="Item" 
-       title="<?=msg($status["environment"]["moisture"]["status"])?> -
-              <?=$status["environment"]["moisture"]["moment"]?>">
+  <div id="Item" class="moisture_moment">
     <div id="Item_description">
       <?=msg("moisture")?>
     </div>
-    <div id="status<?=$status["environment"]["moisture"]["status"]?>">
-      <?=$status["environment"]["moisture"]["value"]?>%
+    <div class="moisture_status" id="status4">
+      <span id="moisture_value"></span>
     </div>
   </div>
-  <div id="Item" 
-       title="<?=msg($status["environment"]["water"]["status"])?> -
-              <?=$status["environment"]["water"]["moment"]?>">
+  <div id="Item" class="water_moment">
     <div id="Item_description">
       <?=msg("water_level")?>
     </div>
-    <div id="status<?=$status["environment"]["water"]["status"]?>">
-      <?=$status["environment"]["water"]["value"]?>%
+    <div class="water_status" id="status4">
+      <span id="water_value"></span>
     </div>
   </div>
-  <div id="Item" 
-       title="<?=msg($status["season"]["current"])?> -
-              <?=$status["season"]["begin"]?>">
+  <div id="Item" class="season_moment">
     <div id="Item_description">
       <?=msg("season")?>
     </div>
-    <div id="status0">
+    <div class="season_status" id="status4">
       <?=msg($status["season"]["current"])?>
+<!--
+      <span id="season_value"></span>
+-->
     </div>
   </div>
 </div>
@@ -99,93 +86,71 @@
       <span id="nextseasonin"></span>
     </div>
   </div>
-  <div id="Item"
-       title="<?=msg($status["running_id"])?> -
-              <?=msg($status["running"])?>">
+  <div id="Item" class="daemon_moment">
     <div id="Item_description">
       <?=msg("system_status")?>
     </div>
-    <div id="status<?=$status["running_id"]?>">
-      <span id="status"></span>
+    <div class="daemon_status" id="status4">
+      <span id="daemon_value"></span>
     </div>
   </div>
-  <div id="Item" 
-       title="<?=msg($status["system"]["temperature"]["status"])?> -
-              <?=$status["system"]["temperature"]["moment"]?>">
+  <div id="Item" class="system_temperature_moment">
     <div id="Item_description">
       <?=msg("temperature")?>
     </div>
-    <div id="status<?=$status["system"]["temperature"]["status"]?>">
-      <span id="temperature_value"></span> &#8451;
+    <div class="system_temperature_status" id="status4">
+      <span id="system_temperature_value"></span>
     </div>
   </div>
-  <div id="Item" 
-       title="<?=msg($status["system"]["fan"]["status"])?> -
-              <?=$status["system"]["fan"]["moment"]?>">
+  <div id="Item" class="fan_moment">
     <div id="Item_description">
       <?=msg("fan")?>
     </div>
-    <div id="status<?=$status["system"]["fan"]["status"]?>">
-      <span id="fan_value"></span>%
+    <div class="fan_status" id="status4">
+      <span id="fan_value"></span>
     </div>
   </div>
-  <div id="Item" 
-       title="<?=msg($cpu["status"])?> -
-              <?=$cpu["moment"]?>">
+  <div id="Item" class="cpu_moment">
     <div id="Item_description">
       <?=msg("cpu")?>
     </div>
-    <div id="status<?=$cpu["status"]?>">
-      <span id="cpu_value"></span>%
+    <div class="cpu_status" id="status4">
+      <span id="cpu_value"></span>
     </div>
   </div>
-  <div id="Item" 
-       title="<?=msg($memory["status"])?> -
-              <?=$memory["moment"]?>">
+  <div id="Item" class="memory_moment">
     <div id="Item_description">
       <?=msg("memory")?>
     </div>
-    <div id="status<?=$memory["status"]?>">
-      <span id="memory_value"></span>%
+    <div class="memory_status" id="status4">
+      <span id="memory_value"></span>
     </div>
   </div>
-  <div id="Item" 
-       title="<?=msg($status["system"]["swap"]["status"])?> -
-              <?=$status["system"]["swap"]["moment"]?>">
+  <div id="Item" class="swap_moment">
     <div id="Item_description">
       <?=msg("swap")?>
     </div>
-    <div id="status<?=$status["system"]["swap"]["status"]?>">
-      <span id="swap_value"></span>%
+    <div class="swap_status" id="status4">
+      <span id="swap_value"></span>
     </div>
   </div>
-  <div id="Item" 
-       title="<?=msg($status["system"]["intstorage"]["status"])?> -
-              <?=$status["system"]["intstorage"]["moment"]?>">
+  <div id="Item" class="intstorage_moment">
     <div id="Item_description">
       <?=msg("intstorage")?>
     </div>
-    <div id="status<?=$status["system"]["intstorage"]["status"]?>">
-      <span id="intstorage_value"></span>%
+    <div class="intstorage_status" id="status4">
+      <span id="intstorage_value"></span>
     </div>
   </div>
-  <div id="Item" 
-       title="<?=msg($status["system"]["extstorage"]["status"])?> -
-              <?=$status["system"]["extstorage"]["moment"]?>">
+  <div id="Item" class="extstorage_moment">
     <div id="Item_description">
       <?=msg("extstorage")?>
     </div>
-    <div id="status<?=$status["system"]["extstorage"]["status"]?>">
-      <span id="extstorage_value"></span>%
+    <div class="extstorage_status" id="status4">
+      <span id="extstorage_value"></span>
     </div>
   </div>
 </div>
-<!--
-<script language="JavaScript" type="text/javascript">
-setTimeout("location.reload(true);",
-           <?=$cfg['timer']['display']['timeout'] * 1000?>);
-</script>
--->
 <script language="JavaScript" type="text/javascript">
 var remote_timestamp = <?=$timestamp?>;
 var remote_uptime = <?=$uptime?>;

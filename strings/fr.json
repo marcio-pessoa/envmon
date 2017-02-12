@@ -8,10 +8,5 @@
     }
   },
   "elements": {
-    "warning": "Attention",
-    "critical": "Critique",
-    "unknown": "Inconnu",
-    "old_data": "Anciennes données",
-    "language": "Langue"
   }
 }

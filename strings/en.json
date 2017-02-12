@@ -12,7 +12,8 @@
     "1": "Warning",
     "2": "Critical",
     "3": "Unknown",
-    "4": "Old data",
+    "4": "Information",
+    "5": "Old data",
     "ok": "OK",
     "warning": "Warning",
     "critical": "Critical",
@@ -182,6 +183,13 @@
     "consumer_secret": "Consumer Secret (API Secret)",
     "consumer_key": "Consumer Key (API Key)",
     "timezone": "Time zone",
-    "nextseasonin": "Next season in"
+    "nextseasonin": "Next season in",
+    "cmd_ok": "Command executed successfully.",
+    "cmd_error": "Fail running command.",
+    "restart": "Restart",
+    "restart_service": "Restart service",
+    "restart_term1": "",
+    "restart_term2": "",
+    "service_restarted": "Service restarted"
   }
 }

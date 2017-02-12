@@ -75,7 +75,7 @@ void setup() {
   Console.begin();
   // Start up message
   echoln("Starting...");
-  CommandM92();
+  CommandM90();
   // RGB LED
   led.inverse();
   // Outdoor LED

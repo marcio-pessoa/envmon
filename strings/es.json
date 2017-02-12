@@ -8,11 +8,5 @@
     }
   },
   "elements": {
-    "ok": "Bueno",
-    "warning": "Cautela",
-    "critical": "Crítico",
-    "unknown": "Desconocido",
-    "old_data": "Datos antiguos",
-    "language": "Language"
   }
 }

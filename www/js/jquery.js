@@ -1,1 +1,1 @@
-/home/mex/Development/envmon/Mark_II/www/js/jquery-1.10.2.min.js
+jquery-3.0.0.min.js

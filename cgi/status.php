@@ -9,7 +9,9 @@
 header("Content-Type: text/plain");
 
 if (file_exists($files["status"])) {
-    for ($i=0; $i<=100; $i++) {
+    // This is a retry and timeout engine
+    // Used to wait when status file is already open or empty. 
+    for ($i=0; $i<=90; $i++) {  // Retry 90 times
         $size = filesize($files["status"]);
         if ($size > 0) {
             $file = fopen($files["status"], "r");
@@ -18,20 +20,14 @@ if (file_exists($files["status"])) {
             $status = json_decode($json, true);
             break;
         }
-        usleep(1000);
+        usleep(1000);  // Wait for 1 millisecond to try again.
+        // Total wait time is 90 milliseconds, or 1 second and a half.
         clearstatcache();
     }
 }
 else {
-    print("ERROR: Status file not found.");
+    print("ERROR: Can't retrieve data from status file.");
 }
-
-// Set configured language
-$current["language"] = $cfg['system']['language'];
-// if ($current["language"] != "English") {
-    $language_default = language_load("English");
-// }
-$language_defined = language_load($current["language"]);
 
 $current["sub"] = isset($_GET["sub"]) ? $_GET["sub"] : null;
 if ($current["sub"] != null)
@@ -41,9 +37,11 @@ switch ($current["sub"]) {
              $status,
              $status_id);
         $status = $status_id == 0 ? "running" : "stopped";
-        $data = '{"daemon":{"status":"' . msg($status) .
-                '", "status_id":"' . $status_id . '"}}';
-        echo $data;
+        $date_time = date("Y-m-d H:i:s");
+        $data = json_decode('{"daemon":{"status":"' . msg($status) .
+                            '", "status_id":"' . $status_id .
+                            '", "moment":"' . $date_time . '"}}');
+        echo json_encode($data, JSON_PRETTY_PRINT);
         exit;
     case "end":
         $current["timezone"] = isset($cfg['system']['timezone']) ? 

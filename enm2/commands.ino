@@ -21,6 +21,24 @@ void Command0(){
   echoln("Unknown command");
 }
 
+/* CommandM2
+ * 
+ * Description
+ *   .
+ * 
+ *   CommandM2()
+ * 
+ * Parameters
+ *   frequency: Sound frequency (31	~ 65535)
+ *   duration: Sound duration (milliseconds)
+ * 
+ * Returns
+ *   void
+ */
+bool CommandM2() {
+  echoln("Program end.");
+}
+
 /* CommandM10
  * 
  * Description
@@ -61,7 +79,7 @@ bool CommandM20(byte R, byte G, byte B) {
 /* CommandM30
  * 
  * Description
- *   Shows memory information.
+ *   Check moisture.
  * 
  *   CommandM30()
  * 
@@ -72,20 +90,15 @@ bool CommandM20(byte R, byte G, byte B) {
  *   void
  */
 bool CommandM30() {
-  int total = (float)2.5 * 1024;
-  int free = freeMemory();
-  int used = total - free;
-  int percent_used = (float)used * 100 / total;
-  int percent_free = 100 - (float)percent_used;
-  echoln("SRAM:\t" + String(total) + " B");
-  echoln("Used:\t" + String(used) + " B (" + percent_used + "%)");
-  echoln("Free:\t" + String(free) + " B (" + percent_free + "%)");
+  float detected = 0;
+  detected = soil_moisture.read();
+  echoln("Moisture: " + String(detected) + "%");
 }
 
 /* CommandM40
  * 
  * Description
- *   Shows fan sensor information.
+ *   Check fan sensor information.
  * 
  *   CommandM40()
  * 
@@ -110,7 +123,7 @@ bool CommandM40(byte sensor) {
 /* CommandM50
  * 
  * Description
- *   Shows water sensor information.
+ *   Check water sensor information.
  * 
  *   CommandM50()
  * 
@@ -135,7 +148,7 @@ bool CommandM50(byte sensor) {
 /* CommandM60
  * 
  * Description
- *   Shows temperature.
+ *   Check temperature.
  * 
  *   CommandM60()
  * 
@@ -163,7 +176,7 @@ bool CommandM60(byte sensor) {
 /* CommandM70
  * 
  * Description
- *   Shows humidity.
+ *   Check humidity.
  * 
  *   Reading temperature or humidity takes about 250 milliseconds!
  *   Sensor readings may also be up to 2 seconds 'old'.
@@ -192,7 +205,7 @@ bool CommandM70(byte sensor) {
 /* CommandM80
  * 
  * Description
- *   Shows relay status.
+ *   Check relay status.
  * 
  *   CommandM80()
  * 
@@ -260,12 +273,12 @@ bool CommandM82(byte relay) {
   }
 }
 
-/* CommandM92
+/* CommandM90
  * 
  * Description
  *   Shows system information.
  * 
- *   CommandM92()
+ *   CommandM90()
  * 
  * Parameters
  *   none
@@ -273,7 +286,7 @@ bool CommandM82(byte relay) {
  * Returns
  *   void
  */
-void CommandM92() {
+void CommandM90() {
   echoln(envmon.version());
   if (debug or (millis() < 100)) {
     echoln(envmon.owner());
@@ -282,6 +295,30 @@ void CommandM92() {
     echoln(envmon.website());
     echoln(envmon.contact());
   }
+}
+
+/* CommandM91
+ * 
+ * Description
+ *   Shows memory information.
+ * 
+ *   CommandM91()
+ * 
+ * Parameters
+ *   none
+ * 
+ * Returns
+ *   void
+ */
+bool CommandM91() {
+  int total = (float)2.5 * 1024;
+  int free = freeMemory();
+  int used = total - free;
+  int percent_used = (float)used * 100 / total;
+  int percent_free = 100 - (float)percent_used;
+  echoln("SRAM:\t" + String(total) + " B");
+  echoln("Used:\t" + String(used) + " B (" + percent_used + "%)");
+  echoln("Free:\t" + String(free) + " B (" + percent_free + "%)");
 }
 
 void CommandM99() {
@@ -310,17 +347,19 @@ void CommandM100(char letter = 0) {
     echo("No G commands defined.");  // Test: Pending
   }
   if (letter == 'M' or letter == 0) {
+    echoln("M02\tProgram end");  // Test: Pending
     echoln("M10\tSpeaker sond (F=frequency, D=duration)");  // Test: Pending
     echoln("M20\tLed color (R=red, G=blue, B=green)");  // Test: Pending
-    echoln("M30\tMemory information");  // Test: Pending
+    echoln("M30\tMoisture sensors");  // Test: Pending
     echoln("M40\tFan sensors");  // Test: Pending
     echoln("M50\tDistance sensor");  // Test: Pending
-    echoln("M60\tTemeprature sensors (S1=system, S2=environment)");  // Test: Pending
+    echoln("M60\tTemeperature sensors (S1=system, S2=environment)");  // Test: Pending
     echoln("M70\tHumidity sensor");  // Test: Pending
     echoln("M80\tRelay status");  // Test: Pending
     echoln("M81\tRelay on");  // Test: Pending
     echoln("M82\tRelay off");  // Test: Pending
-    echoln("M92\tSystem information");  // Test: Pending
+    echoln("M90\tSystem information");  // Test: Pending
+    echoln("M91\tMemory information");  // Test: Pending
     echoln("M99\tReset system");  // Test: Pending
     echoln("M100\tThis help message");  // Test: Pending
     echoln("M111\tDebug mode");  // Test: Pending

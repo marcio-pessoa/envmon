@@ -7,17 +7,12 @@
  */
 
 $status = json_decode(file_get_contents($url["ws_all"]), true);
-exec($files["envmon_manager"] . " status",
-     $status["running"],
-     $status["running_id"]);
-$status["running"] = $status["running_id"] == 0 ? "running" : "stopped";
-$cpu = json_decode(file_get_contents($url["ws_cpu"]), true);
-$memory = json_decode(file_get_contents($url["ws_memory"]), true);
 $timezone = str_replace("_", " ", $cfg['system']['timezone']);
 $timestamp = date('U');
+$timestamp_UTC = $timestamp;
 $uptime = exec("cat /proc/uptime | cut -d ' ' -f 1");
-//TODO(Márcio): Converter para UTC
+//TODO(Márcio): Veritifcar se é necessário converter a variavel timestamp para UTC
 $seconds_to_next_season = strtotime(date($status["season"]["end"])) - 
-                          $timestamp;
+                          $timestamp_UTC;
 require($directory["html"] . "view.html");
 ?>

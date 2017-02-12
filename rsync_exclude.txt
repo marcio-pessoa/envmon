@@ -1,8 +1,10 @@
 *.py
 cfg/config.json
+BOM
 DONE
 TODO
 rsync_exclude.txt
+rsync_include.txt
 setup.sh
 envmon.geany
 enm2/
@@ -12,3 +14,9 @@ Schematics/
 task.log
 log/*
 var/*
+public_html/
+cgi-bin/
+index.html.original
+luci-static/
+keystore_manager_example/
+config.json

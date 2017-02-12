@@ -42,12 +42,6 @@ $current["content"] = isset($_GET["content"]) ?
                       $_GET["content"] :
                       $default["content"];
 
-// ReST - Web Services
-if ($current["content"] == "status") {
-  require($directory["cgi"] . $current["content"] . ".php");
-  exit;
-}
-
 // Set configured language
 $current["language"] = $cfg['system']['language'];
 // if ($current["language"] != "English") {
@@ -55,13 +49,19 @@ $current["language"] = $cfg['system']['language'];
 // }
 $language_defined = language_load($current["language"]);
 
-// Set configured theme
-$current["theme_file"] = theme_set($cfg['system']['theme']);
-
 // Set time zone
 $current["timezone"] = isset($cfg['system']['timezone']) ? 
                        $cfg['system']['timezone'] : $default["timezone"];
 date_default_timezone_set($current["timezone"]);
+
+// ReST - Web Services
+if ($current["content"] == "status") {
+  require($directory["cgi"] . $current["content"] . ".php");
+  exit;
+}
+
+// Set configured theme
+$current["theme_file"] = theme_set($cfg['system']['theme']);
 
 // Load content
 require($directory["html"] . "header.html");
