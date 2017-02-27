@@ -190,6 +190,7 @@
     "restart_service": "Restart service",
     "restart_term1": "",
     "restart_term2": "",
-    "service_restarted": "Service restarted"
+    "service_restarted": "Service restarted",
+    "wifisignal": "WiFi signal"
   }
 }

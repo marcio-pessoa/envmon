@@ -172,6 +172,7 @@
     "nextseasonin": "Próxima estação em",
     "timezone": "Fuso horário",
     "cmd_ok": "Comando executado com sucesso.",
-    "cmd_error": "Falha ao executar comando."
+    "cmd_error": "Falha ao executar comando.",
+    "wifisignal": "Sinal WiFi"
   }
 }

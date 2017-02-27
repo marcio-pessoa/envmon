@@ -1,21 +1,25 @@
 CHANGELOG, envmon Mark II - Environment Monitor, Change log file
 
+2017-02-26
+        * Added WiFi signal strength monitoring.
+        * Removed setup/cloud option.
+
 2015-11-21
-        Added swap memory statistics.
+        * Added swap memory statistics.
 
 2015-11-20
-        Added automatic installer (install.sh).
+        * Added automatic installer (install.sh).
 
 2015-09-15
-        Added support to two soil moisture sensors.
+        * Added support to two soil moisture sensors.
 
 2015-01-09
         * handlers.ino and commands.ino
-        I separated the main sketch file into 2 new ones to maintain code
-        clear and to grow up.
+        * I separated the main sketch file into 2 new ones to maintain code
+          clear and to grow up.
 
 2014-11-22
-        Trying to wake up this project...
+        * Trying to wake up this project...
 
 2013-11-15
-        Experimental version.
+        * Experimental version.

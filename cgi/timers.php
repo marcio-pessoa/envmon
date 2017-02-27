@@ -30,6 +30,8 @@ if ($action == "proced") {
         m_post("timer_system_intstorage", "integer", array(1, 600));
     $cfg['timer']['system']['extstorage'] =
         m_post("timer_system_extstorage", "integer", array(1, 600));
+    $cfg['timer']['system']['wifisignal'] =
+        m_post("timer_system_wifisignal", "integer", array(1, 600));
     $cfg['timer']['squirt']['duration'] =
         m_post("timer_squirt_duration", "integer", array(1, 20));
     $cfg['timer']['squirt']['minimum'] =

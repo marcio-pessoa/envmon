@@ -27,8 +27,8 @@ $url["service_host"] = gethostbyname('localhost');
 $url["service_port"] = 2323;
 $url["main"] = "http://127.0.0.1/www/";
 $url["ws_all"] = $url["main"] . "?content=status";
-$url["ws_cpu"] = $url["main"] . "?content=status&sub=cpu"; // remove
-$url["ws_memory"] = $url["main"] . "?content=status&sub=memory"; // remove
+// $url["ws_cpu"] = $url["main"] . "?content=status&sub=cpu";
+// $url["ws_memory"] = $url["main"] . "?content=status&sub=memory";
 
 // Defaults
 $default["title"] = true;
@@ -54,7 +54,6 @@ $menu_items = array("view",
                           "thresholds",
                           "timers",
                           "notifications",
-                          "cloud",
                           "configuration"),
                     "help",
                     "about");

@@ -45,7 +45,7 @@ switch ($current["sub"]) {
         exit;
     case "end":
         $current["timezone"] = isset($cfg['system']['timezone']) ? 
-                               $cfg['system']['timezone'] : $default["timezone"];
+            $cfg['system']['timezone'] : $default["timezone"];
         date_default_timezone_set($current["timezone"]);
         $timestamp = date('U');
         echo strtotime(date($status["season"]["end"])) - $timestamp;
@@ -61,6 +61,7 @@ switch ($current["sub"]) {
     case "swap":
     case "intstorage":
     case "extstorage":
+    case "wifisignal":
         echo json_encode($status["system"][$current["sub"]],
                          JSON_PRETTY_PRINT);
         exit;

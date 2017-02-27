@@ -15,7 +15,7 @@ function getStatus() {
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       obj = JSON.parse(xhttp.responseText);
-      // Temperature
+      // Environment temperature
       document.getElementById('environment_temperature_value').innerHTML = 
         obj.environment.temperature.value + " &#8451";
       document.getElementsByClassName('environment_temperature_status')[0].id = 
@@ -71,7 +71,7 @@ function getStatus() {
         "status" + obj.system.swap.status;
       document.getElementsByClassName('swap_moment')[0].title =
         obj.system.swap.moment;
-      // System Temperature
+      // System temperature
       document.getElementById('system_temperature_value').innerHTML = 
         obj.system.temperature.value + " &#8451";
       document.getElementsByClassName('system_temperature_status')[0].id = 
@@ -85,20 +85,27 @@ function getStatus() {
         "status" + obj.system.fan.status;
       document.getElementsByClassName('fan_moment')[0].title =
         obj.system.fan.moment;
-      // Internal Storage
+      // Internal storage
       document.getElementById('intstorage_value').innerHTML = 
         obj.system.intstorage.value + "%";
       document.getElementsByClassName('intstorage_status')[0].id = 
         "status" + obj.system.intstorage.status;
       document.getElementsByClassName('intstorage_moment')[0].title =
         obj.system.intstorage.moment;
-      // External Storage
+      // External storage
       document.getElementById('extstorage_value').innerHTML = 
         obj.system.extstorage.value + "%";
       document.getElementsByClassName('extstorage_status')[0].id = 
         "status" + obj.system.extstorage.status;
       document.getElementsByClassName('extstorage_moment')[0].title =
         obj.system.extstorage.moment;
+      // WiFi signal
+      document.getElementById('wifisignal_value').innerHTML = 
+        obj.system.wifisignal.value + "%";
+      document.getElementsByClassName('wifisignal_status')[0].id = 
+        "status" + obj.system.wifisignal.status;
+      document.getElementsByClassName('wifisignal_moment')[0].title =
+        obj.system.wifisignal.moment;
     }
   };
   xhttp.open("GET", "/www/?content=status", true);

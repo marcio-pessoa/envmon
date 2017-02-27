@@ -4,14 +4,36 @@ Label:
   Status '-': OK
   Status '+': Pending
 
+- US-100 Ultrasonic Sensor Module - Green
+  - Technical specification
+    - URL: http://www.dx.com/p/144433
+  - Buy
+    - Date: 31/03/2014 21:25
+    - Cost: USD 6.48
+    - DX item ID: 140331001086539330
+  - Delivery
+    - Date: 2014-mm-dd
+  + Install
+- DHT22 2302 Digital Temperature Humidity Sensor for Arduino
+  - Technical specification
+    - URL: http://www.dx.com/p/138531
+  - Buy
+    - Date: Fri, Nov 29, 2013 at 12:51 PM
+    - Cost: USD 10.80
+    - DX item ID: 131129001020675880
+  - Delivery
+    - Date: 2014-mm-dd
+  - Install
+
 + Item name
   + Technical specification
     + URL: 
   + Buy
     + Date: 
     + Cost: USD 0.0
-    + eBay item ID: 
-    + Delivery: 
+    + DX item ID: 
+  + Delivery
+    + Date: 
   + Install
 
-Total cost: $0
+Total cost: $17.28

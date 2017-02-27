@@ -12,6 +12,9 @@
 #   /opt/envmon/bin/check_system.sh
 # 
 # Change log:
+# 2017-02-27
+#         Added WiFi signal strength monitoring.
+#
 # 2016-06-17
 #         Fixed methodology to get CPU utilization.
 #
@@ -57,6 +60,15 @@ getStorage() {
   fi
 }
 
+getWiFiSignalStrength() {
+  result=$(iwconfig wlan0 | grep Quality | tr -s ' ' | cut -d ' ' -f 3 | cut -d '=' -f 2 | tr '/' ' ' | awk '{usage=$1/$2*100} END {print usage}')
+  if [ "$result" = "" ]; then
+    echo 0
+  else
+    echo "$result"
+  fi
+}
+
 case "$1" in
   cpu)
     getCPU
@@ -73,8 +85,11 @@ case "$1" in
   sd)
     getStorage /dev/sda
     ;;
+  wifi)
+    getWiFiSignalStrength
+    ;;
   *)
-    echo "Usage: $PROGRAM_NAME {cpu|mem|swap|root|sd}" >&2
+    echo "Usage: $PROGRAM_NAME {cpu|mem|swap|root|sd|wifi}" >&2
     exit 3
     ;;
 esac

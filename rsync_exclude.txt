@@ -1,11 +1,11 @@
 *.py
 cfg/config.json
 BOM
-DONE
-TODO
+HOURS
+KANBAN
 rsync_exclude.txt
 rsync_include.txt
-setup.sh
+setup
 envmon.geany
 enm2/
 Pictures/

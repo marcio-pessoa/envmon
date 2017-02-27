@@ -1,0 +1,146 @@
+KANBAN, envmon Mark II - Environment Monitor, KANBAN file
+
+BACKLOG
++ Mechanics
+  * Controller
+    * Case
+      * Shapes
+        * Back
+  * Soil Moisture
+    * Case
+  * Outdoor module
+    * Case
+      * Furos
+        * Sensor de nível d'água
++ Electronics
+  * Moisture sensor
+  * Sensors
+    * É interessante checar pH, nitrogênio, potássio no solo.
+      * As doenças tem relação com temperatura e umidade
++ Software
+  * Linux
+    * Fazer upload dos logs para a nuvem.
+    * Adicionar uptime na monitoração.
+    * Mover logs antigos para dispositivo de armazenamento USB.
+  * bridge (Watchdog - shell script)
+    * Verificar se esse programa é realmente necessário
+    * Review
+  * envmon daemon (Python)
+    * Sender
+      * Checar periodicamente se está conectado ao Console (Bridge), se não
+        estiver deve re­estabelecer a conexão.
+    * Commands
+      * M10 Speaker sond (F=frequency, D=duration)
+      * M20 Led color (R=red, G=blue, B=green)
+      * M80 Relay status
+      * M81 Relay on
+      * M82 Relay off
+      * M90 System information
+      * M99 Reset system
+      * M100 This help message
+      * M111 Debug mode
+    * Listener
+      * Criar classe ou funções para envio e recebimento de mensagens via
+        socket.
+    * Start up
+      * Timers
+      * notifySeason
+        * seasons.json
+        * Apply timezone correction to use only UTC timestamp
+      * notifications.json
+        * Read JSON
+        * Discover next message
+        * Create timer
+        * Apply timezone correction to use only UTC timestamp
+      * Local web interface
+    * Next season in
+      * Apply timezone correction to use only UTC timezone
+  * Web Interface
+    * status.php
+      * Padronizar REST
+    * Identificar quando o conteúdo do arquivo de log for muito antigo.
+
+TODO
++ Mechanics
++ Electronics
++ Software
+  * Firmware (Arduino)
+    * Fazer o controlador entender as estações do ano e aplicar perfis de rega
+      específicos para cada estação.
+
+IN PROGRESS
++ Mechanics
++ Electronics
+  * Fan
+    * Driver
+      * LM7805 ­ Instalar regulador de tensão linear
+      * Transistor BC547
+      * Resistor 270R
++ Software
+  * envmon (Watchdog - shell script)
+    * Review
+  * Web Interface
+    * Logs
+      * Limitar em 100 linhas o log de eventos
+
+TESTING
++ Mechanics
++ Electronics
++ Software
+  * setup (Shell script)
+    * Review
+  * Web Interface
+    * view
+      * Nível de sinal do WiFi
+
+DONE
++ Mechanics
+  * Controller
+    * Case
+      * Shapes
+        * Top
+        * Bottom
+          * Fixar pézinhos de borracha
+        * Left
+        * Right
+        * Front
+          * Furar orificio para LED
+  * Outdoor module
+    * Case
+      * Buy
+    * PCB
+      * Soldar
+      * Conector para sensor de nível d'água
+      * Conector para DHT-22
+      * RJ-45
+      * Conector soil moisture (definir padrão do conector)
++ Electronics
+  * Controller
+    * Arduino Leonardo
+    * LED tri-color (OK, Warning, Critical)
+    * System temperature sensor (TMP36)
+  * Outdoor module
+    * PCB
+      * Soldar
+      * Conector para sensor de nível d'água
+      * Conector para DHT-22
+      * RJ-45
+      * Conector soil moisture (definir padrão do conector)
++ Software
+  * Web Interface
+    * setup/cloud
+      * Ocultar esse item
+
+WON'T DO
++ Mechanics
+  * Reservatório de água
+    >> 2017-02-24 - Defini que não faz parte do escopo do projeto. A intenção
+       é que o envmon seja a inteligência de um sistema de rega. Dessa forma
+       o reservatório de água, mangueiras, bombas, não fazem parte do projeto.
+       O projeto é composto por sensores diversos e também por atuadores das
+       bombas de água, de devem ser adquiridas prontas ou fazer parte do escopo
+       de um outro projeto.
++ Electronics
+  * Pump
+    >> 2017-02-24 - Defini que não faz parte do escopo do projeto.
++ Software

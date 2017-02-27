@@ -142,6 +142,15 @@
              <?=msg("seconds")?>
     </td>
   </tr>
+  <tr>
+    <td class="form_description"><?=msg("wifisignal")?></td>
+    <td class="form_input">
+      <input name="timer_system_wifisignal" 
+             type="number" min="10" max="300" 
+             value="<?=$cfg['timer']['system']['wifisignal']?>">
+             <?=msg("seconds")?>
+    </td>
+  </tr>
 </table>
 <p id="moisture"><?=msg("squirt")?></p>
 <table class="form">

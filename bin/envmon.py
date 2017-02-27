@@ -407,6 +407,29 @@ def getExtStorageData():
     statusWrite(r)
 
 
+def getWiFiSignalStrength():
+    n = subprocess.check_output("/opt/envmon/bin/check_system.sh wifi",
+                                shell=True)
+    n = float(re.sub(r'[^\d.]+', '', n))
+    value = round(n, 0)
+    status = checker(value,
+                     cfg["threshold"]["wifisignal"]["warning"],
+                     cfg["threshold"]["wifisignal"]["critical"])
+    r = {
+        'system': {
+            'wifisignal': {
+                'value': 0,
+                'status': 3,
+                'moment': ''
+            }
+        }
+    }
+    r['system']['wifisignal']['value'] = value
+    r['system']['wifisignal']['status'] = status
+    r['system']['wifisignal']['moment'] = timestamp()
+    statusWrite(r)
+
+
 def getSysTempData(n):
     value = round(n, 1)
     status = checker(value,
@@ -714,6 +737,7 @@ def main():
     swap_timer = Timer(int(cfg["timer"]["system"]["swap"]) * 1000)
     intstorage_timer = Timer(int(cfg["timer"]["system"]["intstorage"]) * 1000)
     extstorage_timer = Timer(int(cfg["timer"]["system"]["extstorage"]) * 1000)
+    wifisignal_timer = Timer(int(cfg["timer"]["system"]["wifisignal"]) * 1000)
     water_timer = Timer(int(cfg["timer"]["environment"]["water"]) * 1000)
     envtemp_timer = Timer(int(cfg["timer"]["environment"]["temperature"]) *
                           1000)
@@ -754,6 +778,8 @@ def main():
             getIntStorageData()
         if extstorage_timer.check():
             getExtStorageData()
+        if wifisignal_timer.check():
+            getWiFiSignalStrength()
         if season_timer.check():
             notifySeason()
             season_timer.set(checkSeason() * 1000)

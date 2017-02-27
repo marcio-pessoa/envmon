@@ -111,8 +111,8 @@ usage() {
 setup install root@envmon
 setup update root@192.168.0.105
 "
-
 }
+
 case "$ACTION" in
   'install')
     dependencies
