@@ -31,46 +31,6 @@ WORK_DIR='/opt/envmon'
 WORK_FILE='envmon.pyc'
 LOG_FILE='event.log'
 
-bridge_proc_id() {
-  state=$(pgrep -f "python -u bridge.py")
-  if [ "$state" = "" ]; then
-    state=0
-  fi
-  echo "$state"
-}
-
-bridge_status() {
-  id=$(bridge_proc_id)
-  if [ "$id" -gt "0" ]; then
-    echo "Running ($id)"
-    exit 0
-  else
-    echo "Stopped"
-    exit 2
-  fi
-}
-
-bridge_start() {
-  id=$(bridge_proc_id)
-  if [ "$id" -gt "0" ]; then
-    echo "Nothing to do, because bridge is already running."
-    exit 0
-  fi
-  echo "Starting..."
-  /usr/bin/reset-mcu
-  exit $?
-}
-
-bridge_stop() {
-  id=$(bridge_proc_id)
-  if [ "$id" -gt "0" ]; then
-    echo "Stopping..."
-    /usr/bin/kill-bridge 2>&1 /dev/null
-  else
-    echo "Nothing to do, because bridge is not running."
-  fi
-}
-
 envmon_proc_id() {
   state=$(pgrep -f "$WORK_DIR/bin/$WORK_FILE")
   if [ "$state" = "" ]; then
@@ -118,22 +78,17 @@ envmon_stop() {
 
 case "$1" in
   start)
-    # bridge_start
     envmon_start
     ;;
   stop)
-    # bridge_stop
     envmon_stop
     ;;
   restart)
-    # bridge_stop
-    # bridge_start
-    # sleep 3
-    # envmon_stop
+    envmon_stop
+    sleep 3
     envmon_start
     ;;
   status)
-    # bridge_status
     envmon_status
     ;;
   *)

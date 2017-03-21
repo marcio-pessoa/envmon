@@ -29,16 +29,6 @@ BACKLOG
     * Sender
       * Checar periodicamente se está conectado ao Console (Bridge), se não
         estiver deve re­estabelecer a conexão.
-    * Commands
-      * M10 Speaker sond (F=frequency, D=duration)
-      * M20 Led color (R=red, G=blue, B=green)
-      * M80 Relay status
-      * M81 Relay on
-      * M82 Relay off
-      * M90 System information
-      * M99 Reset system
-      * M100 This help message
-      * M111 Debug mode
     * Listener
       * Criar classe ou funções para envio e recebimento de mensagens via
         socket.
@@ -59,16 +49,73 @@ BACKLOG
     * status.php
       * Padronizar REST
     * Identificar quando o conteúdo do arquivo de log for muito antigo.
+  * Firmware (Arduino)
+    * Commands
+      * M2
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M10
+        * Speaker sond (F=frequency, D=duration)
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M20
+        * Led color (R=red, G=blue, B=green)
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M30
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M40
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M50
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M60
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M70
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M80
+        * URL: http://reprap.org/wiki/G-code#M80:_ATX_Power_On
+        * URL: http://forums.reprap.org/read.php?219,132664
+        * Relay status
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M81
+        * Relay on
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M82
+        * Relay off
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M90
+        * System information
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M91
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
++ Video
+  * envmon intro
+    * Subtítulos em inglês
 
 TODO
-+ Mechanics
-+ Electronics
-+ Software
-  * Firmware (Arduino)
-    * Fazer o controlador entender as estações do ano e aplicar perfis de rega
-      específicos para cada estação.
-
-IN PROGRESS
 + Mechanics
 + Electronics
   * Fan
@@ -77,6 +124,43 @@ IN PROGRESS
       * Transistor BC547
       * Resistor 270R
 + Software
+  * Firmware (Arduino)
+    * Fazer o controlador entender as estações do ano e aplicar perfis de rega
+      específicos para cada estação.
+    * Commands
+      * 0
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M0
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M99
+        * Reset system
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M100
+        * This help message
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
+      * M111
+        * Debug mode
+        * Revisar nomenclatura
+        * Revisar função
+        * Revisar implementação
++ Video
+  * envmon intro
+    * Subtítulos em português
+
+IN PROGRESS
++ Mechanics
++ Electronics
++ Software
+  * NRDP
+    * Bug: falha no envio de checagens passivas em HTTPS.
   * envmon (Watchdog - shell script)
     * Review
   * Web Interface
@@ -92,6 +176,18 @@ TESTING
   * Web Interface
     * view
       * Nível de sinal do WiFi
+  * envmon daemon (Python)
+    * Bug: Erro ao na chave 'wifisignal'
+      Traceback (most recent call last):
+      File "/home/mex/Development/envmon/Mark_II/bin/envmon.py", line 846, in 
+      File "/home/mex/Development/envmon/Mark_II/bin/envmon.py", line 782, in main
+      File "/home/mex/Development/envmon/Mark_II/bin/envmon.py", line 416, in getWiFiSignalStrength
+      KeyError: 'wifisignal'
+      > 2017-03-10 - Identifique se o problema ocorre na leitura do arquivo de 
+        configuração ou na gravação do arquivo de status. Isso está reiniciando
+        o daemon envmon.
+      > 2017-03-21 - Adicionei os threshold do sinal WiFi no arquivo
+        config.json e no arquivo default.json.
 
 DONE
 + Mechanics
@@ -134,13 +230,13 @@ DONE
 WON'T DO
 + Mechanics
   * Reservatório de água
-    >> 2017-02-24 - Defini que não faz parte do escopo do projeto. A intenção
-       é que o envmon seja a inteligência de um sistema de rega. Dessa forma
-       o reservatório de água, mangueiras, bombas, não fazem parte do projeto.
-       O projeto é composto por sensores diversos e também por atuadores das
-       bombas de água, de devem ser adquiridas prontas ou fazer parte do escopo
-       de um outro projeto.
+    > 2017-02-24 - Defini que não faz parte do escopo do projeto. A intenção
+      é que o envmon seja a inteligência de um sistema de rega. Dessa forma
+      o reservatório de água, mangueiras, bombas, não fazem parte do projeto.
+      O projeto é composto por sensores diversos e também por atuadores das
+      bombas de água, de devem ser adquiridas prontas ou fazer parte do escopo
+      de um outro projeto.
 + Electronics
   * Pump
-    >> 2017-02-24 - Defini que não faz parte do escopo do projeto.
+    > 2017-02-24 - Defini que não faz parte do escopo do projeto.
 + Software

@@ -24,6 +24,18 @@ Label:
   - Delivery
     - Date: 2014-mm-dd
   - Install
++ Sistema de irrigação
+  + Technical specification
+    - Description: O sistema deve contemplar mangueiras, bombas de água e
+      talvez um reservatório de água.
+    + URL: 
+  + Buy
+    + Date: 
+    + Cost: USD 0.0
+    + DX item ID: 
+  + Delivery
+    + Date: 
+  + Install
 
 + Item name
   + Technical specification
