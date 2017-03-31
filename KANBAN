@@ -25,7 +25,7 @@ BACKLOG
   * bridge (Watchdog - shell script)
     * Verificar se esse programa é realmente necessário
     * Review
-  * envmon daemon (Python)
+  * envmon (Python)
     * Sender
       * Checar periodicamente se está conectado ao Console (Bridge), se não
         estiver deve re­estabelecer a conexão.
@@ -49,6 +49,8 @@ BACKLOG
     * status.php
       * Padronizar REST
     * Identificar quando o conteúdo do arquivo de log for muito antigo.
+    * "Setup"/"Backup e reset"/"Reload configuration"
+      * Bug: It is not working
   * Firmware (Arduino)
     * Commands
       * M2
@@ -129,8 +131,6 @@ TODO
       específicos para cada estação.
     * Commands
       * 0
-        * Revisar nomenclatura
-        * Revisar função
         * Revisar implementação
       * M0
         * Revisar nomenclatura
@@ -160,7 +160,10 @@ IN PROGRESS
 + Electronics
 + Software
   * NRDP
-    * Bug: falha no envio de checagens passivas em HTTPS.
+    * send_nrdp.py
+      * Instalar manualmente bibliotecas pendentes
+        * python-openssl (talvez seja necessário)
+        * python-curl (talvez seja necessário)
   * envmon (Watchdog - shell script)
     * Review
   * Web Interface
@@ -173,10 +176,7 @@ TESTING
 + Software
   * setup (Shell script)
     * Review
-  * Web Interface
-    * view
-      * Nível de sinal do WiFi
-  * envmon daemon (Python)
+  * envmon (Python)
     * Bug: Erro ao na chave 'wifisignal'
       Traceback (most recent call last):
       File "/home/mex/Development/envmon/Mark_II/bin/envmon.py", line 846, in 
@@ -188,6 +188,12 @@ TESTING
         o daemon envmon.
       > 2017-03-21 - Adicionei os threshold do sinal WiFi no arquivo
         config.json e no arquivo default.json.
+  * NRDP
+    * send_nrdp.py
+      * Melhorar padrão de qualidade de código do programa
+  * check_my_ip
+    * Bug: OpenWrt does not support HTTPS on wget command.
+      * Fix: Write check_my_ip.py
 
 DONE
 + Mechanics
@@ -224,8 +230,15 @@ DONE
       * Conector soil moisture (definir padrão do conector)
 + Software
   * Web Interface
+    * view
+      * Nível de sinal do WiFi
     * setup/cloud
       * Ocultar esse item
+  * Firmware (Arduino)
+    * Commands
+      * 0
+        * Revisar nomenclatura
+        * Revisar função
 
 WON'T DO
 + Mechanics

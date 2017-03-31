@@ -121,6 +121,10 @@
             "warning": 30,
             "critical": 10
         },
+        "wifisignal": {
+            "warning": 40,
+            "critical": 30
+        },
         "moisture": {
             "spring": {
                 "warning": 52,

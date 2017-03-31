@@ -27,7 +27,7 @@ fi
 
 # Get public IP address
 get_ip_addr() {
-  STATUS=$($PROGRAM http://pessoa.eti.br/ip/ -q -O -)
+  STATUS=$($PROGRAM https://pessoa.eti.br/ip/ -q -O -)
   RETURN=$?
   check_get_ip_addr "$STATUS" $RETURN
 }

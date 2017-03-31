@@ -414,7 +414,8 @@ def getWiFiSignalStrength():
     value = round(n, 0)
     status = checker(value,
                      cfg["threshold"]["wifisignal"]["warning"],
-                     cfg["threshold"]["wifisignal"]["critical"])
+                     cfg["threshold"]["wifisignal"]["critical"],
+                     False, False, True)
     r = {
         'system': {
             'wifisignal': {

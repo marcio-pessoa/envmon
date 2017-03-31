@@ -12,7 +12,7 @@
  */
 
 // NRDP configuration
-$nrdp["url"] = "http://mgmt.sciemon.com/nrdp/";
+$nrdp["url"] = "https://sciemon.com/nrdp/";
 $nrdp["token"] = "Jenkiactat(twobfossAcyingIlsocPatHyratCoorphefeshepdecNieshvekvu";
 $nrdp["hostname"] = "envmon";
 
@@ -40,7 +40,7 @@ $status = json_decode(file_get_contents($url["ws_all"]), true);
 send_data($nrdp["url"], $nrdp["token"], $nrdp["hostname"],
           "",
           $nagios_states["OK"],
-          exec("/opt/envmon/bin/check_myip.sh"));
+          exec("/opt/envmon/bin/check_myip.py"));
 
 // Humidity
 $service = "Humidity";
@@ -235,11 +235,10 @@ function send_data($url, $token, $host, $service, $state, $output) {
   // Import $default variable
   global $default;
   // Build command string
-  $command = "/usr/bin/php-cli " .
-             "/opt/envmon/nrdp/bin/send_nrdp.php " .
+  $command = "/opt/envmon/bin/send_nrdp.py " .
              "--url=\"" . $url . "\" " .
              "--token=\"" . $token . "\" " .
-             "--host=\"" . $host . "\" " .
+             "--hostname=\"" . $host . "\" " .
              "--service=\"" . $service . "\" " .
              "--state=" . $state . " " .
              "--output=\"" . $output . "\"" .
