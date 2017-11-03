@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# setup, envmon Mark II - Environment Monitor
+# setup, envmon Mark I - Environment Monitor
 # Setup script file
 # 
 # Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
@@ -50,7 +50,7 @@ dependencies() {
   ssh "$DESTINATION" "opkg install \
                       rsync zoneinfo-simple \
                       php5 php5-cgi php5-cli php5-mod-json php5-mod-sockets \
-                      python python-json pyserial"
+                      python python-json pyserial python-openssl"
   check_return $?
   message "Creating directory structure"
   ssh "$DESTINATION" mkdir -p /opt
