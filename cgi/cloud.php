@@ -1,5 +1,5 @@
 <?php
-/* cloud.php, envmon Mark II - Environment Monitor
+/* cloud.php, envmon Mark I - Environment Monitor
  * Web interface - Cloud options
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

@@ -1,5 +1,5 @@
 <?php
-/* setup.php, envmon Mark II - Environment Monitor
+/* setup.php, envmon Mark I - Environment Monitor
  * Web interface - Setup main screen
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

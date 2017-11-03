@@ -1,5 +1,5 @@
 <?php
-/* reboot.php, envmon Mark II - Environment Monitor
+/* reboot.php, envmon Mark I - Environment Monitor
  * Web interface - Reboot
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

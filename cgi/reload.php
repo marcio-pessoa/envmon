@@ -1,5 +1,5 @@
 <?php
-/* reload.php, envmon Mark II - Environment Monitor
+/* reload.php, envmon Mark I - Environment Monitor
  * Web interface - Reload
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

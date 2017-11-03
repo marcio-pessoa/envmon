@@ -1,5 +1,5 @@
 <?php
-/* stopwatch.php, envmon Mark II - Environment Monitor
+/* stopwatch.php, envmon Mark I - Environment Monitor
  * Web interface - Stopwatch library
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

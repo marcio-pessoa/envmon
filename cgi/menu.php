@@ -1,5 +1,5 @@
 <?php
-/* menu.php, envmon Mark II - Environment Monitor
+/* menu.php, envmon Mark I - Environment Monitor
  * Web interface - Menu library
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

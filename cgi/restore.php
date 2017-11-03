@@ -1,5 +1,5 @@
 <?php
-/* restore.php, envmon Mark II - Environment Monitor
+/* restore.php, envmon Mark I - Environment Monitor
  * Web interface - Restore backup
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

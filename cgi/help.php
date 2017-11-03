@@ -1,5 +1,5 @@
 <?php
-/* help.php, envmon Mark II - Environment Monitor
+/* help.php, envmon Mark I - Environment Monitor
  * Web interface - Help
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

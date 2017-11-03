@@ -1,5 +1,5 @@
 <?php
-/* notifications.php, envmon Mark II - Environment Monitor
+/* notifications.php, envmon Mark I - Environment Monitor
  * Web interface - Notifications setup
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

@@ -1,5 +1,5 @@
 <?php
-/* logs.php, envmon Mark II - Environment Monitor
+/* logs.php, envmon Mark I - Environment Monitor
  * Web interface - Logs
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

@@ -1,5 +1,5 @@
 <?php
-/* thresholds.php, envmon Mark II - Environment Monitor
+/* thresholds.php, envmon Mark I - Environment Monitor
  * Web interface - Thesholds
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

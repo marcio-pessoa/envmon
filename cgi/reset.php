@@ -1,5 +1,5 @@
 <?php
-/* reset.php, envmon Mark II - Environment Monitor
+/* reset.php, envmon Mark I - Environment Monitor
  * Web interface - Reset to factory defaults
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

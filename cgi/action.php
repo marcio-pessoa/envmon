@@ -1,5 +1,5 @@
 <?php
-/* action.php, envmon Mark II - Environment Monitor
+/* action.php, envmon Mark I - Environment Monitor
  * Web interface - Action
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

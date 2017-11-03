@@ -40,7 +40,7 @@ $status = json_decode(file_get_contents($url["ws_all"]), true);
 send_data($nrdp["url"], $nrdp["token"], $nrdp["hostname"],
           "",
           $nagios_states["OK"],
-          exec("/opt/envmon/bin/check_myip.py"));
+          exec("python /opt/envmon/bin/check_myip.pyc"));
 
 // Humidity
 $service = "Humidity";
@@ -235,7 +235,7 @@ function send_data($url, $token, $host, $service, $state, $output) {
   // Import $default variable
   global $default;
   // Build command string
-  $command = "/opt/envmon/bin/send_nrdp.py " .
+  $command = "python /opt/envmon/bin/send_nrdp.pyc " .
              "--url=\"" . $url . "\" " .
              "--token=\"" . $token . "\" " .
              "--hostname=\"" . $host . "\" " .
