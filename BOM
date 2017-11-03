@@ -1,4 +1,4 @@
-BOM, envmon Mark II - Environment Monitor, Bill of materials
+BOM, envmon Mark I - Environment Monitor, Bill of materials
 
 Label:
   Status '-': OK
@@ -12,6 +12,15 @@ Label:
     - Cost: USD 7.10
     - eBay item ID: 291365740305
     - Delivery: 2015-03-04 18:33
+  - Install
+- Dragino Yún Shield
+  - Technical specification
+    - URL: 
+  - Buy
+    - Date: Thu, Jan 8, 2015 at 1:56 PM
+    - Cost: USD 31.50 (GBP 24.59)
+    - eBay item ID: 181590847161
+    - Delivery: 2015-mm-dd
   - Install
 - US-100 Ultrasonic Sensor Module - Green
   - Technical specification
@@ -31,6 +40,15 @@ Label:
     - DX item ID: 131129001020675880
     - Delivery: 2014-mm-dd
   - Install
++ Sucking Vacuum Desoldering Pump
+  + Technical specification
+    + URL: 
+  + Buy
+    + Date: 
+    + Cost: USD 0.0
+    + eBay item ID: 
+    + Delivery: 
+  + Install
 + Sistema de irrigação
   + Technical specification
     - Description: O sistema deve contemplar mangueiras, bombas de água e
@@ -39,18 +57,8 @@ Label:
   + Buy
     + Date: 
     + Cost: USD 0.0
-    + DX item ID: 
+    + eBay item ID: 
     + Delivery: 
   + Install
 
-+ Item name
-  + Technical specification
-    + URL: 
-  + Buy
-    + Date: 
-    + Cost: USD 0.0
-    + eBay item ID: 
-    + Delivery:
-  + Install
-
-Total cost: $17.28
+Total cost: $55.88
