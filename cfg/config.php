@@ -1,5 +1,5 @@
 <?php
-/* config.php, envmon Mark II - Environment Monitor, Web interface config file
+/* config.php, envmon Mark I - Environment Monitor, Web interface config file
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
  * Contributors: none
