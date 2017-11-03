@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# envmon, envmon Mark II - Environment Monitor
+# envmon, envmon Mark I - Environment Monitor
 # Service manager
 #
 # Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
@@ -15,12 +15,12 @@
 #   Add this script to cron job.
 #
 # Change log
-# 2016-07-30
-#         Added bridge management support.
+# 2017-06-27
+#         Bug fix: Some minor fixes.
 #
 # 2016-06-04
-#         Minor bug fixes.
-#         Added proc id to status information.
+#         Bug fix: Some minor fixes.
+#         Improvement: Added process id to status information.
 #
 # 2016-06-03
 #         Experimental version.
@@ -62,7 +62,7 @@ envmon_start() {
                                     --bind 127.0.0.1 \
                                     --verbose \
                                     2>&1 | tee -a "$WORK_DIR/log/$LOG_FILE" \
-                                    #> /dev/null &
+                                    > /dev/null &
   exit $?
 }
 

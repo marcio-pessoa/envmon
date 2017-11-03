@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# envmon, envmon Mark II - Environment Monitor
+# envmon, envmon Mark I - Environment Monitor
 # Arduino Bridge Service manager
 #
 # Author: Márcio Pessoa <marcio.pessoa@sciemon.com>

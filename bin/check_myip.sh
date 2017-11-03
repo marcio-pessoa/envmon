@@ -1,6 +1,6 @@
 #!/bin/sh
 # 
-# check_myip.sh, envmon Mark II - Environment Monitor, script file
+# check_myip.sh, envmon Mark I - Environment Monitor, script file
 # 
 # Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
 # Contributors: none

@@ -282,8 +282,6 @@ def sensorsRead():
     getSwapData()
     getIntStorageData()
     getExtStorageData()
-    # getFanData()
-    # getSysTempData()
     checkSeason()
     logln("Status updated.", debug)
 
@@ -782,7 +780,7 @@ def main():
         if wifisignal_timer.check():
             getWiFiSignalStrength()
         if season_timer.check():
-            notifySeason()
+            # notifySeason()
             season_timer.set(checkSeason() * 1000)
 
         try:
