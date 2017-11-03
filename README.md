@@ -1,4 +1,4 @@
-README, envmon Mark II - Environment Monitor, Readme file
+README, envmon Mark I - Environment Monitor, Readme file
 
 1. Introduction
 
@@ -10,7 +10,7 @@ README, envmon Mark II - Environment Monitor, Readme file
 
 3. Electronics
 
-3.1. envmon Mark II - Arduino Leonardo pin designation table
+3.1. envmon Mark I - Arduino Leonardo pin designation table
 ╔════╦═════╦═══════════╦═══════════╦══════════════════════════════════════════╗
 ║ id ║ pin ║   type    ║ direction ║               description                ║
 ╠════╬═════╬═══════════╬═══════════╬══════════════════════════════════════════╣
@@ -68,7 +68,7 @@ README, envmon Mark II - Environment Monitor, Readme file
           \_______________________/
                           Adapted from: http://busyducks.com/ascii-art-arduinos
 
-3.2. envmon Mark II - RJ-45 female pins
+3.2. envmon Mark I - RJ-45 female pins
 ╔═════╦═══════════════════════════════════════════════════════════════════════╗
 ║ pin ║                              description                              ║
 ╠═════╬═══════════════════════════════════════════════════════════════════════╣
@@ -110,9 +110,9 @@ L1 +5Vcc
 L2 GND
 L3 Soil moisture sensor
 
-R1 Relay NO
-R2 Relay common
-R3 Relay NC
+R1 Relay NO (Normally Open)
+R2 Relay Common
+R3 Relay NC (Normally Closed)
 
 ╔═════╦═══════════════════════════════════════════════════════════════════════╗
 ║ pin ║                              description                              ║
@@ -124,7 +124,7 @@ R3 Relay NC
 
 
 
-3.4. envmon Outdoor Module Mark II - RJ-45 male pins
+3.4. envmon Outdoor Module Mark I - RJ-45 male pins
 ╔═════╦═══════════════════════════════════════════════════════════════════════╗
 ║ pin ║                              description                              ║
 ╠═════╬═══════════════════════════════════════════════════════════════════════╣
