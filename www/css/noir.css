@@ -1,4 +1,4 @@
-/* style.css, envmon Mark II - Environment Monitor, Web black style file
+/* style.css, envmon Mark I - Environment Monitor, Web black style file
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
  * Contributors: none
@@ -42,7 +42,7 @@ a:hover, a:active {
 #status2,
 #status3,
 #status4 {
-  color: #000000;
+  color: #101010;
 }
 
 #status0 {
