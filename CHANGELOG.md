@@ -1,28 +1,38 @@
-CHANGELOG, envmon Mark I - Environment Monitor, Change log file
+# Change log
+All notable changes to this project will be documented in this file.
 
-2017-03-31
-        * Bug fix: NRDP client was not communicating with remote server.
-        * Bug fix: check_myip was not receiving device IP address.
+## [] - 2017-03-31
+### Fixed
+- NRDP client was not communicating with remote server.
+- check_myip was not receiving device IP address.
 
-2017-03-21
-        * Bug fix: Added 'wifisignal' thresholds to config.json.
+## [] - 2017-03-21
+### Fixed
+- 'wifisignal' thresholds to config.json.
 
-2017-02-26
-        * New feature: WiFi signal strength monitoring.
-        * Improvement: Removed setup/cloud option.
+## [] - 2017-02-26
+### Added
+- WiFi signal strength monitoring.
 
-2015-11-21
-        * New feature: Swap memory statistics.
+### Changed
+- Removed setup/cloud option.
 
-2015-11-20
-        * New feature: Added automatic installer (setup file).
+## [] - 2015-11-21
+### Added
+- Swap memory statistics.
 
-2015-09-15
-        * New feature: Added support to two soil moisture sensors.
+## [] - 2015-11-20
+### Added
+- Automatic installer (setup file).
 
-2015-01-09
-        * Improvement: Code optimization with handlers.ino and commands.ino
-          files.
+## [] - 2015-09-15
+### Added
+- Support to two soil moisture sensors.
 
-2013-11-15
-        * Project definition.
+## [] - 2015-01-09
+### Changed
+- Code optimization with handlers.ino and commands.ino files.
+
+## [] - 2013-11-15
+### Added
+- Project definition.
