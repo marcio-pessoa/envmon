@@ -1,5 +1,5 @@
-# Change log
-All notable changes to this project will be documented in this file.
+# CHANGELOG
+envmon Mark I - Environment Monitor, Change log
 
 ## [] - 2017-03-31
 ### Fixed

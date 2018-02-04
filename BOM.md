@@ -1,18 +1,12 @@
-BOM, envmon Mark I - Environment Monitor, Bill of materials
+# BOM
+envmon Mark I - Environment Monitor, Bill of materials
 
-Label:
-  Status '-': OK
-  Status '+': Pending
+| Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
+|-------|--------------------|----------------|------------|------------|------|--------|-------|--------|
+|     1 | Arduino_Leonardo   |   291365740305 | 2015-01-29 | 2015-03-04 | each |   7.10 |  0.44 |   7.54 |
 
-- Arduino Leonardo
-  - Technical specification
-    - URL: http://rover.ebay.com/rover/0/e11400.m3695.l6470/7?euid=3a57aac006084678b3ae8d558c619bf7&loc=http%3A%2F%2Fpages.ebay.com%2Flink%2F%3Fnav%3Ditem.view%26id%3D291365740305%26alt%3Dhttp%253A%252F%252Fpayments.ebay.com%252Fws%252FeBayISAPI.dll%253FViewPaymentStatus%2526transId%253D0%2526qu%253D1%2526itemId%253D291365740305%26nav_dt%3Dalt%26globalID%3DEBAY_MAIN%26ssPageName%3DADME%3AL%3AOC%3AUS%3A6470&exe=11488&ext=28026&sojTags=exe=exe,ext=ext
-  - Buy
-    - Date: Thu, Jan 29, 2015 at 8:14 PM
-    - Cost: USD 7.10
-    - eBay item ID: 291365740305
-    - Delivery: 2015-03-04 18:33
-  - Install
+
+
 - Dragino Yún Shield
   - Technical specification
     - URL: 

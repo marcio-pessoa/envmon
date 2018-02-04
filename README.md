@@ -1,4 +1,10 @@
-README, envmon Mark I - Environment Monitor, Readme file
+# envmon Mark I - Environment Monitor
+
+[Change log](CHANGELOG.md)
+
+[Bill of materials](BOM.md)
+
+[Kanban](KANBAN.md)
 
 1. Introduction
 
