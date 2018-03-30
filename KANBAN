@@ -1,5 +1,4 @@
 - 'BACKLOG':
-+ Strategic
 + Mechanics
   * Controller
     * Case
@@ -134,7 +133,7 @@
   * envmon intro
     * Subtítulos em inglês
 
-TODO
+- 'TODO':
 + Strategic
   * Watering system
     * Research
@@ -187,7 +186,7 @@ IN PROGRESS
     * Logs
       * Limitar em 100 linhas o log de eventos
 
-TESTING
+- 'TESTING':
 + Mechanics
 + Electronics
   * USB Interface
@@ -216,8 +215,12 @@ TESTING
   * envmon (Watchdog - shell script)
     * Review
 
-DONE
-+ Mechanics
+- 'DONE':
+  - (Video) Presentation - Publish
+  - (Video) Presentation - Edit
+  - (Video) Presentation - Build
+
+  + Mechanics
   * Controller
     * Case
       * Shapes
@@ -267,17 +270,3 @@ DONE
       * Ocultar esse item
   * setup (Shell script)
     * Review
-
-WON'T DO
-+ Mechanics
-  * Reservatório de água
-    > 2017-02-24 - Defini que não faz parte do escopo do projeto. A intenção
-      é que o envmon seja a inteligência de um sistema de rega. Dessa forma
-      o reservatório de água, mangueiras, bombas, não fazem parte do projeto.
-      O projeto é composto por sensores diversos e também por atuadores das
-      bombas de água, de devem ser adquiridas prontas ou fazer parte do escopo
-      de um outro projeto.
-+ Electronics
-  * Pump
-    > 2017-02-24 - Defini que não faz parte do escopo do projeto.
-+ Software
