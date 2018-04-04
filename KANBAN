@@ -1,272 +1,93 @@
-- 'BACKLOG':
-+ Mechanics
-  * Controller
-    * Case
-      * Shapes
-        * Back
-  * Soil Moisture
-    * Case
-  * Outdoor module
-    * Case
-      * Furos
-        * Sensor de nível d'água
-+ Electronics
-  * Moisture sensor
-  * Sensors
-    * É interessante checar pH, nitrogênio, potássio no solo.
-      * As doenças tem relação com temperatura e umidade
-+ Software
-  * Linux
-    * Fazer upload dos logs para a nuvem.
-    * Adicionar uptime na monitoração.
-    * Mover logs antigos para dispositivo de armazenamento USB.
-  * bridge (Watchdog - shell script)
-    * Verificar se esse programa é realmente necessário
-    * Review
-  * envmon (Python)
-    * notifySeason
-      * Bug: Inapropriate notification
-        * As seguintes notificações de primavera foram enviadas um dia após o
-          inínio do inverno:
-        envmon (@envmon_system) tweeted at 9:35 AM on Sat, Jun 24, 2017:
-        Começou a #primavera! Seja bem vindo a estação mais florida. 2016-09-22 14:21:00 UTC
-        envmon (@envmon_system) tweeted at 9:35 AM on Sat, Jun 24, 2017:
-        It is #Spring! Welcome the most colorful season. 2016-09-22 14:21:00 UTC
-        envmon (@envmon_system) tweeted at 9:17 AM on Tue, Jul 18, 2017:
-        Começou a #primavera! Seja bem vindo a estação mais florida. 2016-09-22 14:21:00 UTC
-        envmon (@envmon_system) tweeted at 9:17 AM on Tue, Jul 18, 2017:
-        It is #Spring! Welcome the most colorful season. 2016-09-22 14:21:00 UTC
+﻿- 'BACKLOG':
+  - (Electronics) Moisture sensor - check pH
+  - (Electronics) Moisture sensor - check potassio
+  - (Electronics) Moisture sensor - check nitrogen
+  - (Mechanics) Controller case - Shapes Back
+  - (Mechanics) Soil Moisture case - Shapes Back
+  - (Mechanics) Outdoor Module case - Shapes Back
+  - (Software) Linux - Logs upload to cloud
+  - (Software) Linux - Add uptime to monitoring
+  - (Software) Linux - Move old logs to external USB storage device
+  - (Software) Linux - bridge (Watchdog - shell script) Verificar se esse programa eh realmente necessario
+  - (Software) Command M2 - Check code
+  - (Software) Command M2 - Check code
+  - (Software) Command M2 - Check name
+  - (Software) Command M10 - Check code
+  - (Software) Command M10 - Check code
+  - (Software) Command M10 - Check name
+  - (Software) Command M20 - Check code
+  - (Software) Command M20 - Check code
+  - (Software) Command M20 - Check name
+  - (Software) Command M30 - Check code
+  - (Software) Command M30 - Check code
+  - (Software) Command M30 - Check name
+  - (Software) Command M40 - Check code
+  - (Software) Command M40 - Check code
+  - (Software) Command M40 - Check name
+  - (Software) Command M50 - Check code
+  - (Software) Command M50 - Check code
+  - (Software) Command M50 - Check name
+  - (Software) Command M60 - Check code
+  - (Software) Command M60 - Check code
+  - (Software) Command M60 - Check name
+  - (Software) Command M70 - Check code
+  - (Software) Command M70 - Check code
+  - (Software) Command M70 - Check name
+  - (Software) Command M80 - Check code
+  - (Software) Command M80 - Check code
+  - (Software) Command M80 - Check name
+  - (Software) Command M81 - Check code
+  - (Software) Command M81 - Check code
+  - (Software) Command M81 - Check name
+  - (Software) Command M82 - Check code
+  - (Software) Command M82 - Check code
+  - (Software) Command M82 - Check name
+  - (Software) Command M90 - Check code
+  - (Software) Command M90 - Check code
+  - (Software) Command M90 - Check name
+  - (Software) Command M91 - Check code
+  - (Software) Command M91 - Check code
+  - (Software) Command M91 - Check name
+  - (Software) NRDP - Use nrdp_sender.py
+  - (Video) envmon intro - Subtítulos em ingles
 
-    * Fazer o controlador entender as estações do ano e aplicar perfis de rega
-      específicos para cada estação.
-    * Sender
-      * Checar periodicamente se está conectado ao Console (Bridge), se não
-        estiver deve re­estabelecer a conexão.
-    * Listener
-      * Criar classe ou funções para envio e recebimento de mensagens via
-        socket.
-    * Start up
-      * Timers
-      * notifySeason
-        * seasons.json
-        * Apply timezone correction to use only UTC timestamp
-      * notifications.json
-        * Read JSON
-        * Discover next message
-        * Create timer
-        * Apply timezone correction to use only UTC timestamp
-      * Local web interface
-    * Next season in
-      * Apply timezone correction to use only UTC timezone
-  * Web Interface
-    * status.php
-      * Padronizar REST
-    * Identificar quando o conteúdo do arquivo de log for muito antigo.
-    * "Setup"/"Backup e reset"/"Reload configuration"
-      * Bug: It is not working
-  * Firmware (Arduino)
-    * Commands
-      * M2
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M10
-        * Speaker sond (F=frequency, D=duration)
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M20
-        * Led color (R=red, G=blue, B=green)
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M30
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M40
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M50
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M60
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M70
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M80
-        * URL: http://reprap.org/wiki/G-code#M80:_ATX_Power_On
-        * URL: http://forums.reprap.org/read.php?219,132664
-        * Relay status
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M81
-        * Relay on
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M82
-        * Relay off
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M90
-        * System information
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M91
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-  * NRDP
-    * nrdp_sender.py
-      * Escrever programa baseado no nrdp_sender.php
-+ Video
-  * envmon intro
-    * Subtítulos em inglês
+- 'TO DO':
+  - (Video) envmon intro - Subtitulos em portugues
+  - (Strategic) Watering system - Research
+  - (Software) Startup - Write version information in status file
+  - (Software) Command 0 - Check code
+  - (Software) Command 0 - Check code
+  - (Software) Command 0 - Check name
+  - (Software) Command M0 - Check code
+  - (Software) Command M0 - Check code
+  - (Software) Command M0 - Check name
+  - (Software) Command M99 - Check code
+  - (Software) Command M99 - Check code
+  - (Software) Command M99 - Check name
+  - (Software) Command M100 - Check code
+  - (Software) Command M100 - Check code
+  - (Software) Command M100 - Check name
+  - (Software) Command M111 - Check code
+  - (Software) Command M111 - Check code
+  - (Software) Command M111 - Check name
 
-- 'TODO':
-+ Strategic
-  * Watering system
-    * Research
-+ Mechanics
-+ Electronics
-+ Software
-  * envmon (Python)
-    * Bug: Reload configuration file is not working.
-    * New Feature: On startup, write version information in log file.
-    * New Feature: On startup, write JSON { version } information in log file.
-  * Firmware (Arduino)
-    * New Feature: On startup, write version information in log file.
-    * Commands
-      * 0
-        * Revisar implementação
-      * M0
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M99
-        * Reset system
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M100
-        * This help message
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-      * M111
-        * Debug mode
-        * Revisar nomenclatura
-        * Revisar função
-        * Revisar implementação
-  * config.json
-    * New Feature: On save, write version information in { version: 20170620054923 }.
-  * NRDP
-    * Bug: Intermittent execution fails
-+ Video
-  * envmon intro
-    * Subtítulos em português
-
-IN PROGRESS
-+ Mechanics
-+ Electronics
-+ Software
-  * Cooling system
-    * Bug: Fan is not working
-  * Web Interface
-    * Logs
-      * Limitar em 100 linhas o log de eventos
+- 'DOING':
+  - (Software) Cooling system - Bug #4: Fan is not working
+  - (Software) Web Interface - Limit logs in 100 lines
 
 - 'TESTING':
-+ Mechanics
-+ Electronics
-  * USB Interface
-    * Bug: Connector broken.
-+ Software
-  * envmon (Python)
-    * Bug: Erro ao na chave 'wifisignal'
-      Traceback (most recent call last):
-      File "/home/mex/Development/envmon/Mark_II/bin/envmon.py", line 846, in 
-      File "/home/mex/Development/envmon/Mark_II/bin/envmon.py", line 782, in main
-      File "/home/mex/Development/envmon/Mark_II/bin/envmon.py", line 416, in getWiFiSignalStrength
-      KeyError: 'wifisignal'
-      > 2017-03-10 - Identifique se o problema ocorre na leitura do arquivo de 
-        configuração ou na gravação do arquivo de status. Isso está reiniciando
-        o daemon envmon.
-      > 2017-03-21 - Adicionei os threshold do sinal WiFi no arquivo
-        config.json e no arquivo default.json.
-  * check_my_ip
-    * Bug: OpenWrt does not support HTTPS on wget command.
-      * Fix: Write check_my_ip.py
-  * NRDP
-    * send_nrdp.py
-      * Melhorar padrão de qualidade de código do programa
-      * Instalar bibliotecas pendentes
-        * python-openssl
-  * envmon (Watchdog - shell script)
-    * Review
+  - (Electronics) Fan Driver - Make
 
 - 'DONE':
-  - (Video) Presentation - Publish
-  - (Video) Presentation - Edit
-  - (Video) Presentation - Build
-
-  + Mechanics
-  * Controller
-    * Case
-      * Shapes
-        * Top
-        * Bottom
-          * Fixar pézinhos de borracha
-        * Left
-        * Right
-        * Front
-          * Furar orificio para LED
-  * Outdoor module
-    * Case
-      * Buy
-    * PCB
-      * Soldar
-      * Conector para sensor de nível d'água
-      * Conector para DHT-22
-      * RJ-45
-      * Conector soil moisture (definir padrão do conector)
-+ Electronics
-  * Fan
-    * Driver
-      * LM7805 Instalar regulador de tensão linear
-      * Transistor BC547
-      * Resistor 270R
-  * Controller
-    * Arduino Leonardo
-    * LED tri-color (OK, Warning, Critical)
-    * System temperature sensor (TMP36)
-  * Outdoor module
-    * PCB
-      * Soldar
-      * Conector para sensor de nível d'água
-      * Conector para DHT-22
-      * RJ-45
-      * Conector soil moisture (definir padrão do conector)
-+ Software
-  * Firmware (Arduino)
-    * Commands
-      * 0
-        * Revisar nomenclatura
-        * Revisar função
-  * Web Interface
-    * view
-      * Nível de sinal do WiFi
-    * setup/cloud
-      * Ocultar esse item
-  * setup (Shell script)
-    * Review
+  - (Video) envmon intro - Publish
+  - (Video) envmon intro - Edit
+  - (Video) envmon intro - Build
+  - (Mechanics) Case - Build
+  - (Electronics) Status LED - Install
+  - (Electronics) TMP36 - Install
+  - (Electronics) Outdoor module PCD - Soldering
+  - (Electronics) Outdoor module PCD - Conector para sensor de nivel d agua
+  - (Electronics) Outdoor module PCD - Conector para DHT-22
+  - (Electronics) Outdoor module PCD - RJ-45
+  - (Electronics) Outdoor module PCD - Conector soil moisture (definir padrao do conector)
+  - (Software) Web Interface - Nivel de sinal do WiFi

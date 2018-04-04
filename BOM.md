@@ -7,8 +7,6 @@ envmon Mark I - Environment Monitor, Bill of materials
 |     1 | Dragino_Yún_Shield |   181590847161 | 2015-01-08 | 2015-mm-dd | each |  31.50 |  0.00 |   0.00 |
 
 
-
-
 - US-100 Ultrasonic Sensor Module - Green
   - Technical specification
     - URL: http://www.dx.com/p/144433
