@@ -1,0 +1,93 @@
+﻿- 'BACKLOG':
+  - (Electronics) Moisture sensor - check pH
+  - (Electronics) Moisture sensor - check potassio
+  - (Electronics) Moisture sensor - check nitrogen
+  - (Mechanics) Controller case - Shapes Back
+  - (Mechanics) Soil Moisture case - Shapes Back
+  - (Mechanics) Outdoor Module case - Shapes Back
+  - (Software) Linux - Logs upload to cloud
+  - (Software) Linux - Add uptime to monitoring
+  - (Software) Linux - Move old logs to external USB storage device
+  - (Software) Linux - bridge (Watchdog - shell script) Verificar se esse programa eh realmente necessario
+  - (Software) Command M2 - Check code
+  - (Software) Command M2 - Check code
+  - (Software) Command M2 - Check name
+  - (Software) Command M10 - Check code
+  - (Software) Command M10 - Check code
+  - (Software) Command M10 - Check name
+  - (Software) Command M20 - Check code
+  - (Software) Command M20 - Check code
+  - (Software) Command M20 - Check name
+  - (Software) Command M30 - Check code
+  - (Software) Command M30 - Check code
+  - (Software) Command M30 - Check name
+  - (Software) Command M40 - Check code
+  - (Software) Command M40 - Check code
+  - (Software) Command M40 - Check name
+  - (Software) Command M50 - Check code
+  - (Software) Command M50 - Check code
+  - (Software) Command M50 - Check name
+  - (Software) Command M60 - Check code
+  - (Software) Command M60 - Check code
+  - (Software) Command M60 - Check name
+  - (Software) Command M70 - Check code
+  - (Software) Command M70 - Check code
+  - (Software) Command M70 - Check name
+  - (Software) Command M80 - Check code
+  - (Software) Command M80 - Check code
+  - (Software) Command M80 - Check name
+  - (Software) Command M81 - Check code
+  - (Software) Command M81 - Check code
+  - (Software) Command M81 - Check name
+  - (Software) Command M82 - Check code
+  - (Software) Command M82 - Check code
+  - (Software) Command M82 - Check name
+  - (Software) Command M90 - Check code
+  - (Software) Command M90 - Check code
+  - (Software) Command M90 - Check name
+  - (Software) Command M91 - Check code
+  - (Software) Command M91 - Check code
+  - (Software) Command M91 - Check name
+  - (Software) NRDP - Use nrdp_sender.py
+  - (Video) envmon intro - Subtítulos em ingles
+
+- 'TO DO':
+  - (Video) envmon intro - Subtitulos em portugues
+  - (Strategic) Watering system - Research
+  - (Software) Startup - Write version information in status file
+  - (Software) Command 0 - Check code
+  - (Software) Command 0 - Check code
+  - (Software) Command 0 - Check name
+  - (Software) Command M0 - Check code
+  - (Software) Command M0 - Check code
+  - (Software) Command M0 - Check name
+  - (Software) Command M99 - Check code
+  - (Software) Command M99 - Check code
+  - (Software) Command M99 - Check name
+  - (Software) Command M100 - Check code
+  - (Software) Command M100 - Check code
+  - (Software) Command M100 - Check name
+  - (Software) Command M111 - Check code
+  - (Software) Command M111 - Check code
+  - (Software) Command M111 - Check name
+
+- 'DOING':
+  - (Software) Cooling system - Bug #4: Fan is not working
+  - (Software) Web Interface - Limit logs in 100 lines
+
+- 'TESTING':
+  - (Electronics) Fan Driver - Make
+
+- 'DONE':
+  - (Video) envmon intro - Publish
+  - (Video) envmon intro - Edit
+  - (Video) envmon intro - Build
+  - (Mechanics) Case - Build
+  - (Electronics) Status LED - Install
+  - (Electronics) TMP36 - Install
+  - (Electronics) Outdoor module PCD - Soldering
+  - (Electronics) Outdoor module PCD - Conector para sensor de nivel d agua
+  - (Electronics) Outdoor module PCD - Conector para DHT-22
+  - (Electronics) Outdoor module PCD - RJ-45
+  - (Electronics) Outdoor module PCD - Conector soil moisture (definir padrao do conector)
+  - (Software) Web Interface - Nivel de sinal do WiFi
