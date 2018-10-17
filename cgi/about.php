@@ -2,7 +2,7 @@
 /* about.php, envmon Mark I - Environment Monitor
  * Web interface - About
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 

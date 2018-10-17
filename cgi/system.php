@@ -2,7 +2,7 @@
 /* system.php, envmon Mark I - Environment Monitor
  * Web interface - System setup
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 

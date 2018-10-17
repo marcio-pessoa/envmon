@@ -1,7 +1,7 @@
 <?php
 /* index.php, envmon Mark I - Environment Monitor, Web interface index file
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 

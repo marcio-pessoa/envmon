@@ -1,7 +1,7 @@
 <?php
 /* config.php, envmon Mark I - Environment Monitor, Web interface config file
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 

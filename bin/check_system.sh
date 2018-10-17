@@ -3,7 +3,7 @@
 # check_system.sh, envmon Mark I - Environment Monitor
 # System performance stats collector script file
 # 
-# Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+# Author: Márcio Pessoa <marcio.pessoa@gmail.com>
 # Contributors: none
 # 
 # Description:

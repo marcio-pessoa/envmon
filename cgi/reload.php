@@ -2,7 +2,7 @@
 /* reload.php, envmon Mark I - Environment Monitor
  * Web interface - Reload
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 

@@ -2,7 +2,7 @@
 <?php
 /* nrdp_sender.php, envmon Mark I - Environment Monitor, Nagios NRDP sender
  * 
- * Author: Márcio Pessoa <marcio@pessoa.eti.br>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  * 
  * Description:

@@ -3,7 +3,7 @@
     "project": "envmon Mark I - Environment Monitor",
     "file": "notifications.json",
     "description": "Notifications file",
-    "author": "Márcio Pessoa <marcio.pessoa@sciemon.com>",
+    "author": "Márcio Pessoa <marcio.pessoa@gmail.com>",
     "contributors": "none"
   },
   "timezone": "UTC",

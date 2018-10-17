@@ -4,23 +4,23 @@
  * Probably it works fine on original Arduin Yún board, I don't know.
  * To work on other Arduino models, some adaptations may be necessary.
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 
 #include <Arduino.h>         // Arduino - Main library
 #include <Console.h>         // Arduino - Console communication
-#include <Project.h>         // Sciemon - Basic project definitions
-#include <Timer.h>           // Sciemon - Timer library with nice features
-#include <RGB.h>             // Sciemon - RGB LED controller
-#include <SigGen.h>          // Sciemon - Signal Generator
-#include <Alarm.h>           // Sciemon - Manage alarms
-#include <Switch.h>          // Sciemon - Switch manipulation
-#include <Fan.h>             // Sciemon - Fan speed control
-#include <Temperature.h>     // Sciemon - Temperature Sensors
-#include <Ultrasonic.h>      // Sciemon - Ultrasonic distance sensor
-#include <SoilMoisture.h>    // Sciemon - Soil moisture sensor
-#include "config.h"          // Sciemon - Configuration
+#include <Project.h>         // Marcio Pessoa - Basic project definitions
+#include <Timer.h>           // Marcio Pessoa - Timer library
+#include <RGB.h>             // Marcio Pessoa - RGB LED controller
+#include <SigGen.h>          // Marcio Pessoa - Signal Generator
+#include <Alarm.h>           // Marcio Pessoa - Manage alarms
+#include <Switch.h>          // Marcio Pessoa - Switch manipulation
+#include <Fan.h>             // Marcio Pessoa - Fan speed control
+#include <Temperature.h>     // Marcio Pessoa - Temperature Sensors
+#include <Ultrasonic.h>      // Marcio Pessoa - Ultrasonic distance sensor
+#include <SoilMoisture.h>    // Marcio Pessoa - Soil moisture sensor
+#include "config.h"          // Marcio Pessoa - Configuration
 #include <DHT.h>             // Adafruit - DHT humidity/temperature sensors
 #include <MemoryFree.h>      // 
 
@@ -34,7 +34,7 @@ Project envmon("envmon",  // Platform
                "Copyright (c) 2013-2017 Marcio Pessoa",  // Owner
                "undefined. There is NO WARRANTY.",  // License
                "http://pessoa.eti.br/",  // Website
-               "Marcio Pessoa <marcio.pessoa@sciemon.com>");  // Contact
+               "Marcio Pessoa <marcio.pessoa@gmail.com>");  // Contact
 
 // RGB LED
 RGB led(R_pin, G_pin, B_pin);

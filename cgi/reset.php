@@ -2,7 +2,7 @@
 /* reset.php, envmon Mark I - Environment Monitor
  * Web interface - Reset to factory defaults
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 

@@ -3,7 +3,7 @@
 """
 check.py
 
-Author: Marcio Pessoa <marcio@pessoa.eti.br>
+Author: Marcio Pessoa <marcio.pessoa@gmail.com>
 
 Change log:
 """

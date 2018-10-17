@@ -2,7 +2,7 @@
 /* thresholds.php, envmon Mark I - Environment Monitor
  * Web interface - Thesholds
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 

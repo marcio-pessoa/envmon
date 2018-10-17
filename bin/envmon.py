@@ -3,7 +3,7 @@
 """
 envmon.py
 
-Author: Marcio Pessoa <marcio@pessoa.eti.br>
+Author: Marcio Pessoa <marcio.pessoa@gmail.com>
 
 Change log:
 """
@@ -42,7 +42,7 @@ PROGRAM_DATE = "2016-06-19"
 PROGRAM_COPYRIGHT = "Copyright (c) 2015-2016 Marcio Pessoa"
 PROGRAM_LICENSE = "undefined. There is NO WARRANTY."
 PROGRAM_WEBSITE = "http://pessoa.eti.br/"
-PROGRAM_CONTACT = "Marcio Pessoa <marcio.pessoa@sciemon.com>"
+PROGRAM_CONTACT = "Marcio Pessoa <marcio.pessoa@gmail.com>"
 
 OK = 0
 WARNING = 1
@@ -79,7 +79,7 @@ def message_usage():
     print "  " + PROGRAM_NAME + " -c config.json -b localhost -d localhost:6571"
     print "  " + PROGRAM_NAME + " -b localhost -p 2424 -d 127.0.0.1:6571"
     print ""
-    print "Report", PROGRAM_NAME, "bugs to marcio@pessoa.eti.br"
+    print "Report", PROGRAM_NAME, "bugs to marcio.pessoa@gmail.com"
     message_version()
 
 

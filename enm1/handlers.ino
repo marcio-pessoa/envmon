@@ -1,7 +1,7 @@
 /* handlers.ino, envmon Mark I - Environment Monitor, Arduino handlers 
  *                                                     sketch file
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 
