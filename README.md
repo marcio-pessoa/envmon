@@ -9,7 +9,7 @@
 # Introduction
 
 ## System architecture
-![System architeture](Documents/envmon.png)
+![System architeture](Documents/Pictures/architecture.png)
 
 # Mechanics
 
