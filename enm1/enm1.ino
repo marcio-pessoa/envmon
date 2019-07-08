@@ -33,7 +33,7 @@ Project envmon("envmon",  // Platform
                "5",  // Serial number
                "Copyright (c) 2013-2017 Marcio Pessoa",  // Owner
                "undefined. There is NO WARRANTY.",  // License
-               "http://pessoa.eti.br/",  // Website
+               "https://github.com/marcio-pessoa/envmon",  // Website
                "Marcio Pessoa <marcio.pessoa@gmail.com>");  // Contact
 
 // RGB LED

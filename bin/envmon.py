@@ -41,7 +41,7 @@ PROGRAM_VERSION = "0.01b"
 PROGRAM_DATE = "2016-06-19"
 PROGRAM_COPYRIGHT = "Copyright (c) 2015-2016 Marcio Pessoa"
 PROGRAM_LICENSE = "undefined. There is NO WARRANTY."
-PROGRAM_WEBSITE = "http://pessoa.eti.br/"
+PROGRAM_WEBSITE = "https://github.com/marcio-pessoa/envmon"
 PROGRAM_CONTACT = "Marcio Pessoa <marcio.pessoa@gmail.com>"
 
 OK = 0
